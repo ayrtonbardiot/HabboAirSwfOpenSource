@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//bottom_trousers_on_png$b1c693d2a42d210f106d461b36e38cb01978273533
+
+package 
+{
+    import flash.display.Bitmap;
+
+    public class bottom_trousers_on_png$b1c693d2a42d210f106d461b36e38cb01978273533 extends Bitmap 
+    {
+
+
+    }
+}//package 
+

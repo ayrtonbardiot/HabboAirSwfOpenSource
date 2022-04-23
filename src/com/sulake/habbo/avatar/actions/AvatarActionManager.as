@@ -1,0 +1,203 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//com.sulake.habbo.avatar.actions.AvatarActionManager
+
+package com.sulake.habbo.avatar.actions
+{
+    import com.sulake.core.assets._SafeStr_21;
+    import flash.utils.Dictionary;
+
+    public class AvatarActionManager 
+    {
+
+        private var _assets:_SafeStr_21;
+        private var _SafeStr_4249:Dictionary;
+        private var _defaultAction:ActionDefinition;
+
+        public function AvatarActionManager(_arg_1:_SafeStr_21, _arg_2:XML)
+        {
+            _assets = _arg_1;
+            _SafeStr_4249 = new Dictionary();
+            updateActions(_arg_2);
+        }
+
+        public function updateActions(_arg_1:XML):void
+        {
+            var _local_4:* = null;
+            var _local_3:* = null;
+            for each (var _local_2:XML in _arg_1.action)
+            {
+                _local_4 = String(_local_2.@state);
+                if (_local_4 != "")
+                {
+                    _local_3 = new ActionDefinition(_local_2);
+                    _SafeStr_4249[_local_4] = _local_3;
+                };
+            };
+            parseActionOffsets();
+        }
+
+        private function parseActionOffsets():void
+        {
+            var _local_8:* = null;
+            var _local_9:* = null;
+            var _local_3:* = null;
+            var _local_7:* = null;
+            var _local_6:* = null;
+            var _local_10:int;
+            var _local_1:int;
+            var _local_5:int;
+            var _local_4:Number;
+            for each (_local_9 in _SafeStr_4249)
+            {
+                _local_3 = _local_9.state;
+                if (_assets.hasAsset(("action_offset_" + _local_3)))
+                {
+                    _local_7 = (_assets.getAssetByName(("action_offset_" + _local_3)).content as XML);
+                    for each (var _local_2:XML in _local_7.offset)
+                    {
+                        _local_6 = String(_local_2.@size);
+                        _local_10 = parseInt(_local_2.@direction);
+                        _local_1 = parseInt(_local_2.@x);
+                        _local_5 = parseInt(_local_2.@y);
+                        _local_4 = Number(_local_2.@z);
+                        _local_9.setOffsets(_local_6, _local_10, new Array(_local_1, _local_5, _local_4));
+                    };
+                };
+            };
+        }
+
+        public function getActionDefinition(_arg_1:String):ActionDefinition
+        {
+            for each (var _local_2:ActionDefinition in _SafeStr_4249)
+            {
+                if (_local_2.id == _arg_1)
+                {
+                    return (_local_2);
+                };
+            };
+            return (null);
+        }
+
+        public function getActionDefinitionWithState(_arg_1:String):ActionDefinition
+        {
+            return (_SafeStr_4249[_arg_1]);
+        }
+
+        public function getDefaultAction():ActionDefinition
+        {
+            if (_defaultAction)
+            {
+                return (_defaultAction);
+            };
+            for each (var _local_1:ActionDefinition in _SafeStr_4249)
+            {
+                if (_local_1.isDefault)
+                {
+                    _defaultAction = _local_1;
+                    return (_local_1);
+                };
+            };
+            return (null);
+        }
+
+        public function getCanvasOffsets(_arg_1:Array, _arg_2:String, _arg_3:int):Array
+        {
+            var _local_4:* = null;
+            var _local_5:* = null;
+            var _local_7:* = null;
+            var _local_6:int;
+            _local_6 = 0;
+            while (_local_6 < _arg_1.length)
+            {
+                _local_5 = (_arg_1[_local_6] as ActiveActionData);
+                _local_7 = (_SafeStr_4249[_local_5.actionType] as ActionDefinition);
+                if (((!(_local_7 == null)) && (!(_local_7.getOffsets(_arg_2, _arg_3) == null))))
+                {
+                    _local_4 = _local_7.getOffsets(_arg_2, _arg_3);
+                };
+                _local_6++;
+            };
+            return (_local_4);
+        }
+
+        public function sortActions(_arg_1:Array):Array
+        {
+            var _local_4:* = null;
+            _arg_1 = filterActions(_arg_1);
+            var _local_2:Array = [];
+            for each (var _local_3:_SafeStr_3292 in _arg_1)
+            {
+                _local_4 = _SafeStr_4249[_local_3.actionType];
+                if (_local_4 != null)
+                {
+                    _local_3.definition = _local_4;
+                    _local_2.push(_local_3);
+                };
+            };
+            _local_2.sort(orderByPrecedence);
+            return (_local_2);
+        }
+
+        private function filterActions(_arg_1:Array):Array
+        {
+            var _local_3:* = null;
+            var _local_7:* = null;
+            var _local_4:int;
+            var _local_5:* = null;
+            var _local_2:Array = [];
+            var _local_6:Array = [];
+            _local_4 = 0;
+            while (_local_4 < _arg_1.length)
+            {
+                _local_3 = (_arg_1[_local_4] as ActiveActionData);
+                _local_7 = (_SafeStr_4249[_local_3.actionType] as ActionDefinition);
+                if (_local_7 != null)
+                {
+                    _local_6 = _local_6.concat(_local_7.getPrevents(_local_3.actionParameter));
+                };
+                _local_4++;
+            };
+            _local_4 = 0;
+            while (_local_4 < _arg_1.length)
+            {
+                _local_3 = (_arg_1[_local_4] as ActiveActionData);
+                _local_5 = _local_3.actionType;
+                if (_local_3.actionType == "fx")
+                {
+                    _local_5 = (_local_5 + ("." + _local_3.actionParameter));
+                };
+                if (_local_6.indexOf(_local_5) == -1)
+                {
+                    _local_2.push(_local_3);
+                };
+                _local_4++;
+            };
+            return (_local_2);
+        }
+
+        private function orderByPrecedence(_arg_1:_SafeStr_3292, _arg_2:_SafeStr_3292):Number
+        {
+            var _local_3:Number = _arg_1.definition.precedence;
+            var _local_4:Number = _arg_2.definition.precedence;
+            if (_local_3 < _local_4)
+            {
+                return (1);
+            };
+            if (_local_3 > _local_4)
+            {
+                return (-1);
+            };
+            return (0);
+        }
+
+
+    }
+}//package com.sulake.habbo.avatar.actions
+
+// _SafeStr_21 = "_-61a" (String#265, DoABC#4)
+// _SafeStr_3292 = "_-91r" (String#2734, DoABC#4)
+// _SafeStr_4249 = "_-Mb" (String#2437, DoABC#4)
+
+

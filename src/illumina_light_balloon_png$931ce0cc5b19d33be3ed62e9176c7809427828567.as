@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//illumina_light_balloon_png$931ce0cc5b19d33be3ed62e9176c7809427828567
+
+package 
+{
+    import flash.display.Bitmap;
+
+    public class illumina_light_balloon_png$931ce0cc5b19d33be3ed62e9176c7809427828567 extends Bitmap 
+    {
+
+
+    }
+}//package 
+

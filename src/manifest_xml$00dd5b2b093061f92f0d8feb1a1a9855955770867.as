@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//manifest_xml$00dd5b2b093061f92f0d8feb1a1a9855955770867
+
+package 
+{
+    import flash.utils.ByteArray;
+
+    public class manifest_xml$00dd5b2b093061f92f0d8feb1a1a9855955770867 extends ByteArray 
+    {
+
+
+    }
+}//package 
+

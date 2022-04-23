@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//mannequin_controller_save_xml$f268e753e6b0afe2273b39e2419bff2f1280977305
+
+package 
+{
+    import flash.utils.ByteArray;
+
+    public class mannequin_controller_save_xml$f268e753e6b0afe2273b39e2419bff2f1280977305 extends ByteArray 
+    {
+
+
+    }
+}//package 
+

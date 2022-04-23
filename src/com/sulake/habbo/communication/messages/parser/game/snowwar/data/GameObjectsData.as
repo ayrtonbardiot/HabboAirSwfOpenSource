@@ -1,0 +1,51 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//com.sulake.habbo.communication.messages.parser.game.snowwar.data.GameObjectsData
+
+package com.sulake.habbo.communication.messages.parser.game.snowwar.data
+{
+    import com.sulake.core.communication.messages.IMessageDataWrapper;
+    import _-kg.SnowWarGameObjectData;
+
+    public class GameObjectsData 
+    {
+
+        private var _SafeStr_5732:Array = [];
+
+        public function GameObjectsData(_arg_1:IMessageDataWrapper)
+        {
+            parse(_arg_1);
+        }
+
+        public function get gameObjects():Array
+        {
+            return (_SafeStr_5732);
+        }
+
+        public function parse(_arg_1:IMessageDataWrapper):void
+        {
+            var _local_3:int;
+            var _local_5:int;
+            var _local_4:int;
+            var _local_6:* = null;
+            var _local_2:int = _arg_1.readInteger();
+            _local_3 = 0;
+            while (_local_3 < _local_2)
+            {
+                _local_5 = _arg_1.readInteger();
+                _local_4 = _arg_1.readInteger();
+                _local_6 = SnowWarGameObjectData.create(_local_5, _local_4);
+                _local_6.parse(_arg_1);
+                _SafeStr_5732.push(_local_6);
+                _local_3++;
+            };
+        }
+
+
+    }
+}//package com.sulake.habbo.communication.messages.parser.game.snowwar.data
+
+// _SafeStr_5732 = "_-AT" (String#7285, DoABC#3)
+
+

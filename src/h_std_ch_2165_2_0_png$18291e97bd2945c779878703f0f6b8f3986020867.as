@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//h_std_ch_2165_2_0_png$18291e97bd2945c779878703f0f6b8f3986020867
+
+package 
+{
+    import flash.display.Bitmap;
+
+    public class h_std_ch_2165_2_0_png$18291e97bd2945c779878703f0f6b8f3986020867 extends Bitmap 
+    {
+
+
+    }
+}//package 
+

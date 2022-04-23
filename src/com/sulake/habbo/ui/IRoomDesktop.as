@@ -1,0 +1,26 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//com.sulake.habbo.ui.IRoomDesktop
+
+package com.sulake.habbo.ui
+{
+    import flash.events.IEventDispatcher;
+    import flash.events.Event;
+    import com.sulake.habbo.session.IRoomSession;
+    import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
+    import com.sulake.habbo.ui.widget.IRoomWidget;
+
+    public /*dynamic*/ interface IRoomDesktop 
+    {
+
+        function get events():IEventDispatcher;
+        function processEvent(_arg_1:Event):void;
+        function get roomSession():IRoomSession;
+        function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
+        function getWidget(_arg_1:String):IRoomWidget;
+
+    }
+}//package com.sulake.habbo.ui
+

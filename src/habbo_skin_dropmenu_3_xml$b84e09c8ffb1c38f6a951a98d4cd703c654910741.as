@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//habbo_skin_dropmenu_3_xml$b84e09c8ffb1c38f6a951a98d4cd703c654910741
+
+package 
+{
+    import flash.utils.ByteArray;
+
+    public class habbo_skin_dropmenu_3_xml$b84e09c8ffb1c38f6a951a98d4cd703c654910741 extends ByteArray 
+    {
+
+
+    }
+}//package 
+

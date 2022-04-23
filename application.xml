@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/33.1">
+  <id>com.sulake.habboair</id>
+  <filename>Habbo</filename>
+  <name>
+    <text xml:lang="fr">Habbo</text>
+    <text xml:lang="en">
+    </text>
+  </name>
+  <versionLabel>1.0.14</versionLabel>
+  <versionNumber>1.0.14</versionNumber>
+  <copyright>Sulake Oy 2022</copyright>
+  <initialWindow>
+    <content>HabboAir.swf</content>
+    <title>Habbo</title>
+    <visible>true</visible>
+    <fullScreen>true</fullScreen>
+    <autoOrients>true</autoOrients>
+    <renderMode>cpu</renderMode>
+    <aspectRatio>landscape</aspectRatio>
+    <width>1024</width>
+    <height>768</height>
+    <resizable>true</resizable>
+    <systemChrome>standard</systemChrome>
+    <requestedDisplayResolution>standard</requestedDisplayResolution>
+  </initialWindow>
+  <supportedLanguages>en de es fr it nl sv tr pt</supportedLanguages>
+  <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+  <installFolder>Sulake</installFolder>
+  <programMenuFolder>Sulake</programMenuFolder>
+  <icon>
+    <image16x16>icon16.png</image16x16>
+    <image32x32>icon32.png</image32x32>
+    <image48x48>icon48.png</image48x48>
+    <image128x128>icon128.png</image128x128>
+  </icon>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" xmlns:android="http://schemas.android.com/apk/res/android" />]]></manifestAdditions>
+  </android>
+  <description>
+    <text xml:lang="fr">
+    </text>
+    <text xml:lang="en">
+    </text>
+  </description>
+</application>

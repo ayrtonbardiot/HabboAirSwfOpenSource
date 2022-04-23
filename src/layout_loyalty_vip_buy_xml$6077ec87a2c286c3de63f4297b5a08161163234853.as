@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//layout_loyalty_vip_buy_xml$6077ec87a2c286c3de63f4297b5a08161163234853
+
+package 
+{
+    import flash.utils.ByteArray;
+
+    public class layout_loyalty_vip_buy_xml$6077ec87a2c286c3de63f4297b5a08161163234853 extends ByteArray 
+    {
+
+
+    }
+}//package 
+

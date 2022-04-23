@@ -1,0 +1,16 @@
+﻿// Decompiled by AS3 Sorcerer 6.30
+// www.as3sorcerer.com
+
+//duckat_icon_2_png$c7d3c1025ee323265e133ffac74943a3286243019
+
+package 
+{
+    import flash.display.Bitmap;
+
+    public class duckat_icon_2_png$c7d3c1025ee323265e133ffac74943a3286243019 extends Bitmap 
+    {
+
+
+    }
+}//package 
+
