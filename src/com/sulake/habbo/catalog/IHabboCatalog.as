@@ -5,7 +5,7 @@
 package com.sulake.habbo.catalog
 {
     import com.sulake.core.runtime.IUnknown;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -26,7 +26,7 @@ package com.sulake.habbo.catalog
 
         function redeemVoucher(_arg_1:String):void;
         function loadCatalogPage(_arg_1:int, _arg_2:int, _arg_3:String):void;
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function get windowManager():_SafeStr_1695;
         function get events():IEventDispatcher;
         function get localization():_SafeStr_18;

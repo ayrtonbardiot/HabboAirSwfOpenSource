@@ -5,7 +5,7 @@
 package com.sulake.habbo.avatar
 {
     import com.sulake.core.runtime.IUnknown;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.avatar.structure._SafeStr_3125;
     import __AS3__.vec.Vector;
     import com.sulake.core.assets.IAsset;
@@ -17,7 +17,7 @@ package com.sulake.habbo.avatar
     {
 
         function createAvatarImage(_arg_1:String, _arg_2:String, _arg_3:String=null, _arg_4:_SafeStr_1875=null, _arg_5:_SafeStr_3139=null):_SafeStr_3138;
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function getFigureData():_SafeStr_3125;
         function getFigureStringWithFigureIds(_arg_1:String, _arg_2:String, _arg_3:Vector.<int>):String;
         function isValidFigureSetForGender(_arg_1:int, _arg_2:String):Boolean;

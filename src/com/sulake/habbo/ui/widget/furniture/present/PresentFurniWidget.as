@@ -13,7 +13,7 @@ package com.sulake.habbo.ui.widget.furniture.present
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPresentDataUpdateEvent;
@@ -64,7 +64,7 @@ package com.sulake.habbo.ui.widget.furniture.present
         private var _SafeStr_4953:String = "";
         private var _placedInRoom:Boolean = false;
 
-        public function PresentFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:IHabboCatalog, _arg_7:_SafeStr_1708, _arg_8:IRoomEngine)
+        public function PresentFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:IHabboCatalog, _arg_7:_SafeStr_1708, _arg_8:IRoomEngine)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _habboConfiguration = _arg_5;

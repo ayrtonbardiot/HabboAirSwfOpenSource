@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory.bots
 {
     import com.sulake.habbo.inventory.IInventoryModel;
     import com.sulake.habbo.inventory.HabboInventory;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.catalog.IHabboCatalog;
@@ -26,7 +26,7 @@ package com.sulake.habbo.inventory.bots
 
         private var _SafeStr_4360:HabboInventory;
         private var _SafeStr_3882:BotsView;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _communication:IHabboCommunicationManager;
         private var _roomEngine:IRoomEngine;
         private var _catalog:IHabboCatalog;
@@ -35,7 +35,7 @@ package com.sulake.habbo.inventory.bots
         private var _disposed:Boolean = false;
         private var _SafeStr_4365:Boolean;
 
-        public function BotsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21, _arg_5:IRoomEngine, _arg_6:IHabboCatalog, _arg_7:_SafeStr_1701)
+        public function BotsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:IAssetLibrary, _arg_5:IRoomEngine, _arg_6:IHabboCatalog, _arg_7:_SafeStr_1701)
         {
             _SafeStr_4360 = _arg_1;
             _assets = _arg_4;

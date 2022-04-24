@@ -7,7 +7,7 @@ package com.sulake.habbo.inventory.furni
     import com.sulake.habbo.inventory.IInventoryView;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.inventory.marketplace.MarketplaceModel;
     import com.sulake.habbo.room.IRoomEngine;
@@ -48,7 +48,7 @@ package com.sulake.habbo.inventory.furni
 
         private var _SafeStr_5526:String = "";
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3882:_SafeStr_3133;
         private var _SafeStr_5384:FurniGridView;
         private var _SafeStr_4619:FurniModel;
@@ -71,7 +71,7 @@ package com.sulake.habbo.inventory.furni
         private var _SafeStr_3840:RoomPreviewer;
         private var _rentablesPlacementSelection:int = 0;
 
-        public function FurniView(_arg_1:FurniModel, _arg_2:MarketplaceModel, _arg_3:_SafeStr_1695, _arg_4:_SafeStr_21, _arg_5:IRoomEngine)
+        public function FurniView(_arg_1:FurniModel, _arg_2:MarketplaceModel, _arg_3:_SafeStr_1695, _arg_4:IAssetLibrary, _arg_5:IRoomEngine)
         {
             _SafeStr_4619 = _arg_1;
             _marketplace = _arg_2;

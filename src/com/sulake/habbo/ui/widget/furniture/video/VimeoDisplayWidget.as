@@ -10,7 +10,7 @@ package com.sulake.habbo.ui.widget.furniture.video
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler._SafeStr_3372;
     import com.sulake.core.window._SafeStr_3109;
@@ -29,7 +29,7 @@ package com.sulake.habbo.ui.widget.furniture.video
         private var _window:_SafeStr_3133;
         private var _roomObject:IRoomObject;
 
-        public function VimeoDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18)
+        public function VimeoDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             ownHandler.widget = this;

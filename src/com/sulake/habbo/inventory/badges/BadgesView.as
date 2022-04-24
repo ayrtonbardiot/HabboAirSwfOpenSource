@@ -8,7 +8,7 @@ package com.sulake.habbo.inventory.badges
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemGridWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3122;
     import com.sulake.habbo.window.widgets._SafeStr_3349;
     import com.sulake.core.window.components._SafeStr_3199;
@@ -33,7 +33,7 @@ package com.sulake.habbo.inventory.badges
         private var _SafeStr_3883:Boolean = false;
         private var _SafeStr_5384:BadgeGridView;
 
-        public function BadgesView(_arg_1:BadgesModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function BadgesView(_arg_1:BadgesModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _SafeStr_4619 = _arg_1;
             _windowManager = _arg_2;

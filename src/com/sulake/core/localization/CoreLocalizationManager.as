@@ -4,12 +4,12 @@
 
 package com.sulake.core.localization
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_13;
     import flash.utils.Dictionary;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.Event;
     import flash.net.URLLoader;
     import flash.net.URLRequest;
@@ -18,7 +18,7 @@ package com.sulake.core.localization
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import com.sulake.core.utils.ErrorReportStorage;
 
-    public class CoreLocalizationManager extends _SafeStr_20 implements _SafeStr_13, _SafeStr_17 
+    public class CoreLocalizationManager extends Component implements _SafeStr_13, _SafeStr_17 
     {
 
         private var _SafeStr_4020:Dictionary;
@@ -29,7 +29,7 @@ package com.sulake.core.localization
         private var _activeEnvironmentId:String;
         private var _gameDataResources:_SafeStr_40;
 
-        public function CoreLocalizationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function CoreLocalizationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

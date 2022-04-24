@@ -10,13 +10,13 @@ package
     import com.sulake.core.runtime._SafeStr_19;
     import flash.utils.Dictionary;
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime._SafeStr_31;
     import flash.display.DisplayObjectContainer;
     import flash.net.URLRequest;
     import flash.system.LoaderContext;
     import com.sulake.core.utils._SafeStr_39;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import flash.system.ApplicationDomain;
     import com.sulake.core.runtime.IUnknown;
     import com.sulake.core.runtime._SafeStr_41;
@@ -40,7 +40,7 @@ package
             _SafeStr_3522 = _arg_1;
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_assets);
         }
@@ -92,11 +92,11 @@ package
             return (null);
         }
 
-        public function attachComponent(_arg_1:_SafeStr_20, _arg_2:Array):void
+        public function attachComponent(_arg_1:Component, _arg_2:Array):void
         {
         }
 
-        public function detachComponent(_arg_1:_SafeStr_20):void
+        public function detachComponent(_arg_1:Component):void
         {
         }
 
@@ -145,7 +145,7 @@ package
             return (false);
         }
 
-        public function injectDependencies(_arg_1:_SafeStr_20):void
+        public function injectDependencies(_arg_1:Component):void
         {
         }
 

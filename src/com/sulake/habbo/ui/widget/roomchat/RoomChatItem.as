@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.roomchat
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.widget.events.RoomWidgetChatUpdateEvent;
     import com.sulake.core.window._SafeStr_3133;
@@ -36,7 +36,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _windowManager:_SafeStr_1695;
         private var _SafeStr_4020:_SafeStr_18;
         private var _window:IRegionWindow;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3820:String;
         private var _SafeStr_5425:String;
         private var _aboveLevels:int = 0;
@@ -64,7 +64,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _SafeStr_4051:Number = 0;
         private var _SafeStr_5424:Boolean = false;
 
-        public function RoomChatItem(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:String, _arg_5:_SafeStr_18, _arg_6:String)
+        public function RoomChatItem(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:String, _arg_5:_SafeStr_18, _arg_6:String)
         {
             _SafeStr_4981 = _arg_1;
             _windowManager = _arg_2;

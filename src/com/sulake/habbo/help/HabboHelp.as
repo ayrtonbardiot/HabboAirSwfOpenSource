@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.help
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -27,7 +27,7 @@ package com.sulake.habbo.help
     import com.sulake.core.communication.messages.IMessageComposer;
     import _-v1p._SafeStr_1638;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -74,7 +74,7 @@ package com.sulake.habbo.help
     import flash.net.navigateToURL;
     import flash.net.URLRequest;
 
-    public class HabboHelp extends _SafeStr_20 implements IHabboHelp, ILinkEventTracker 
+    public class HabboHelp extends Component implements IHabboHelp, ILinkEventTracker 
     {
 
         public static const REPORT_TYPE_EMERGENCY:int = 1;
@@ -118,7 +118,7 @@ package com.sulake.habbo.help
         private var _SafeStr_3895:TopicsFlowHelpController;
         private var _sanctionInfo:SanctionInfo;
 
-        public function HabboHelp(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboHelp(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

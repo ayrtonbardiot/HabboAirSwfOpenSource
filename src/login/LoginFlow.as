@@ -19,7 +19,7 @@ package login
     import onBoardingHcUi.LocalizedTextField;
     import flash.utils.ByteArray;
     import com.sulake.core.assets.AssetLibrary;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.AssetLibraryCollection;
     import com.sulake.habbo.communication.login.WebApiLoginProvider;
     import flash.events.Event;
@@ -134,7 +134,7 @@ package login
             var _local_2:ByteArray = (new HabboConfigurationCom.manifest() as ByteArray);
             var _local_3:XML = new XML(_local_2.readUTFBytes(_local_2.length));
             _local_5.library.appendChild(_local_3.component.assets);
-            var _local_4:_SafeStr_21 = new AssetLibrary("_assetsConfiguration@");
+            var _local_4:IAssetLibrary = new AssetLibrary("_assetsConfiguration@");
             _local_4.loadFromResource(_local_5, HabboConfigurationCom);
             return (new HabboConfigurationManager(_arg_1, 0, _local_4));
         }
@@ -145,7 +145,7 @@ package login
             var _local_2:ByteArray = (new HabboLocalizationCom.manifest() as ByteArray);
             var _local_3:XML = new XML(_local_2.readUTFBytes(_local_2.length));
             _local_5.library.appendChild(_local_3.component.assets);
-            var _local_4:_SafeStr_21 = new AssetLibrary("_assetsLocalization@");
+            var _local_4:IAssetLibrary = new AssetLibrary("_assetsLocalization@");
             _local_4.loadFromResource(_local_5, HabboLocalizationCom);
             return (new HabboLocalizationManager(_arg_1, 0, _local_4));
         }
@@ -156,7 +156,7 @@ package login
             var _local_4:XML = new XML(_local_3.readUTFBytes(_local_3.length));
             var _local_2:XML = new XML("<manifest><library /></manifest>");
             _local_2.library.appendChild(_local_4.component.assets);
-            var _local_5:_SafeStr_21 = new AssetLibrary("_assetsTemp@", _local_2);
+            var _local_5:IAssetLibrary = new AssetLibrary("_assetsTemp@", _local_2);
             _local_5.loadFromResource(_local_2, HabboCommunicationCom);
             return (new HabboCommunicationManager(_arg_1, 0, _local_5));
         }
@@ -165,7 +165,7 @@ package login
         {
             _SafeStr_9228 = new FakeContext(_arg_1);
             var _local_3:XML = new XML("<manifest><library /></manifest>");
-            var _local_2:_SafeStr_21 = new AssetLibrary("_assetsTemp@", _local_3);
+            var _local_2:IAssetLibrary = new AssetLibrary("_assetsTemp@", _local_3);
             (_SafeStr_9228.assets as AssetLibraryCollection).addAssetLibrary(_local_2);
             _configuration = createConfiguration(_SafeStr_9228);
             _localization = createLocalization(_SafeStr_9228);

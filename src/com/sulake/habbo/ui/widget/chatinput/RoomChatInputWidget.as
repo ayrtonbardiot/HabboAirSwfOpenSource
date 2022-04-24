@@ -11,7 +11,7 @@ package com.sulake.habbo.ui.widget.chatinput
     import com.sulake.habbo.ui.handler.ChatInputWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.utils.getTimer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChatMessage;
@@ -37,7 +37,7 @@ package com.sulake.habbo.ui.widget.chatinput
         private var _SafeStr_5132:RoomUI;
         private var _SafeStr_4393:IRoomDesktop;
 
-        public function RoomChatInputWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:RoomUI, _arg_6:IRoomDesktop)
+        public function RoomChatInputWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:RoomUI, _arg_6:IRoomDesktop)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _SafeStr_5132 = _arg_5;

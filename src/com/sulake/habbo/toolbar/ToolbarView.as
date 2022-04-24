@@ -8,7 +8,7 @@ package com.sulake.habbo.toolbar
     import flash.geom.Point;
     import com.sulake.core.window._SafeStr_3133;
     import flash.events.IEventDispatcher;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.session.ISessionDataManager;
@@ -20,7 +20,7 @@ package com.sulake.habbo.toolbar
     import com.sulake.core.window.utils._SafeStr_3250;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.localization.ILocalization;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window.components.IItemListWindow;
@@ -58,7 +58,7 @@ package com.sulake.habbo.toolbar
         private var _SafeStr_3983:IEventDispatcher;
         private var _disposed:Boolean;
         private var _toolbar:HabboToolbar;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _windowManager:_SafeStr_1695;
         private var _unseenItemCounters:_SafeStr_24;
         private var _newItemsNotification:_SafeStr_3133;
@@ -70,7 +70,7 @@ package com.sulake.habbo.toolbar
         private var _SafeStr_5202:int;
         private var _SafeStr_5197:MeMenuController;
 
-        public function ToolbarView(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IEventDispatcher, _arg_5:ISessionDataManager)
+        public function ToolbarView(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IEventDispatcher, _arg_5:ISessionDataManager)
         {
             _toolbar = _arg_1;
             _windowManager = _arg_2;
@@ -146,7 +146,7 @@ package com.sulake.habbo.toolbar
             _newItemsNotification.y = 5;
             _SafeStr_5199 = isNewItemsNotificationEnabled();
             checkSize();
-            (_toolbar as _SafeStr_20).context.addLinkEventTracker(this);
+            (_toolbar as Component).context.addLinkEventTracker(this);
         }
 
         private static function addShadow(_arg_1:BitmapData, _arg_2:Point, _arg_3:uint):BitmapData
@@ -266,7 +266,7 @@ package com.sulake.habbo.toolbar
             };
             if (_toolbar)
             {
-                (_toolbar as _SafeStr_20).context.removeLinkEventTracker(this);
+                (_toolbar as Component).context.removeLinkEventTracker(this);
             };
             _toolbar = null;
             _windowManager = null;

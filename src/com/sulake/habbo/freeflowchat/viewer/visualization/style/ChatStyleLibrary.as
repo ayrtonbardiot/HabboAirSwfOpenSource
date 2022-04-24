@@ -6,7 +6,7 @@ package com.sulake.habbo.freeflowchat.viewer.visualization.style
 {
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.habbo.freeflowchat.style._SafeStr_3260;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.utils._SafeStr_24;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
@@ -20,10 +20,10 @@ package com.sulake.habbo.freeflowchat.viewer.visualization.style
 
         private const DEFAULT_STYLE:int = 0;
 
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _styles:_SafeStr_24 = new _SafeStr_24();
 
-        public function ChatStyleLibrary(_arg_1:_SafeStr_21)
+        public function ChatStyleLibrary(_arg_1:IAssetLibrary)
         {
             var _local_4:int;
             var _local_5:* = null;

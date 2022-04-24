@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.ui.widget.contextmenu._SafeStr_3149;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_19;
     import flash.utils.Timer;
     import com.sulake.core.utils._SafeStr_24;
@@ -15,7 +15,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler.AvatarInfoWidgetHandler;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
@@ -69,7 +69,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
         private static const _SafeStr_8950:String = "avatar";
         private static const _SafeStr_8951:String = "use_minimized_own_avatar_menu";
 
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
         private var _configuration:_SafeStr_19;
         private var _SafeStr_3882:AvatarContextInfoButtonView;
         private var _SafeStr_4823:DecorateModeView;
@@ -106,7 +106,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
         private var _SafeStr_4825:_SafeStr_24 = new _SafeStr_24();
         private var _SafeStr_4837:NestBreedingSuccessView;
 
-        public function AvatarInfoWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:_SafeStr_20, _arg_7:IHabboCatalog)
+        public function AvatarInfoWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:Component, _arg_7:IHabboCatalog)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_5);
             _SafeStr_4147 = _arg_6;
@@ -124,7 +124,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
             this.handler.widget = this;
         }
 
-        public function get component():_SafeStr_20
+        public function get component():Component
         {
             return (_SafeStr_4147);
         }

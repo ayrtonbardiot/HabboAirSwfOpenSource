@@ -4,7 +4,7 @@
 
 package com.sulake.room
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.utils._SafeStr_24;
     import __AS3__.vec.Vector;
     import com.sulake.room.object.IRoomObjectVisualizationFactory;
@@ -23,7 +23,7 @@ package com.sulake.room
     import flash.utils.getTimer;
     import com.sulake.iid.*;
 
-    public class RoomManager extends _SafeStr_20 implements IRoomManager, IRoomInstanceContainer 
+    public class RoomManager extends Component implements IRoomManager, IRoomInstanceContainer 
     {
 
         public static const ROOM_MANAGER_ERROR:int = -1;

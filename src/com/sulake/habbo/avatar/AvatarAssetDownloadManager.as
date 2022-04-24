@@ -6,7 +6,7 @@ package com.sulake.habbo.avatar
 {
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import flash.utils.Dictionary;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.AssetLoaderStruct;
     import flash.utils.Timer;
     import flash.net.URLRequest;
@@ -32,7 +32,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_4144:_SafeStr_1702;
         private var _SafeStr_4273:Dictionary;
         private var _SafeStr_4696:Dictionary;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_4698:Dictionary;
         private var _listeners:Dictionary;
         private var _SafeStr_3762:AvatarStructure;
@@ -48,7 +48,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_4695:String;
         private var _SafeStr_4693:Array = ["hh_human_body", "hh_human_item"];
 
-        public function AvatarAssetDownloadManager(_arg_1:_SafeStr_1702, _arg_2:_SafeStr_21, _arg_3:String, _arg_4:String, _arg_5:AvatarStructure, _arg_6:String)
+        public function AvatarAssetDownloadManager(_arg_1:_SafeStr_1702, _arg_2:IAssetLibrary, _arg_3:String, _arg_4:String, _arg_5:AvatarStructure, _arg_6:String)
         {
             var _local_10:* = null;
             var _local_8:* = null;

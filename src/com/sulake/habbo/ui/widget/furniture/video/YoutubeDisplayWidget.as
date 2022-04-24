@@ -11,7 +11,7 @@ package com.sulake.habbo.ui.widget.furniture.video
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler._SafeStr_3306;
     import com.sulake.core.window.components.IItemListWindow;
@@ -42,7 +42,7 @@ package com.sulake.habbo.ui.widget.furniture.video
         private var _canControlPlayback:Boolean;
         private var _SafeStr_4857:int = -1;
 
-        public function YoutubeDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_1704)
+        public function YoutubeDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_1704)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _habboTracking = _arg_5;

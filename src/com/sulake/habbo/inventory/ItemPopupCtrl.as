@@ -5,7 +5,7 @@
 package com.sulake.habbo.inventory
 {
     import flash.utils.Timer;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import flash.display.BitmapData;
     import com.sulake.habbo.inventory.trading.TradingModel;
@@ -43,7 +43,7 @@ package com.sulake.habbo.inventory
 
         private var _SafeStr_6666:Timer = new Timer(250, 1);
         private var _hideDelayTimer:Timer = new Timer(100, 1);
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_6665:_SafeStr_3133;
         private var _parent:_SafeStr_3133;
         private var _preferredLocation:int = 2;
@@ -53,7 +53,7 @@ package com.sulake.habbo.inventory
         private var _windowManager:_SafeStr_1695;
         private var _SafeStr_6667:Boolean = false;
 
-        public function ItemPopupCtrl(_arg_1:_SafeStr_3133, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695, _arg_4:TradingModel)
+        public function ItemPopupCtrl(_arg_1:_SafeStr_3133, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695, _arg_4:TradingModel)
         {
             if (((_arg_1 == null) || (_arg_2 == null)))
             {

@@ -8,7 +8,7 @@ package com.sulake.habbo.game.snowwar.utils
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.utils.Timer;
     import flash.display.BitmapData;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.TimerEvent;
     import flash.geom.Point;
 
@@ -23,7 +23,7 @@ package com.sulake.habbo.game.snowwar.utils
         private var _SafeStr_4582:Timer;
         private var _disposed:Boolean = false;
 
-        public function SnowWarAnimatedWindowElement(_arg_1:_SafeStr_21, _arg_2:_SafeStr_3264, _arg_3:String, _arg_4:int, _arg_5:int=100, _arg_6:Boolean=false)
+        public function SnowWarAnimatedWindowElement(_arg_1:IAssetLibrary, _arg_2:_SafeStr_3264, _arg_3:String, _arg_4:int, _arg_5:int=100, _arg_6:Boolean=false)
         {
             var _local_7:int;
             super();

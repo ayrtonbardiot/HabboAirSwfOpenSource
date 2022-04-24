@@ -13,10 +13,10 @@ package com.sulake.core.assets
     import com.sulake.core.utils._SafeStr_43;
     import flash.net.URLRequest;
 
-    public class AssetLibraryCollection extends EventDispatcherWrapper implements _SafeStr_21 
+    public class AssetLibraryCollection extends EventDispatcherWrapper implements IAssetLibrary 
     {
 
-        protected var _SafeStr_8016:Vector.<_SafeStr_21>;
+        protected var _SafeStr_8016:Vector.<IAssetLibrary>;
         protected var _SafeStr_8014:Array;
         protected var _SafeStr_8001:LoaderContext;
         protected var _SafeStr_8015:AssetLibrary;
@@ -28,7 +28,7 @@ package com.sulake.core.assets
         {
             _name = _arg_1;
             _manifest = null;
-            _SafeStr_8016 = new Vector.<_SafeStr_21>();
+            _SafeStr_8016 = new Vector.<IAssetLibrary>();
             _SafeStr_8014 = [];
             _SafeStr_8001 = new LoaderContext(false, ApplicationDomain.currentDomain, null);
         }
@@ -73,7 +73,7 @@ package com.sulake.core.assets
             _SafeStr_8001 = _arg_1;
         }
 
-        private function get binLibrary():_SafeStr_21
+        private function get binLibrary():IAssetLibrary
         {
             if (!_SafeStr_8015)
             {
@@ -89,7 +89,7 @@ package com.sulake.core.assets
             {
                 loaderContext = _SafeStr_8001;
             };
-            var _local_3:_SafeStr_21 = new AssetLibrary(("lib-" + _SafeStr_4002++));
+            var _local_3:IAssetLibrary = new AssetLibrary(("lib-" + _SafeStr_4002++));
             _SafeStr_8014.push(_local_3);
             _local_3.loadFromFile(_arg_1, _arg_2);
             _arg_1.addEventListener("LIBRARY_LOADER_EVENT_COMPLETE", loadEventHandler);
@@ -106,11 +106,11 @@ package com.sulake.core.assets
         {
             while (_SafeStr_8014.length > 0)
             {
-                (_SafeStr_8014.pop() as _SafeStr_21).dispose();
+                (_SafeStr_8014.pop() as IAssetLibrary).dispose();
             };
             while (_SafeStr_8016.length > 0)
             {
-                (_SafeStr_8016.pop() as _SafeStr_21).dispose();
+                (_SafeStr_8016.pop() as IAssetLibrary).dispose();
             };
         }
 
@@ -145,7 +145,7 @@ package com.sulake.core.assets
                 _local_4 = 0;
                 while (_local_4 < _SafeStr_8014.length)
                 {
-                    _local_2 = (_SafeStr_8014[_local_4] as _SafeStr_21);
+                    _local_2 = (_SafeStr_8014[_local_4] as IAssetLibrary);
                     if (_local_2.url == _local_3.url)
                     {
                         _SafeStr_8014.splice(_local_4, 1);
@@ -166,7 +166,7 @@ package com.sulake.core.assets
 
         public function hasAssetLibrary(_arg_1:String):Boolean
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (_local_2.name == _arg_1)
                 {
@@ -176,9 +176,9 @@ package com.sulake.core.assets
             return (false);
         }
 
-        public function getAssetLibraryByName(_arg_1:String):_SafeStr_21
+        public function getAssetLibraryByName(_arg_1:String):IAssetLibrary
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (_local_2.name == _arg_1)
                 {
@@ -188,9 +188,9 @@ package com.sulake.core.assets
             return (null);
         }
 
-        public function getAssetLibraryByUrl(_arg_1:String):_SafeStr_21
+        public function getAssetLibraryByUrl(_arg_1:String):IAssetLibrary
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (_local_2.url == _arg_1)
                 {
@@ -200,9 +200,9 @@ package com.sulake.core.assets
             return (null);
         }
 
-        public function getAssetLibraryByPartialUrl(_arg_1:String):_SafeStr_21
+        public function getAssetLibraryByPartialUrl(_arg_1:String):IAssetLibrary
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (((_local_2.url) && (!(_local_2.url.indexOf(_arg_1) === -1))))
                 {
@@ -212,7 +212,7 @@ package com.sulake.core.assets
             return (null);
         }
 
-        public function addAssetLibrary(_arg_1:_SafeStr_21):void
+        public function addAssetLibrary(_arg_1:IAssetLibrary):void
         {
             if (_SafeStr_8016.indexOf(_arg_1) == -1)
             {
@@ -228,7 +228,7 @@ package com.sulake.core.assets
         public function getAssetByName(_arg_1:String):IAsset
         {
             var _local_3:* = null;
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 _local_3 = _local_2.getAssetByName(_arg_1);
                 if (_local_3 != null)
@@ -243,7 +243,7 @@ package com.sulake.core.assets
         {
             var _local_4:* = null;
             var _local_2:Array = [];
-            for each (var _local_3:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_3:IAssetLibrary in _SafeStr_8016)
             {
                 _local_4 = _local_3.getAssetByName(_arg_1);
                 if (_local_4 != null)
@@ -257,7 +257,7 @@ package com.sulake.core.assets
         public function getAssetByContent(_arg_1:Object):IAsset
         {
             var _local_3:* = null;
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 _local_3 = _local_2.getAssetByContent(_arg_1);
                 if (_local_3 != null)
@@ -272,7 +272,7 @@ package com.sulake.core.assets
         {
             var _local_2:uint;
             var _local_3:uint;
-            for each (var _local_4:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_4:IAssetLibrary in _SafeStr_8016)
             {
                 _local_2 = (_local_2 + _local_4.numAssets);
                 if (_local_2 <= _arg_1)
@@ -288,7 +288,7 @@ package com.sulake.core.assets
         {
             var _local_2:int;
             var _local_4:int;
-            for each (var _local_3:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_3:IAssetLibrary in _SafeStr_8016)
             {
                 _local_4 = _local_3.getAssetIndex(_arg_1);
                 if (_local_4 != -1)
@@ -302,7 +302,7 @@ package com.sulake.core.assets
 
         public function hasAsset(_arg_1:String):Boolean
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (_local_2.hasAsset(_arg_1))
                 {
@@ -324,7 +324,7 @@ package com.sulake.core.assets
 
         public function removeAsset(_arg_1:IAsset):IAsset
         {
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 if (_local_2.removeAsset(_arg_1) == _arg_1)
                 {
@@ -346,7 +346,7 @@ package com.sulake.core.assets
             {
                 return (binLibrary.getAssetTypeDeclarationByMimeType(_arg_1, true));
             };
-            for each (var _local_4:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_4:IAssetLibrary in _SafeStr_8016)
             {
                 _local_3 = _local_4.getAssetTypeDeclarationByMimeType(_arg_1, false);
                 if (_local_3 != null)
@@ -364,7 +364,7 @@ package com.sulake.core.assets
             {
                 return (binLibrary.getAssetTypeDeclarationByClass(_arg_1, true));
             };
-            for each (var _local_4:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_4:IAssetLibrary in _SafeStr_8016)
             {
                 _local_3 = _local_4.getAssetTypeDeclarationByClass(_arg_1, false);
                 if (_local_3 != null)
@@ -382,7 +382,7 @@ package com.sulake.core.assets
             {
                 return (binLibrary.getAssetTypeDeclarationByFileName(_arg_1, true));
             };
-            for each (var _local_4:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_4:IAssetLibrary in _SafeStr_8016)
             {
                 _local_3 = _local_4.getAssetTypeDeclarationByFileName(_arg_1, false);
                 if (_local_3 != null)
@@ -396,7 +396,7 @@ package com.sulake.core.assets
         private function getNumAssets():uint
         {
             var _local_1:uint;
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 _local_1 = (_local_1 + _local_2.numAssets);
             };
@@ -406,7 +406,7 @@ package com.sulake.core.assets
         private function getAssetNameArray():Array
         {
             var _local_2:Array = [];
-            for each (var _local_1:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_1:IAssetLibrary in _SafeStr_8016)
             {
                 _local_2 = _local_2.concat(_local_1.nameArray);
             };
@@ -416,7 +416,7 @@ package com.sulake.core.assets
         public function getManifests():Array
         {
             var _local_2:Array = [];
-            for each (var _local_1:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_1:IAssetLibrary in _SafeStr_8016)
             {
                 _local_2.push(_local_1.manifest);
             };
@@ -431,14 +431,14 @@ package com.sulake.core.assets
             {
                 applyManifestNodes(_local_1, _SafeStr_8015);
             };
-            for each (var _local_2:_SafeStr_21 in _SafeStr_8016)
+            for each (var _local_2:IAssetLibrary in _SafeStr_8016)
             {
                 applyManifestNodes(_local_1, _local_2);
             };
             return (_local_3);
         }
 
-        private function applyManifestNodes(_arg_1:XMLList, _arg_2:_SafeStr_21):void
+        private function applyManifestNodes(_arg_1:XMLList, _arg_2:IAssetLibrary):void
         {
             var _local_3:* = null;
             var _local_4:* = null;

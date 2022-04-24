@@ -4,11 +4,11 @@
 
 package com.sulake.room.renderer
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_31;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_1891 extends _SafeStr_20 implements IRoomRendererFactory 
+    public class _SafeStr_1891 extends Component implements IRoomRendererFactory 
     {
 
         public function _SafeStr_1891(_arg_1:_SafeStr_31, _arg_2:uint=0)

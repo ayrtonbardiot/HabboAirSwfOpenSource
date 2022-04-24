@@ -4,17 +4,17 @@
 
 package com.sulake.habbo.avatar.actions
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.utils.Dictionary;
 
     public class AvatarActionManager 
     {
 
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_4249:Dictionary;
         private var _defaultAction:ActionDefinition;
 
-        public function AvatarActionManager(_arg_1:_SafeStr_21, _arg_2:XML)
+        public function AvatarActionManager(_arg_1:IAssetLibrary, _arg_2:XML)
         {
             _assets = _arg_1;
             _SafeStr_4249 = new Dictionary();

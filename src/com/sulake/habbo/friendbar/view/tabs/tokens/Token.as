@@ -7,7 +7,7 @@ package com.sulake.habbo.friendbar.view.tabs.tokens
     import com.sulake.core.runtime._SafeStr_13;
     import flash.geom.Rectangle;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.game._SafeStr_1699;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window._SafeStr_3133;
@@ -25,7 +25,7 @@ package com.sulake.habbo.friendbar.view.tabs.tokens
         protected static const ICON_RECTANGLE:Rectangle = new Rectangle(0, 0, 25, 25);
 
         protected static var _WINDOW_MANAGER:_SafeStr_1695;
-        protected static var _SafeStr_5967:_SafeStr_21;
+        protected static var _SafeStr_5967:IAssetLibrary;
         protected static var _GAMES:_SafeStr_1699;
 
         protected var _icon:IRegionWindow;
@@ -43,7 +43,7 @@ package com.sulake.habbo.friendbar.view.tabs.tokens
             _WINDOW_MANAGER = _arg_1;
         }
 
-        public static function set ASSETS(_arg_1:_SafeStr_21):void
+        public static function set ASSETS(_arg_1:IAssetLibrary):void
         {
             _SafeStr_5967 = _arg_1;
         }

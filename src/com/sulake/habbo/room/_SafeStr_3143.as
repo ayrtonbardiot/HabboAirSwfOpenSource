@@ -12,7 +12,7 @@ package com.sulake.habbo.room
     import flash.events.IEventDispatcher;
     import flash.utils.Dictionary;
     import com.sulake.habbo.session.ISessionDataManager;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.core._SafeStr_79;
     import com.sulake.core.utils._SafeStr_68;
@@ -89,7 +89,7 @@ package com.sulake.habbo.room
         private var _SafeStr_4270:Boolean = false;
         private var _lastAssetCompressionTime:uint;
         private var _sessionDataManager:ISessionDataManager;
-        private var _SafeStr_4292:_SafeStr_21;
+        private var _SafeStr_4292:IAssetLibrary;
         private var _SafeStr_4293:_SafeStr_1690;
         private var _configuration:_SafeStr_19;
         private var _SafeStr_4285:Array;
@@ -767,7 +767,7 @@ package com.sulake.habbo.room
             return (_SafeStr_4290 + _arg_1);
         }
 
-        public function insertObjectContent(_arg_1:int, _arg_2:int, _arg_3:_SafeStr_21):Boolean
+        public function insertObjectContent(_arg_1:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean
         {
             var _local_6:* = null;
             var _local_7:* = null;
@@ -970,7 +970,7 @@ package com.sulake.habbo.room
             }
             else
             {
-                _local_3 = (_arg_1.target as _SafeStr_21);
+                _local_3 = (_arg_1.target as IAssetLibrary);
                 if (_local_3 == null)
                 {
                     return;
@@ -979,7 +979,7 @@ package com.sulake.habbo.room
             };
         }
 
-        private function processLoadedLibrary(_arg_1:_SafeStr_21):void
+        private function processLoadedLibrary(_arg_1:IAssetLibrary):void
         {
             var _local_3:RoomContentLoadedEvent;
             var _local_2:Boolean;
@@ -1065,7 +1065,7 @@ package com.sulake.habbo.room
             };
         }
 
-        private function initializeGraphicAssetCollection(_arg_1:String, _arg_2:_SafeStr_21):Boolean
+        private function initializeGraphicAssetCollection(_arg_1:String, _arg_2:IAssetLibrary):Boolean
         {
             var _local_4:* = null;
             if (((_arg_1 == null) || (_arg_2 == null)))
@@ -1091,7 +1091,7 @@ package com.sulake.habbo.room
 
         public function extractObjectContent(_arg_1:String, _arg_2:String):Boolean
         {
-            var _local_3:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_3:IAssetLibrary = getAssetLibrary(_arg_1);
             _SafeStr_4283.add(_arg_2, _arg_1);
             if (initializeGraphicAssetCollection(_arg_2, _local_3))
             {
@@ -1106,28 +1106,28 @@ package com.sulake.habbo.room
             return ("RoomContentLoader " + _arg_1);
         }
 
-        private function getAssetLibrary(_arg_1:String):_SafeStr_21
+        private function getAssetLibrary(_arg_1:String):IAssetLibrary
         {
             var _local_3:* = null;
             var _local_4:String = getContentType(_arg_1);
             _local_4 = getRoomObjectOriginalName(_local_4);
-            var _local_2:_SafeStr_21 = (_SafeStr_4273.getValue(getAssetLibraryName(_local_4)) as _SafeStr_21);
+            var _local_2:IAssetLibrary = (_SafeStr_4273.getValue(getAssetLibraryName(_local_4)) as IAssetLibrary);
             if (_local_2 == null)
             {
                 _local_3 = _SafeStr_4283.getValue(_local_4);
                 if (_local_3 != null)
                 {
                     _local_4 = getContentType(_local_3);
-                    _local_2 = (_SafeStr_4273.getValue(getAssetLibraryName(_local_4)) as _SafeStr_21);
+                    _local_2 = (_SafeStr_4273.getValue(getAssetLibraryName(_local_4)) as IAssetLibrary);
                 };
             };
             return (_local_2);
         }
 
-        private function addAssetLibraryCollection(_arg_1:String, _arg_2:IEventDispatcher):_SafeStr_21
+        private function addAssetLibraryCollection(_arg_1:String, _arg_2:IEventDispatcher):IAssetLibrary
         {
             var _local_5:String = getContentType(_arg_1);
-            var _local_3:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_3:IAssetLibrary = getAssetLibrary(_arg_1);
             if (_local_3 != null)
             {
                 return (_local_3);
@@ -1165,7 +1165,7 @@ package com.sulake.habbo.room
             return ((_local_5 > 0) ? ((_local_3 + "*") + _local_5) : _local_3);
         }
 
-        private function getAssetLibraryType(_arg_1:_SafeStr_21):String
+        private function getAssetLibraryType(_arg_1:IAssetLibrary):String
         {
             if (_arg_1 == null)
             {
@@ -1191,7 +1191,7 @@ package com.sulake.habbo.room
             {
                 return (null);
             };
-            var _local_2:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_2:IAssetLibrary = getAssetLibrary(_arg_1);
             if (_local_2 == null)
             {
                 return (null);
@@ -1220,7 +1220,7 @@ package com.sulake.habbo.room
             {
                 return (null);
             };
-            var _local_2:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_2:IAssetLibrary = getAssetLibrary(_arg_1);
             if (_local_2 == null)
             {
                 return (null);
@@ -1275,7 +1275,7 @@ package com.sulake.habbo.room
 
         private function getXML(_arg_1:String, _arg_2:String):XML
         {
-            var _local_3:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_3:IAssetLibrary = getAssetLibrary(_arg_1);
             if (_local_3 == null)
             {
                 return (null);
@@ -1297,7 +1297,7 @@ package com.sulake.habbo.room
 
         private function hasXML(_arg_1:String, _arg_2:String):Boolean
         {
-            var _local_3:_SafeStr_21 = getAssetLibrary(_arg_1);
+            var _local_3:IAssetLibrary = getAssetLibrary(_arg_1);
             if (_local_3 == null)
             {
                 return (false);
@@ -1317,7 +1317,7 @@ package com.sulake.habbo.room
             return (false);
         }
 
-        private function createGraphicAssetCollection(_arg_1:String, _arg_2:_SafeStr_21):IGraphicAssetCollection
+        private function createGraphicAssetCollection(_arg_1:String, _arg_2:IAssetLibrary):IGraphicAssetCollection
         {
             var _local_3:IGraphicAssetCollection = getGraphicAssetCollection(_arg_1);
             if (_local_3 != null)
@@ -1399,7 +1399,7 @@ package com.sulake.habbo.room
                 {
                     _local_5 = _SafeStr_4282.getValue(_local_10);
                     _local_2 = getAssetLibraryName(_local_10);
-                    _local_3 = (_SafeStr_4273.getValue(_local_2) as _SafeStr_21);
+                    _local_3 = (_SafeStr_4273.getValue(_local_2) as IAssetLibrary);
                     if (_local_3)
                     {
                         _local_4 = _local_3.numAssets;
@@ -1440,7 +1440,7 @@ package com.sulake.habbo.room
                         _SafeStr_4282.remove(_local_7);
                         _local_4.dispose();
                         _local_2 = getAssetLibraryName(_local_7);
-                        _local_3 = (_SafeStr_4273.getValue(_local_2) as _SafeStr_21);
+                        _local_3 = (_SafeStr_4273.getValue(_local_2) as IAssetLibrary);
                         if (_local_3)
                         {
                             _SafeStr_4273.remove(_local_2);
@@ -1468,7 +1468,7 @@ package com.sulake.habbo.room
             return (((((("room_content/" + _arg_1) + "/") + _local_4) + "/") + _arg_1) + ".swf");
         }
 
-        public function set iconAssets(_arg_1:_SafeStr_21):void
+        public function set iconAssets(_arg_1:IAssetLibrary):void
         {
             _SafeStr_4292 = _arg_1;
         }

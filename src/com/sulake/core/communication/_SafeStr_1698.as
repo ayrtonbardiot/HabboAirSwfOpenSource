@@ -4,7 +4,7 @@
 
 package com.sulake.core.communication
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.core.runtime._SafeStr_31;
     import com.sulake.core.communication.connection.IConnection;
@@ -12,7 +12,7 @@ package com.sulake.core.communication
     import com.sulake.core.communication.connection._SafeStr_26;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_1698 extends _SafeStr_20 implements _SafeStr_46, _SafeStr_41 
+    public class _SafeStr_1698 extends Component implements _SafeStr_46, _SafeStr_41 
     {
 
         private var _SafeStr_3753:Array;

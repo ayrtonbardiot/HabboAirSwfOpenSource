@@ -7,7 +7,7 @@ package com.sulake.habbo.avatar.alias
     import com.sulake.core.assets.AssetLibraryCollection;
     import flash.utils.Dictionary;
     import com.sulake.habbo.avatar._SafeStr_1702;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.IAsset;
 
     public class AssetAliasCollection 
@@ -41,7 +41,7 @@ package com.sulake.habbo.avatar.alias
         {
             var _local_3:* = null;
             var _local_2:* = null;
-            var _local_4:_SafeStr_21 = _assets.getAssetLibraryByPartialUrl((("/" + _arg_1) + ".swf"));
+            var _local_4:IAssetLibrary = _assets.getAssetLibraryByPartialUrl((("/" + _arg_1) + ".swf"));
             if (_local_4)
             {
                 for each (var _local_5:XML in _local_4.manifest..alias)

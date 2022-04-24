@@ -17,7 +17,7 @@ package com.sulake.habbo.navigator.transitional
     import com.sulake.habbo.navigator.inroom.RoomEventInfoCtrl;
     import com.sulake.habbo.navigator.roomsettings.RoomFilterCtrl;
     import com.sulake.habbo.navigator.roomsettings.EnforceCategoryCtrl;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.navigator.mainview.ITransitionalMainViewCtrl;
@@ -80,7 +80,7 @@ package com.sulake.habbo.navigator.transitional
             _SafeStr_3964 = _arg_1;
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_SafeStr_3964.assets);
         }

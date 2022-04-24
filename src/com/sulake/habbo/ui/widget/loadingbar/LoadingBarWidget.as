@@ -11,7 +11,7 @@ package com.sulake.habbo.ui.widget.loadingbar
     import flash.display.Sprite;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetLoadingBarUpdateEvent;
@@ -30,7 +30,7 @@ package com.sulake.habbo.ui.widget.loadingbar
         private var _SafeStr_4177:String = "";
         private var _SafeStr_4203:Sprite = null;
 
-        public function LoadingBarWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19)
+        public function LoadingBarWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _config = _arg_5;

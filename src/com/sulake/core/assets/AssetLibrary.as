@@ -26,7 +26,7 @@ package com.sulake.core.assets
     import flash.utils.getQualifiedClassName;
     import com.sulake.core.assets.loaders.*;
 
-    public class AssetLibrary extends EventDispatcherWrapper implements _SafeStr_21 
+    public class AssetLibrary extends EventDispatcherWrapper implements IAssetLibrary 
     {
 
         public static const ASSET_LIBRARY_READY:String = "AssetLibraryReady";

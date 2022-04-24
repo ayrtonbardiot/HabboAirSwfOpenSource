@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.ui
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.room.IRoomEngine;
@@ -38,7 +38,7 @@ package com.sulake.habbo.ui
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.ui.widget.RoomWidgetFactory;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDRoomEngine;
@@ -95,7 +95,7 @@ package com.sulake.habbo.ui
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style._SafeStr_3260;
 
-    public class RoomUI extends _SafeStr_20 implements IRoomUI, _SafeStr_41 
+    public class RoomUI extends Component implements IRoomUI, _SafeStr_41 
     {
 
         private var _windowManager:_SafeStr_1695;
@@ -135,7 +135,7 @@ package com.sulake.habbo.ui
         private var _isInRoom:Boolean = false;
         private var _perkAllowancesMessageEvent:IMessageEvent;
 
-        public function RoomUI(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function RoomUI(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3938 = new RoomWidgetFactory(this);

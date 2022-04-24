@@ -13,7 +13,7 @@ package com.sulake.habbo.communication.demo
     import _-yL._SafeStr_274;
     import _-yL._SafeStr_1033;
     import _-a5._SafeStr_1014;
-    import _-yL._SafeStr_133;
+    import com.sulake.habbo.communication.messages.incoming.handshake.InitDiffieHandshakeEvent;
     import _-yL._SafeStr_459;
     import _-ps._SafeStr_226;
     import _-yL._SafeStr_251;
@@ -45,7 +45,8 @@ package com.sulake.habbo.communication.demo
     import com.sulake.habbo.communication.demo.utils._SafeStr_3298;
     import com.sulake.habbo.communication.demo.utils.KeyObfuscator;
 
-    [SecureSWF(rename="true")]
+    [SecureSWF(rename = "true")]
+	// not sure if its rly HabboCommunicationDemo
     public class HabboCommunicationDemo 
     {
 
@@ -54,7 +55,7 @@ package com.sulake.habbo.communication.demo
         private var _keyExchange:IKeyExchange;
         private var _privateKey:String;
         private var _handshakeInProgress:Boolean;
-        private var _SafeStr_5120:Boolean;
+        private var _logoutInProgress:Boolean;
         private var _messageEvents:Vector.<IMessageEvent> = new Vector.<IMessageEvent>(0);
         private var _rsa:RSAKey;
 
@@ -72,7 +73,7 @@ package com.sulake.habbo.communication.demo
             addHabboConnectionMessageEvent(new _SafeStr_274(onDisconnectReason));
             addHabboConnectionMessageEvent(new _SafeStr_1033(onIdentityAccounts));
             addHabboConnectionMessageEvent(new _SafeStr_1014(onLoginFailedHotelClosed));
-            addHabboConnectionMessageEvent(new _SafeStr_133(onInitDiffieHandshake));
+            addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(onInitDiffieHandshake));
             addHabboConnectionMessageEvent(new _SafeStr_459(onAuthenticationOK));
             addHabboConnectionMessageEvent(new _SafeStr_226(onErrorReport));
             addHabboConnectionMessageEvent(new _SafeStr_251(onPing));
@@ -123,14 +124,14 @@ package com.sulake.habbo.communication.demo
 
         private function unloading(_arg_1:Event):void
         {
-            _SafeStr_5120 = true;
+            _logoutInProgress = true;
         }
 
         private function onInitDiffieHandshake(_arg_1:IMessageEvent):void
         {
             var _local_9:* = null;
-            var _local_16:IConnection = _arg_1.connection;
-            var _local_2:_SafeStr_133 = (_arg_1 as _SafeStr_133);
+            var connection:IConnection = _arg_1.connection;
+            var _local_2:InitDiffieHandshakeEvent = (_arg_1 as InitDiffieHandshakeEvent);
             var _local_3:ByteArray = new ByteArray();
             var _local_4:ByteArray = new ByteArray();
             _local_3.writeBytes(CryptoTools.hexStringToByteArray(_local_2.encryptedPrime));
@@ -186,7 +187,7 @@ package com.sulake.habbo.communication.demo
             var _local_14:ByteArray = new ByteArray();
             _local_15.writeMultiByte(_local_6, "iso-8859-1");
             _rsa.encrypt(_local_15, _local_14, _local_15.length);
-            _local_16.sendUnencrypted(new _SafeStr_371(CryptoTools.byteArrayToHexString(_local_14)));
+            connection.sendUnencrypted(new _SafeStr_371(CryptoTools.byteArrayToHexString(_local_14)));
         }
 
         private function onCompleteDiffieHandshake(_arg_1:IMessageEvent):void
@@ -296,7 +297,7 @@ package com.sulake.habbo.communication.demo
             {
                 updateRsaData();
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_ESTABLISHED");
-                _SafeStr_5120 = false;
+                _logoutInProgress = false;
                 _handshakeInProgress = true;
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_HANDSHAKING");
                 _local_2.sendUnencrypted(new _SafeStr_475());
@@ -322,7 +323,7 @@ package com.sulake.habbo.communication.demo
             _SafeStr_14.log(("[HabboLogin] Got disconnect reason: " + _arg_1.reason));
             _SafeStr_4147.disconnected(_arg_1.reason, _arg_1.getReasonName());
             _handshakeInProgress = false;
-            _SafeStr_5120 = true;
+            _logoutInProgress = true;
         }
 
         private function handleWebLogout(_arg_1:_SafeStr_274):void
@@ -367,7 +368,7 @@ package com.sulake.habbo.communication.demo
             if (ExternalInterface.available)
             {
                 ExternalInterface.call("FlashExternalInterface.logDisconnection", "Communication failure, client disconnected.");
-                if (((_arg_1.type == "close") && (!(_SafeStr_5120))))
+                if (((_arg_1.type == "close") && (!(_logoutInProgress))))
                 {
                     _local_2 = _SafeStr_4147.getProperty("logout.disconnect.url");
                     _local_2 = setOriginProperty(_local_2);
@@ -381,7 +382,7 @@ package com.sulake.habbo.communication.demo
                     };
                 };
             };
-            if (((_arg_1.type == "close") && (!(_SafeStr_5120))))
+            if (((_arg_1.type == "close") && (!(_logoutInProgress))))
             {
                 _SafeStr_4147.disconnected(-3, "");
             };
@@ -445,7 +446,7 @@ package com.sulake.habbo.communication.demo
 // _SafeStr_475 = "_-c1t" (String#29475, DoABC#4)
 // _keyExchange = "_-f1Q" (String#6919, DoABC#4)
 // _handshakeInProgress = "_-B1P" (String#8733, DoABC#4)
-// _SafeStr_5120 = "_-J1W" (String#6242, DoABC#4)
+// _logoutInProgress = "_-J1W" (String#6242, DoABC#4)
 // _SafeStr_588 = "_-T1Q" (String#28389, DoABC#4)
 // _SafeStr_7 = "_a_-_---" (String#39228, DoABC#4)
 // _SafeStr_79 = "_-411" (String#2835, DoABC#4)

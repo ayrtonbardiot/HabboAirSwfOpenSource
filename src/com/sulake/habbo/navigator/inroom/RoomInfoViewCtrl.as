@@ -26,7 +26,7 @@ package com.sulake.habbo.navigator.inroom
     import _-p1Y._SafeStr_878;
     import _-M1k._SafeStr_928;
     import _-M1k._SafeStr_362;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import _-XO._SafeStr_313;
 
     public class RoomInfoViewCtrl 
@@ -476,7 +476,7 @@ package com.sulake.habbo.navigator.inroom
 
         private function onAddRoomThumbnail(_arg_1:_SafeStr_3116):void
         {
-            (_navigator.windowManager as _SafeStr_20).context.createLinkEvent("roomThumbnailCamera/open");
+            (_navigator.windowManager as Component).context.createLinkEvent("roomThumbnailCamera/open");
             close();
             var _local_2:String = ((_navigator.getProperty("navigator.thumbnail.url_base") + _navigator.data.enteredGuestRoom.flatId) + ".png");
             _navigator.windowManager.resourceManager.removeAsset(_local_2);

@@ -12,7 +12,7 @@ package com.sulake.habbo.friendbar.landingview.widget
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import _-41O._SafeStr_1572;
     import com.sulake.core.window._SafeStr_3109;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import _-41O._SafeStr_511;
     import com.sulake.core.window.components.ITextWindow;
     import _-61d._SafeStr_750;
@@ -56,7 +56,7 @@ package com.sulake.habbo.friendbar.landingview.widget
         {
             if (((!(_landingView == null)) && (_landingView.windowManager)))
             {
-                _SafeStr_20(_landingView.windowManager).removeUpdateReceiver(this);
+                Component(_landingView.windowManager).removeUpdateReceiver(this);
             };
             _landingView = null;
             _SafeStr_6915 = null;
@@ -219,7 +219,7 @@ package com.sulake.habbo.friendbar.landingview.widget
                 if (_SafeStr_6922 > 1)
                 {
                     _SafeStr_6922 = 1;
-                    _SafeStr_20(_landingView.windowManager).removeUpdateReceiver(this);
+                    Component(_landingView.windowManager).removeUpdateReceiver(this);
                 };
                 updateMeter(Math.floor((getCurrentNeedleFrame() * _SafeStr_6922)));
             };
@@ -230,7 +230,7 @@ package com.sulake.habbo.friendbar.landingview.widget
             _SafeStr_6918 = _SafeStr_1071(_arg_1.parser).data;
             _SafeStr_6920 = false;
             refreshContent();
-            _SafeStr_20(_landingView.windowManager).registerUpdateReceiver(this, 10);
+            Component(_landingView.windowManager).registerUpdateReceiver(this, 10);
         }
 
         private function onCommunityCatalogButtonClick(_arg_1:_SafeStr_3116, _arg_2:_SafeStr_3109):void

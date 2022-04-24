@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.widget.contextmenu._SafeStr_3149;
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.ui.widget.furniture.guildfurnicontextmenu.GuildFurnitureContextMenuView;
     import com.sulake.habbo.ui.widget.furniture.effectbox.EffectBoxOpenDialogView;
@@ -19,7 +19,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.groups._SafeStr_1757;
@@ -32,7 +32,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
     public class FurnitureContextMenuWidget extends RoomWidgetBase implements _SafeStr_3149, _SafeStr_41 
     {
 
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
         private var _SafeStr_3882:FurnitureContextInfoView;
         private var _selectedObject:IRoomObject = null;
         private var _SafeStr_4321:GuildFurnitureContextMenuView;
@@ -49,7 +49,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
         private var _container:IRoomWidgetHandlerContainer = null;
         private var _SafeStr_4331:PurchasableClothingConfirmationView;
 
-        public function FurnitureContextMenuWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:_SafeStr_20, _arg_7:_SafeStr_1757, _arg_8:IHabboCatalog)
+        public function FurnitureContextMenuWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:Component, _arg_7:_SafeStr_1757, _arg_8:IHabboCatalog)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_5);
             _SafeStr_4147 = _arg_6;

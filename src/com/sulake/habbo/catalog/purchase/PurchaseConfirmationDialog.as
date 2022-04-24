@@ -9,7 +9,7 @@ package com.sulake.habbo.catalog.purchase
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.localization._SafeStr_18;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components._SafeStr_3263;
@@ -57,7 +57,7 @@ package com.sulake.habbo.catalog.purchase
         private var _catalog:HabboCatalog;
         private var _roomEngine:IRoomEngine;
         private var _localization:_SafeStr_18;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _offerId:int;
         private var _SafeStr_4890:String = "";
         private var _SafeStr_4786:int;
@@ -82,7 +82,7 @@ package com.sulake.habbo.catalog.purchase
         private var _window:_SafeStr_3263;
         private var _disposed:Boolean = false;
 
-        public function PurchaseConfirmationDialog(_arg_1:_SafeStr_18, _arg_2:_SafeStr_21)
+        public function PurchaseConfirmationDialog(_arg_1:_SafeStr_18, _arg_2:IAssetLibrary)
         {
             _localization = _arg_1;
             _assets = _arg_2;

@@ -7,7 +7,7 @@ package com.sulake.habbo.window.utils
     import flash.display.BitmapData;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.geom.Point;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
 
     public class _SafeStr_3422 
     {
@@ -15,7 +15,7 @@ package com.sulake.habbo.window.utils
         private static const GLYPH_ASSET_PREFIX:String = "unique_item_number_glyph_";
 
 
-        public static function createBitmap(_arg_1:_SafeStr_21, _arg_2:int, _arg_3:int, _arg_4:int):BitmapData
+        public static function createBitmap(_arg_1:IAssetLibrary, _arg_2:int, _arg_3:int, _arg_4:int):BitmapData
         {
             var _local_14:* = null;
             var _local_6:int;

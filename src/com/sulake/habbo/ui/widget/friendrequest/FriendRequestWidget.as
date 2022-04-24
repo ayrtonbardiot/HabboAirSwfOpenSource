@@ -6,11 +6,11 @@ package com.sulake.habbo.ui.widget.friendrequest
 {
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetFriendRequestUpdateEvent;
@@ -22,10 +22,10 @@ package com.sulake.habbo.ui.widget.friendrequest
     public class FriendRequestWidget extends RoomWidgetBase implements _SafeStr_41 
     {
 
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
         private var _SafeStr_4369:_SafeStr_24;
 
-        public function FriendRequestWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_20)
+        public function FriendRequestWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:Component)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _SafeStr_4147 = _arg_5;

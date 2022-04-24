@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.quest
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -32,7 +32,7 @@ package com.sulake.habbo.quest
     import com.sulake.iid.IIDRoomEngine;
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.assets.XmlAsset;
@@ -48,7 +48,7 @@ package com.sulake.habbo.quest
     import _-61d._SafeStr_545;
     import _-61d._SafeStr_410;
 
-    public class HabboQuestEngine extends _SafeStr_20 implements _SafeStr_2046, _SafeStr_41, ILinkEventTracker 
+    public class HabboQuestEngine extends Component implements _SafeStr_2046, _SafeStr_41, ILinkEventTracker 
     {
 
         private static const _SafeStr_8705:int = 5;
@@ -78,7 +78,7 @@ package com.sulake.habbo.quest
         private var _SafeStr_7342:Boolean = false;
         private var _SafeStr_3954:AchievementsResolutionController;
 
-        public function HabboQuestEngine(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboQuestEngine(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3955 = new QuestController(this);

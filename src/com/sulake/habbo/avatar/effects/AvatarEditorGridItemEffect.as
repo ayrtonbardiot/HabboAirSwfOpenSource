@@ -9,7 +9,7 @@ package com.sulake.habbo.avatar.effects
     import com.sulake.habbo.avatar._SafeStr_3339;
     import flash.display.BitmapData;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components._SafeStr_3264;
     import com.sulake.core.window.components.ITextWindow;
@@ -23,7 +23,7 @@ package com.sulake.habbo.avatar.effects
         private var _SafeStr_4617:Boolean = false;
         private var _SafeStr_6955:_SafeStr_3339;
 
-        public function AvatarEditorGridItemEffect(_arg_1:_SafeStr_3339, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function AvatarEditorGridItemEffect(_arg_1:_SafeStr_3339, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _window = _SafeStr_3133(_arg_2.buildFromXML((_arg_3.getAssetByName("avatar_editor_effect_griditem_xml").content as XML)));
             _SafeStr_4620 = _window.findChildByTag("BG_COLOR");

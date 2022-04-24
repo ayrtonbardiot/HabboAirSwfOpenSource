@@ -8,7 +8,7 @@ package com.sulake.core.window.graphics.renderer
     import flash.geom.Matrix;
     import com.sulake.core.window.utils._SafeStr_3371;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.utils.ITextFieldContainer;
     import com.sulake.core.window.components.ITextWindow;
     import flash.text.TextField;
@@ -29,7 +29,7 @@ package com.sulake.core.window.graphics.renderer
             _SafeStr_5956 = new Matrix();
         }
 
-        override public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:_SafeStr_21):void
+        override public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:IAssetLibrary):void
         {
             var _local_4:String = _arg_1.content.toString();
             _SafeStr_3371.setStyles(_SafeStr_3371.parseCSS(_local_4));

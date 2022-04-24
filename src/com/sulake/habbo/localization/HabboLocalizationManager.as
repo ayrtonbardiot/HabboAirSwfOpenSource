@@ -7,7 +7,7 @@ package com.sulake.habbo.localization
     import com.sulake.core.localization.CoreLocalizationManager;
     import flash.utils.Dictionary;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.Event;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.utils._SafeStr_24;
@@ -23,7 +23,7 @@ package com.sulake.habbo.localization
         private var _SafeStr_8639:Dictionary = new Dictionary();
         private var _romanNumerals:Array = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX"];
 
-        public function HabboLocalizationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboLocalizationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             _skipExternals = ((_arg_2 & 0x10000000) > 0);
             super(_arg_1, _arg_2, _arg_3);

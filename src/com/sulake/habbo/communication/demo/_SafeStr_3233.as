@@ -8,7 +8,7 @@ package com.sulake.habbo.communication.demo
     import com.sulake.habbo.communication.login.ILoginViewer;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window._SafeStr_3133;
     import flash.utils.Dictionary;
@@ -41,7 +41,7 @@ package com.sulake.habbo.communication.demo
 
         private var _SafeStr_5113:_SafeStr_19;
         private var _SafeStr_5108:_SafeStr_1695;
-        private var _SafeStr_5107:_SafeStr_21;
+        private var _SafeStr_5107:IAssetLibrary;
         private var _SafeStr_4003:IModalDialog;
         private var _window:_SafeStr_3133;
         private var _firstTryUsingExistingSession:Boolean = false;
@@ -57,7 +57,7 @@ package com.sulake.habbo.communication.demo
         private var _SafeStr_5115:Vector.<AvatarData>;
         private var _SafeStr_5109:AvatarData;
 
-        public function _SafeStr_3233(_arg_1:_SafeStr_19, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695)
+        public function _SafeStr_3233(_arg_1:_SafeStr_19, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695)
         {
             _SafeStr_5113 = _arg_1;
             _SafeStr_5107 = _arg_2;
@@ -68,7 +68,7 @@ package com.sulake.habbo.communication.demo
             createWindow();
         }
 
-        public static function getModalXmlWindow(_arg_1:String, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695, _arg_4:String="_xml"):IModalDialog
+        public static function getModalXmlWindow(_arg_1:String, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695, _arg_4:String="_xml"):IModalDialog
         {
             var _local_7:* = null;
             var _local_5:* = null;

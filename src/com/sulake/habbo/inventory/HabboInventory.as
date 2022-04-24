@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.inventory
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -20,7 +20,7 @@ package com.sulake.habbo.inventory
     import __AS3__.vec.Vector;
     import flash.utils.Timer;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboWindowManager;
@@ -55,7 +55,7 @@ package com.sulake.habbo.inventory
     import com.sulake.habbo.inventory.badges.Badge;
     import com.sulake.iid.*;
 
-    public class HabboInventory extends _SafeStr_20 implements _SafeStr_1708, ILinkEventTracker 
+    public class HabboInventory extends Component implements _SafeStr_1708, ILinkEventTracker 
     {
 
         private var _communication:IHabboCommunicationManager;
@@ -80,7 +80,7 @@ package com.sulake.habbo.inventory
         private var _SafeStr_3891:Vector.<String>;
         private var _SafeStr_3885:Timer;
 
-        public function HabboInventory(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboInventory(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3857 = new Purse();

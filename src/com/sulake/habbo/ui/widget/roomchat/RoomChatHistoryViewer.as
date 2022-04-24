@@ -11,7 +11,7 @@ package com.sulake.habbo.ui.widget.roomchat
     import com.sulake.core.window.components.IScrollableWindow;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window._SafeStr_3133;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.MouseEvent;
 
     public class RoomChatHistoryViewer implements _SafeStr_13 
@@ -32,7 +32,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _SafeStr_5477:Boolean = false;
         private var _SafeStr_5476:Boolean = false;
 
-        public function RoomChatHistoryViewer(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_3133, _arg_4:_SafeStr_21)
+        public function RoomChatHistoryViewer(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_3133, _arg_4:IAssetLibrary)
         {
             _SafeStr_4036 = false;
             _SafeStr_4981 = _arg_1;

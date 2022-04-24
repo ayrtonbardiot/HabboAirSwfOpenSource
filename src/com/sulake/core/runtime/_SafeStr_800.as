@@ -221,7 +221,7 @@ package com.sulake.core.runtime
         {
             if (_SafeStr_8050 != null)
             {
-                for each (var _local_1:_SafeStr_20 in _SafeStr_8050)
+                for each (var _local_1:Component in _SafeStr_8050)
                 {
                     if (_local_1.locked)
                     {

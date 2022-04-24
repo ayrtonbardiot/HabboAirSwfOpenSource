@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.navigator
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.IRoomSessionManager;
@@ -20,7 +20,7 @@ package com.sulake.habbo.navigator
     import com.sulake.habbo.navigator.roomsettings.RoomCreateViewCtrl;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.navigator.domain.Tabs;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.navigator.mainview.OfficialRoomEntryManager;
@@ -67,7 +67,7 @@ package com.sulake.habbo.navigator
     import com.sulake.habbo.session.events.PerksUpdatedEvent;
     import com.sulake.habbo.navigator.inroom.*;
 
-    public class HabboNavigator extends _SafeStr_20 implements _SafeStr_1696, _SafeStr_1697, ILinkEventTracker 
+    public class HabboNavigator extends Component implements _SafeStr_1696, _SafeStr_1697, ILinkEventTracker 
     {
 
         private var _communication:IHabboCommunicationManager;
@@ -84,7 +84,7 @@ package com.sulake.habbo.navigator
         private var _SafeStr_3744:RoomCreateViewCtrl;
         private var _SafeStr_3740:NavigatorData;
         private var _SafeStr_3742:Tabs;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3757:_SafeStr_3118;
         private var _toolbar:IHabboToolbar;
         private var _SafeStr_3746:RoomSettingsCtrl;
@@ -99,7 +99,7 @@ package com.sulake.habbo.navigator
         private var _SafeStr_3752:Boolean = true;
         private var _webRoomReportedName:String = null;
 
-        public function HabboNavigator(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboNavigator(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3745 = new AssetLibraryCollection("NavigatorComponent");
@@ -147,7 +147,7 @@ package com.sulake.habbo.navigator
             return (_SafeStr_3744);
         }
 
-        public function get assetLibrary():_SafeStr_21
+        public function get assetLibrary():IAssetLibrary
         {
             return (_SafeStr_3745);
         }

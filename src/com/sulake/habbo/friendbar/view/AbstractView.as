@@ -4,14 +4,14 @@
 
 package com.sulake.habbo.friendbar.view
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.avatar._SafeStr_1701;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.tracking._SafeStr_1704;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDSessionDataManager;
     import com.sulake.iid.IIDAvatarRenderManager;
@@ -20,7 +20,7 @@ package com.sulake.habbo.friendbar.view
     import com.sulake.iid.IIDHabboTracking;
     import __AS3__.vec.Vector;
 
-    public class AbstractView extends _SafeStr_20 
+    public class AbstractView extends Component 
     {
 
         protected var _windowManager:_SafeStr_1695;
@@ -29,7 +29,7 @@ package com.sulake.habbo.friendbar.view
         protected var _sessionDataManager:ISessionDataManager;
         protected var _tracking:_SafeStr_1704;
 
-        public function AbstractView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function AbstractView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

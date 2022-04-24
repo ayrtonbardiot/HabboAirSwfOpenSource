@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.catalog
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.session.product._SafeStr_1706;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.core.runtime.events.ILinkEventTracker;
@@ -57,7 +57,7 @@ package com.sulake.habbo.catalog
     import com.sulake.habbo.catalog.vault.VaultController;
     import com.sulake.iid.IIDVaultController;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.display.BitmapData;
     import com.sulake.core.window.components._SafeStr_3189;
@@ -235,7 +235,7 @@ package com.sulake.habbo.catalog
     import com.sulake.habbo.catalog.offers.IOfferCenter;
     import com.sulake.iid.*;
 
-    public class HabboCatalog extends _SafeStr_20 implements IHabboCatalog, _SafeStr_1706, _SafeStr_41, ILinkEventTracker, _SafeStr_1707 
+    public class HabboCatalog extends Component implements IHabboCatalog, _SafeStr_1706, _SafeStr_41, ILinkEventTracker, _SafeStr_1707 
     {
 
         public static const GET_SNOWWAR_TOKENS:String = "GET_SNOWWAR_TOKENS";
@@ -318,7 +318,7 @@ package com.sulake.habbo.catalog
         private var _SafeStr_3878:Boolean;
         private var _offerCenter:OfferCenter;
 
-        public function HabboCatalog(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboCatalog(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3857 = new Purse();
@@ -1153,7 +1153,7 @@ package com.sulake.habbo.catalog
 
         public function getPixelEffectIcon(_arg_1:int):BitmapData
         {
-            var _local_2:BitmapDataAsset = ((_inventory as _SafeStr_20).assets.getAssetByName((("fx_icon_" + _arg_1) + "_png")) as BitmapDataAsset);
+            var _local_2:BitmapDataAsset = ((_inventory as Component).assets.getAssetByName((("fx_icon_" + _arg_1) + "_png")) as BitmapDataAsset);
             if (((!(_local_2 == null)) && (!(_local_2.content == null))))
             {
                 return ((_local_2.content as BitmapData).clone());
@@ -3371,4 +3371,4 @@ package com.sulake.habbo.catalog
 // _SafeStr_990 = "_-D1i" (String#4238, DoABC#4)
 
 
-
+

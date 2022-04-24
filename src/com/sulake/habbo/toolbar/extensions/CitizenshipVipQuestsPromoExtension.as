@@ -5,7 +5,7 @@
 package com.sulake.habbo.toolbar.extensions
 {
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.IEventDispatcher;
     import com.sulake.core.localization._SafeStr_17;
     import com.sulake.core.communication.connection.IConnection;
@@ -26,7 +26,7 @@ package com.sulake.habbo.toolbar.extensions
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_3983:IEventDispatcher;
         private var _localization:_SafeStr_17;
         private var _connection:IConnection;
@@ -38,7 +38,7 @@ package com.sulake.habbo.toolbar.extensions
         private var _vipQuestsCampaignName:String;
         private var _SafeStr_5222:IMessageEvent = null;
 
-        public function CitizenshipVipQuestsPromoExtension(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IEventDispatcher, _arg_5:_SafeStr_17, _arg_6:IConnection)
+        public function CitizenshipVipQuestsPromoExtension(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IEventDispatcher, _arg_5:_SafeStr_17, _arg_6:IConnection)
         {
             _windowManager = _arg_2;
             _assets = _arg_3;

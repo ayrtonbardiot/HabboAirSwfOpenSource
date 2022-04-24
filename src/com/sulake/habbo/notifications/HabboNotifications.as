@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.notifications
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -21,7 +21,7 @@ package com.sulake.habbo.notifications
     import com.sulake.habbo.notifications.feed.NotificationController;
     import com.sulake.habbo.notifications.singular.SingularNotificationController;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboInventory;
     import com.sulake.iid.IIDHabboFriendList;
@@ -40,7 +40,7 @@ package com.sulake.habbo.notifications
     import adobe.serialization.json.JSONDecoder;
     import com.sulake.habbo.catalog.event.CatalogEvent;
 
-    public class HabboNotifications extends _SafeStr_20 implements _SafeStr_2081 
+    public class HabboNotifications extends Component implements _SafeStr_2081 
     {
 
         private var _communication:IHabboCommunicationManager;
@@ -61,13 +61,13 @@ package com.sulake.habbo.notifications
         private var _SafeStr_3963:_SafeStr_3118;
         private var _SafeStr_3960:Boolean;
 
-        public function HabboNotifications(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboNotifications(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3960 = false;
         }
 
-        public function get assetLibrary():_SafeStr_21
+        public function get assetLibrary():IAssetLibrary
         {
             return (assets);
         }

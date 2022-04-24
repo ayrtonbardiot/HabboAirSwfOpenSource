@@ -4,13 +4,13 @@
 
 package com.sulake.habbo.ui.widget.furniture.trophy
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
 
     public /*dynamic*/ interface ITrophyFurniWidget 
     {
 
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function get name():String;
         function get date():String;
         function get color():int;

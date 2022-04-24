@@ -505,7 +505,7 @@ package com.sulake.habbo.communication
     import _-u7._SafeStr_745;
     import _-K1h._SafeStr_388;
     import _-X7._SafeStr_941;
-    import _-yL._SafeStr_133;
+    import com.sulake.habbo.communication.messages.incoming.handshake.InitDiffieHandshakeEvent;
     import _-12y._SafeStr_437;
     import _-81g._SafeStr_586;
     import _-O1Z._SafeStr_931;
@@ -1518,7 +1518,7 @@ package com.sulake.habbo.communication
             _incoming[1158] = _SafeStr_745;
             _incoming[1163] = _SafeStr_388;
             _incoming[1169] = _SafeStr_941;
-            _incoming[1173] = _SafeStr_133;
+			_incoming[1173] = InitDiffieHandshakeEvent;
             _incoming[1183] = _SafeStr_437;
             _incoming[1185] = _SafeStr_586;
             _incoming[1196] = _SafeStr_931;

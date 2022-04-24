@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.game.snowwar.utils
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemListWindow;
@@ -24,7 +24,7 @@ package com.sulake.habbo.game.snowwar.utils
     public class WindowUtils 
     {
 
-        private static var _assets:_SafeStr_21;
+        private static var _assets:IAssetLibrary;
         private static var _windowManager:_SafeStr_1695;
 
 
@@ -53,7 +53,7 @@ package com.sulake.habbo.game.snowwar.utils
             };
         }
 
-        public static function init(_arg_1:_SafeStr_21, _arg_2:_SafeStr_1695):void
+        public static function init(_arg_1:IAssetLibrary, _arg_2:_SafeStr_1695):void
         {
             _assets = _arg_1;
             _windowManager = _arg_2;

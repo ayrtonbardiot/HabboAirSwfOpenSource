@@ -10,14 +10,14 @@ package com.sulake.habbo.ui.widget.roomchat
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemListWindow;
     import flash.geom.Point;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.ui.handler.ChatWidgetHandler;
     import com.sulake.core.window.components._SafeStr_3216;
     import flash.geom.Rectangle;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.window._SafeStr_3109;
     import flash.utils.getTimer;
@@ -75,7 +75,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _historyViewer:RoomChatHistoryViewer;
         private var _SafeStr_4250:Boolean = false;
         private var _SafeStr_4600:Boolean = false;
-        private var _SafeStr_4147:_SafeStr_20 = null;
+        private var _SafeStr_4147:Component = null;
         private var _config:_SafeStr_19;
         private var _SafeStr_4597:int = 150;
         private var _SafeStr_4584:int;
@@ -85,7 +85,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _SafeStr_4583:int;
         private var _maxFastLevels:int;
 
-        public function RoomChatWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:int, _arg_7:_SafeStr_20)
+        public function RoomChatWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:int, _arg_7:Component)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             (_arg_1 as ChatWidgetHandler).widget = this;

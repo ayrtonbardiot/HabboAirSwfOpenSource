@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.nux
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.navigator._SafeStr_1696;
@@ -16,7 +16,7 @@ package com.sulake.habbo.nux
     import com.sulake.core.communication.connection.IConnection;
     import flash.utils.Timer;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboWindowManager;
@@ -40,7 +40,7 @@ package com.sulake.habbo.nux
     import _-qv._SafeStr_895;
     import flash.events.TimerEvent;
 
-    public class HabboNuxDialogs extends _SafeStr_20 implements ILinkEventTracker 
+    public class HabboNuxDialogs extends Component implements ILinkEventTracker 
     {
 
         protected var _communicationManager:IHabboCommunicationManager;
@@ -56,7 +56,7 @@ package com.sulake.habbo.nux
         private var _SafeStr_5129:NuxNoobRoomOfferView;
         private var _SafeStr_5126:Timer;
 
-        public function HabboNuxDialogs(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboNuxDialogs(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

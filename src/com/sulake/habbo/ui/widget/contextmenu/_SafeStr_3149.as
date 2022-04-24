@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.ui.widget.contextmenu
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.ui.widget.IRoomWidgetMessageListener;
     import com.sulake.habbo.catalog.IHabboCatalog;
@@ -13,7 +13,7 @@ package com.sulake.habbo.ui.widget.contextmenu
     public /*dynamic*/ interface _SafeStr_3149 
     {
 
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function get windowManager():_SafeStr_1695;
         function get messageListener():IRoomWidgetMessageListener;
         function get catalog():IHabboCatalog;

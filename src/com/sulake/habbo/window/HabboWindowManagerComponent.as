@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.window
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.window._SafeStr_1694;
     import com.sulake.core.window._SafeStr_1693;
     import com.sulake.core.runtime._SafeStr_41;
@@ -29,7 +29,7 @@ package com.sulake.habbo.window
     import com.sulake.core.utils._SafeStr_278;
     import com.sulake.core.window.components.HTMLTextController;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDSessionDataManager;
     import com.sulake.iid.IIDHabboLocalizationManager;
@@ -81,7 +81,7 @@ package com.sulake.habbo.window
     import com.sulake.core.window.events.*;
     import com.sulake.core.window.tools.*;
 
-    public class HabboWindowManagerComponent extends _SafeStr_20 implements _SafeStr_1695, _SafeStr_1694, _SafeStr_1693, _SafeStr_41, IInputEventTracker, _SafeStr_1692 
+    public class HabboWindowManagerComponent extends Component implements _SafeStr_1695, _SafeStr_1694, _SafeStr_1693, _SafeStr_41, IInputEventTracker, _SafeStr_1692 
     {
 
         private static const TRACKING_EVENT_INPUT:Event = new Event("HABBO_WINDOW_TRACKING_EVENT_INPUT");
@@ -113,7 +113,7 @@ package com.sulake.habbo.window
         private var _SafeStr_3724:HabbletLinkHandler;
         private var _SafeStr_3726:ElementPointerHandler;
 
-        public function HabboWindowManagerComponent(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboWindowManagerComponent(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_278.refresh();

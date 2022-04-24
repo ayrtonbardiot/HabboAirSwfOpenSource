@@ -6,7 +6,7 @@ package com.sulake.core.window.graphics.renderer
 {
     import flash.utils.Dictionary;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
@@ -77,7 +77,7 @@ package com.sulake.core.window.graphics.renderer
             return (_disposed);
         }
 
-        public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:_SafeStr_21):void
+        public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:IAssetLibrary):void
         {
         }
 

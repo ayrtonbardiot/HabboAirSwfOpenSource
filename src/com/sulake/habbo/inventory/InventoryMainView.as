@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory
 {
     import flash.geom.Point;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.toolbar.IHabboToolbar;
@@ -27,7 +27,7 @@ package com.sulake.habbo.inventory
         private const DEFAULT_VIEW_LOCATION:Point = new Point(120, 150);
 
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_4079:_SafeStr_3263;
         private var _SafeStr_4941:String;
         private var _SafeStr_4949:_SafeStr_3133;
@@ -42,7 +42,7 @@ package com.sulake.habbo.inventory
         private var _SafeStr_4947:_SafeStr_3133;
         private var _SafeStr_4948:Dictionary;
 
-        public function InventoryMainView(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function InventoryMainView(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _SafeStr_4360 = _arg_1;
             _SafeStr_3745 = _arg_3;

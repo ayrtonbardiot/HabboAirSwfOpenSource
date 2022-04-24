@@ -7,7 +7,7 @@ package com.sulake.habbo.avatar.structure
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import flash.net.URLRequest;
     import com.sulake.core.assets.AssetLoaderStruct;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core._SafeStr_79;
     import flash.events.Event;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -19,7 +19,7 @@ package com.sulake.habbo.avatar.structure
 
         private var _SafeStr_4232:IStructureData;
 
-        public function AvatarStructureDownload(_arg_1:_SafeStr_21, _arg_2:String, _arg_3:IStructureData)
+        public function AvatarStructureDownload(_arg_1:IAssetLibrary, _arg_2:String, _arg_3:IStructureData)
         {
             _SafeStr_4232 = _arg_3;
             if (_arg_1.hasAsset(_arg_2))

@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.friendbar.groupforums
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
@@ -18,7 +18,7 @@ package com.sulake.habbo.friendbar.groupforums
     import flash.utils.Dictionary;
     import flash.utils.Timer;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboConfigurationManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -66,7 +66,7 @@ package com.sulake.habbo.friendbar.groupforums
     import _-VM._SafeStr_168;
     import flash.events.TimerEvent;
 
-    public class GroupForumController extends _SafeStr_20 implements _SafeStr_3254, ILinkEventTracker 
+    public class GroupForumController extends Component implements _SafeStr_3254, ILinkEventTracker 
     {
 
         public static const FORUMS_LIST_CODE_ACTIVE:int = 0;
@@ -100,7 +100,7 @@ package com.sulake.habbo.friendbar.groupforums
         private var _SafeStr_5319:int = 0;
         private var _SafeStr_5320:Timer;
 
-        public function GroupForumController(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function GroupForumController(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

@@ -15,7 +15,7 @@ package com.sulake.habbo.ui.handler
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRequestWidgetMessage;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.localization._SafeStr_17;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineZoomEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import flash.ui.Mouse;
@@ -347,11 +347,11 @@ package com.sulake.habbo.ui.handler
                                         {
                                             if ("group" == _local_19)
                                             {
-                                                (_container.roomEngine as _SafeStr_20).context.createLinkEvent("navigator/goto/predefined_group_lobby");
+                                                (_container.roomEngine as Component).context.createLinkEvent("navigator/goto/predefined_group_lobby");
                                             }
                                             else
                                             {
-                                                (_container.roomEngine as _SafeStr_20).context.createLinkEvent("navigator/goto/predefined_noob_lobby");
+                                                (_container.roomEngine as Component).context.createLinkEvent("navigator/goto/predefined_noob_lobby");
                                             };
                                         };
                                         return (null);

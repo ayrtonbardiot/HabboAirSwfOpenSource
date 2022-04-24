@@ -11,7 +11,7 @@ package com.sulake.habbo.toolbar.offers
     import com.sulake.habbo.catalog.offers.IOfferCenter;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -25,7 +25,7 @@ package com.sulake.habbo.toolbar.offers
         private var _offerCenter:IOfferCenter;
         private var _SafeStr_4162:IItemListWindow;
 
-        public function OfferExtension(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IHabboCatalog)
+        public function OfferExtension(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IHabboCatalog)
         {
             _toolbar = _arg_1;
             _window = (_arg_2.buildFromXML((_arg_3.getAssetByName("offer_extension_xml").content as XML)) as _SafeStr_3133);

@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.ui.widget.furniture.placeholder
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.assets.XmlAsset;
@@ -15,11 +15,11 @@ package com.sulake.habbo.ui.widget.furniture.placeholder
     public class PlaceholderView 
     {
 
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _windowManager:_SafeStr_1695;
         private var _window:_SafeStr_3133;
 
-        public function PlaceholderView(_arg_1:_SafeStr_21, _arg_2:_SafeStr_1695)
+        public function PlaceholderView(_arg_1:IAssetLibrary, _arg_2:_SafeStr_1695)
         {
             _SafeStr_3745 = _arg_1;
             _windowManager = _arg_2;

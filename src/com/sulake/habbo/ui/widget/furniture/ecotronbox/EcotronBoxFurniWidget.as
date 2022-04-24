@@ -9,7 +9,7 @@ package com.sulake.habbo.ui.widget.furniture.ecotronbox
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetEcotronBoxDataUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
@@ -39,7 +39,7 @@ package com.sulake.habbo.ui.widget.furniture.ecotronbox
         private var _furniTypeName:String = "ecotron_box";
         private var _interfaceMapByFurniTypeName:_SafeStr_24 = new _SafeStr_24();
 
-        public function EcotronBoxFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null)
+        public function EcotronBoxFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _interfaceMapByFurniTypeName.add("", "ecotronbox_card");

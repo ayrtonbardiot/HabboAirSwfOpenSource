@@ -7,7 +7,7 @@ package com.sulake.habbo.quest.seasonalcalendar
     import flash.geom.Point;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.display.BitmapData;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -31,7 +31,7 @@ package com.sulake.habbo.quest.seasonalcalendar
         private var _SafeStr_6954:BitmapData;
         private var _SafeStr_6953:BitmapData;
 
-        public function CalendarArrowButton(_arg_1:_SafeStr_21, _arg_2:_SafeStr_3264, _arg_3:int, _arg_4:Function)
+        public function CalendarArrowButton(_arg_1:IAssetLibrary, _arg_2:_SafeStr_3264, _arg_3:int, _arg_4:Function)
         {
             _window = _arg_2;
             _window.procedure = procedure;

@@ -12,7 +12,7 @@ package com.sulake.habbo.catalog.club
     import _-q1n._SafeStr_566;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.session.product._SafeStr_3182;
     import com.sulake.habbo.catalog.purse._SafeStr_3142;
@@ -135,7 +135,7 @@ package com.sulake.habbo.catalog.club
             return (_catalog.localization);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             if (!_catalog)
             {

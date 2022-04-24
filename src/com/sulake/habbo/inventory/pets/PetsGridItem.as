@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory.pets
 {
     import _-Zz._SafeStr_1573;
     import com.sulake.core.window._SafeStr_3133;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.assets.XmlAsset;
     import flash.display.BitmapData;
@@ -23,7 +23,7 @@ package com.sulake.habbo.inventory.pets
 
         private var _SafeStr_5316:_SafeStr_1573;
         private var _window:_SafeStr_3133;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_4620:_SafeStr_3109;
         private var _SafeStr_4617:Boolean;
         private var _SafeStr_6889:PetsView;
@@ -31,7 +31,7 @@ package com.sulake.habbo.inventory.pets
         private var _SafeStr_6695:Boolean;
         private var _isUnseen:Boolean;
 
-        public function PetsGridItem(_arg_1:PetsView, _arg_2:_SafeStr_1573, _arg_3:_SafeStr_1695, _arg_4:_SafeStr_21, _arg_5:Boolean)
+        public function PetsGridItem(_arg_1:PetsView, _arg_2:_SafeStr_1573, _arg_3:_SafeStr_1695, _arg_4:IAssetLibrary, _arg_5:Boolean)
         {
             if (((((_arg_1 == null) || (_arg_2 == null)) || (_arg_3 == null)) || (_arg_4 == null)))
             {

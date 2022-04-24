@@ -7,7 +7,7 @@ package com.sulake.habbo.communication.demo
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.core.window._SafeStr_1694;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.window.components._SafeStr_3284;
     import com.sulake.core.assets.XmlAsset;
@@ -29,13 +29,13 @@ package com.sulake.habbo.communication.demo
 
         private var _SafeStr_5113:_SafeStr_19;
         private var _windowManager:_SafeStr_1694;
-        private var _SafeStr_5107:_SafeStr_21;
+        private var _SafeStr_5107:IAssetLibrary;
         private var _SafeStr_6040:_SafeStr_3109;
         private var _SafeStr_6041:int;
         private var _SafeStr_6039:_SafeStr_3284;
         private var _SafeStr_6038:String;
 
-        public function _SafeStr_3337(_arg_1:_SafeStr_3284, _arg_2:_SafeStr_19, _arg_3:_SafeStr_1694, _arg_4:_SafeStr_21)
+        public function _SafeStr_3337(_arg_1:_SafeStr_3284, _arg_2:_SafeStr_19, _arg_3:_SafeStr_1694, _arg_4:IAssetLibrary)
         {
             _SafeStr_5113 = _arg_2;
             _windowManager = _arg_3;

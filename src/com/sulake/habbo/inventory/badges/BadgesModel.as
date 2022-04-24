@@ -8,7 +8,7 @@ package com.sulake.habbo.inventory.badges
     import com.sulake.habbo.inventory.HabboInventory;
     import __AS3__.vec.Vector;
     import com.sulake.core.utils._SafeStr_24;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.assets.IAsset;
@@ -32,12 +32,12 @@ package com.sulake.habbo.inventory.badges
         private var _SafeStr_4145:Vector.<Badge>;
         private var _SafeStr_5029:Vector.<Badge>;
         private var _SafeStr_5028:_SafeStr_24;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _disposed:Boolean = false;
 
-        public function BadgesModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21)
+        public function BadgesModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:IAssetLibrary)
         {
             _SafeStr_4360 = _arg_1;
             _windowManager = _arg_2;

@@ -22,7 +22,7 @@ package
     import flash.system.System;
     import com.sulake.core.runtime.IID;
     import com.sulake.iid.IIDHabboLocalizationManager;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.iid.IIDHabboConfigurationManager;
     import com.sulake.iid.IIDRoomEngine;
     import flash.utils.setInterval;
@@ -281,12 +281,12 @@ package
 
         private function addInitializationProgressListeners():void
         {
-            simpleQueueInterface(new IIDHabboLocalizationManager(), function (_arg_1:IID, _arg_2:_SafeStr_20):void
+            simpleQueueInterface(new IIDHabboLocalizationManager(), function (_arg_1:IID, _arg_2:Component):void
             {
                 _arg_2.events.addEventListener("complete", onLocalizationComplete);
             });
             simpleQueueInterface(new IIDHabboConfigurationManager(), onConfigurationComplete);
-            simpleQueueInterface(new IIDRoomEngine(), function (_arg_1:IID, _arg_2:_SafeStr_20):void
+            simpleQueueInterface(new IIDRoomEngine(), function (_arg_1:IID, _arg_2:Component):void
             {
                 _arg_2.events.addEventListener("REE_ENGINE_INITIALIZED", onRoomEngineReady);
             });
@@ -300,7 +300,7 @@ package
             updateProgressBar();
         }
 
-        private function onConfigurationComplete(_arg_1:IID, _arg_2:_SafeStr_20):void
+        private function onConfigurationComplete(_arg_1:IID, _arg_2:Component):void
         {
             HabboAir.trackLoginStep("client.init.config.loaded");
             _completedInitSteps++;

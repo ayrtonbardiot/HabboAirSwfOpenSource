@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.roomchat
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components._SafeStr_3264;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.display.BitmapData;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.geom.Rectangle;
@@ -34,7 +34,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _SafeStr_6358:_SafeStr_3264;
         private var _SafeStr_4585:_SafeStr_3133;
         private var _region:IRegionWindow;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _lastWidth:int = 0;
         private var _SafeStr_3734:int = -1;
         private var _SafeStr_6361:BitmapData;
@@ -46,7 +46,7 @@ package com.sulake.habbo.ui.widget.roomchat
         private var _SafeStr_6363:BitmapData;
         private var _regionRightMargin:int = 30;
 
-        public function RoomChatHistoryPulldown(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_3133, _arg_4:_SafeStr_21)
+        public function RoomChatHistoryPulldown(_arg_1:RoomChatWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_3133, _arg_4:IAssetLibrary)
         {
             _SafeStr_4981 = _arg_1;
             _windowManager = _arg_2;

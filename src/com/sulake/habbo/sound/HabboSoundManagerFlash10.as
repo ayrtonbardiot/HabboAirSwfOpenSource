@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.sound
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.communication.connection.IConnection;
@@ -18,7 +18,7 @@ package com.sulake.habbo.sound
     import com.sulake.iid.IIDRoomEngine;
     import com.sulake.iid.IIDHabboNotifications;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.media.Sound;
     import com.sulake.core.assets.IAsset;
     import com.sulake.habbo.sound.trax.TraxData;
@@ -34,7 +34,7 @@ package com.sulake.habbo.sound
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.room.events.RoomEngineObjectPlaySoundEvent;
 
-    public class HabboSoundManagerFlash10 extends _SafeStr_20 implements _SafeStr_2088, _SafeStr_41 
+    public class HabboSoundManagerFlash10 extends Component implements _SafeStr_2088, _SafeStr_41 
     {
 
         private var _communication:IHabboCommunicationManager;
@@ -53,7 +53,7 @@ package com.sulake.habbo.sound
         private var _SafeStr_3981:_SafeStr_24 = new _SafeStr_24();
         private var _SafeStr_3982:Boolean = false;
 
-        public function HabboSoundManagerFlash10(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null, _arg_4:Boolean=true)
+        public function HabboSoundManagerFlash10(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null, _arg_4:Boolean=true)
         {
             super(_arg_1, _arg_2, _arg_3);
             if (_arg_4)

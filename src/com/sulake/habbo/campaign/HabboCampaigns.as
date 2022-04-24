@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.campaign
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -15,7 +15,7 @@ package com.sulake.habbo.campaign
     import com.sulake.habbo.campaign.calendar.CalendarView;
     import _-w1X._SafeStr_1535;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -34,7 +34,7 @@ package com.sulake.habbo.campaign
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.habbo.room._SafeStr_3248;
 
-    public class HabboCampaigns extends _SafeStr_20 implements ILinkEventTracker 
+    public class HabboCampaigns extends Component implements ILinkEventTracker 
     {
 
         private var _communicationManager:IHabboCommunicationManager;
@@ -48,7 +48,7 @@ package com.sulake.habbo.campaign
         private var _SafeStr_4121:int = -1;
         private var _SafeStr_4119:Boolean = false;
 
-        public function HabboCampaigns(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboCampaigns(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

@@ -2,17 +2,17 @@
 
 //_-yL._SafeStr_133
 
-package _-yL
+package com.sulake.habbo.communication.messages.incoming.handshake
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import _-K1r._SafeStr_1096;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_133 extends MessageEvent implements IMessageEvent 
+    public class InitDiffieHandshakeEvent extends MessageEvent implements IMessageEvent 
     {
 
-        public function _SafeStr_133(_arg_1:Function)
+        public function InitDiffieHandshakeEvent(_arg_1:Function)
         {
             super(_arg_1, _SafeStr_1096);
         }

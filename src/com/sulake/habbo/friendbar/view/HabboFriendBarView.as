@@ -21,7 +21,7 @@ package com.sulake.habbo.friendbar.view
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboFriendList;
     import com.sulake.iid.IIDHabboFriendBarData;
@@ -115,7 +115,7 @@ package com.sulake.habbo.friendbar.view
         private var _SafeStr_4582:Timer;
         private var _notifyMessengerOnStartup:Boolean = false;
 
-        public function HabboFriendBarView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboFriendBarView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_5167 = new TextCropper();

@@ -9,7 +9,7 @@ package com.sulake.habbo.ui.widget.furniture.backgroundcolor
     import __AS3__.vec.Vector;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler.FurnitureBackgroundColorWidgetHandler;
     import com.sulake.core.window._SafeStr_3133;
@@ -35,7 +35,7 @@ package com.sulake.habbo.ui.widget.furniture.backgroundcolor
         private var _saturation:int;
         private var _SafeStr_4610:int;
 
-        public function BackgroundColorFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function BackgroundColorFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             this.handler.widget = this;

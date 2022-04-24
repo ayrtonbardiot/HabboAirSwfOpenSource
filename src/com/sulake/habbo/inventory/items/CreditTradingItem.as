@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.inventory.items
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.object.data._SafeStr_1612;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.room.IRoomEngine;
@@ -17,9 +17,9 @@ package com.sulake.habbo.inventory.items
         private static const THUMB_WINDOW_LAYOUT:String = "inventory_thumb_credits_xml";
 
         private var _SafeStr_5970:int;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
 
-        public function CreditTradingItem(_arg_1:FurniModel, _arg_2:_SafeStr_21, _arg_3:IRoomEngine, _arg_4:int)
+        public function CreditTradingItem(_arg_1:FurniModel, _arg_2:IAssetLibrary, _arg_3:IRoomEngine, _arg_4:int)
         {
             var _local_5:* = null;
             _SafeStr_5970 = _arg_4;

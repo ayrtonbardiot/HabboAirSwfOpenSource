@@ -4,11 +4,11 @@
 
 package com.sulake.habbo.avatar
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.avatar.alias.AssetAliasCollection;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboConfigurationManager;
     import __AS3__.vec.Vector;
@@ -29,7 +29,7 @@ package com.sulake.habbo.avatar
     import com.sulake.iid.*;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_1702 extends _SafeStr_20 implements _SafeStr_1701 
+    public class _SafeStr_1702 extends Component implements _SafeStr_1701 
     {
 
         private const AVATAR_PLACEHOLDER_FIGURE:String = "hd-99999-99999";
@@ -49,7 +49,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_3765:Boolean;
         private var _SafeStr_3770:Array = [];
 
-        public function _SafeStr_1702(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21, _arg_4:Boolean=false)
+        public function _SafeStr_1702(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary, _arg_4:Boolean=false)
         {
             _inNuxFlow = _arg_4;
             _arg_2 = (_arg_2 | 0x04);

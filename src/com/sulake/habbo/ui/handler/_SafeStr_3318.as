@@ -9,7 +9,7 @@ package com.sulake.habbo.ui.handler
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.room.events.RoomEngineToWidgetEvent;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import flash.events.Event;
 
     public class _SafeStr_3318 implements IRoomWidgetHandler 
@@ -68,7 +68,7 @@ package com.sulake.habbo.ui.handler
                             };
                             if (((!(_local_3 == null)) && (_local_3.length > 0)))
                             {
-                                (_container.roomEngine as _SafeStr_20).context.createLinkEvent(_local_3);
+                                (_container.roomEngine as Component).context.createLinkEvent(_local_3);
                             };
                         };
                     };

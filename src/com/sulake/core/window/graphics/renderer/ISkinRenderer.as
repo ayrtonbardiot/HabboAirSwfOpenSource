@@ -6,7 +6,7 @@ package com.sulake.core.window.graphics.renderer
 {
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
@@ -15,7 +15,7 @@ package com.sulake.core.window.graphics.renderer
     {
 
         function get name():String;
-        function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:_SafeStr_21):void;
+        function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:IAssetLibrary):void;
         function draw(_arg_1:_SafeStr_3109, _arg_2:BitmapData, _arg_3:Rectangle, _arg_4:uint, _arg_5:Boolean):void;
         function isStateDrawable(_arg_1:uint):Boolean;
         function addLayout(_arg_1:ISkinLayout):ISkinLayout;

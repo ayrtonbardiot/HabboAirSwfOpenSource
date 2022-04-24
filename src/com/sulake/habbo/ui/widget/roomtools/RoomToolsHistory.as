@@ -5,7 +5,7 @@
 package com.sulake.habbo.ui.widget.roomtools
 {
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.ui.handler.RoomToolsWidgetHandler;
     import __AS3__.vec.Vector;
@@ -20,12 +20,12 @@ package com.sulake.habbo.ui.widget.roomtools
         private static const SPACING:int = 2;
 
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _window:_SafeStr_3133;
         private var _SafeStr_3914:RoomToolsWidgetHandler;
         private var _items:Vector.<_SafeStr_3133> = new Vector.<_SafeStr_3133>();
 
-        public function RoomToolsHistory(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:RoomToolsWidgetHandler)
+        public function RoomToolsHistory(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:RoomToolsWidgetHandler)
         {
             _SafeStr_3914 = _arg_3;
             _assets = _arg_2;

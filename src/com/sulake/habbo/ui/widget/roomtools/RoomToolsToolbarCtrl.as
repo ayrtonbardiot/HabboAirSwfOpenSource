@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.roomtools
 {
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components.IItemListWindow;
     import flash.geom.Point;
     import com.sulake.core.window._SafeStr_3109;
@@ -32,7 +32,7 @@ package com.sulake.habbo.ui.widget.roomtools
 
         private var _SafeStr_6307:RoomToolsHistory;
 
-        public function RoomToolsToolbarCtrl(_arg_1:RoomToolsWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function RoomToolsToolbarCtrl(_arg_1:RoomToolsWidget, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
             _window = (_arg_2.buildFromXML((_arg_3.getAssetByName("room_tools_toolbar_xml").content as XML)) as _SafeStr_3133);

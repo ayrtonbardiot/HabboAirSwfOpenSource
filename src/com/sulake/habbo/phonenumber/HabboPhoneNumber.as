@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.phonenumber
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
@@ -12,7 +12,7 @@ package com.sulake.habbo.phonenumber
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -29,7 +29,7 @@ package com.sulake.habbo.phonenumber
     import _-T7._SafeStr_666;
     import flash.utils.getTimer;
 
-    public class HabboPhoneNumber extends _SafeStr_20 
+    public class HabboPhoneNumber extends Component 
     {
 
         protected var _communicationManager:IHabboCommunicationManager;
@@ -44,7 +44,7 @@ package com.sulake.habbo.phonenumber
         private var _SafeStr_4647:VerificationCodeInputMinimizedView;
         private var _retryEnableTime:int;
 
-        public function HabboPhoneNumber(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboPhoneNumber(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

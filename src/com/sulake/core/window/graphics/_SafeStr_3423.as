@@ -8,7 +8,7 @@ package com.sulake.core.window.graphics
     import com.sulake.core.utils._SafeStr_3288;
     import flash.utils.Dictionary;
     import com.sulake.core.window.graphics.renderer.ISkinRenderer;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.graphics.renderer.SkinLayout;
     import com.sulake.core.window.graphics.renderer.SkinLayoutEntity;
     import flash.geom.Rectangle;
@@ -30,7 +30,7 @@ package com.sulake.core.window.graphics
         public static const _SafeStr_8165:String = "locked";
 
 
-        public static function parseSkinDescription(_arg_1:XML, _arg_2:XMLList, _arg_3:ISkinRenderer, _arg_4:String, _arg_5:_SafeStr_21):void
+        public static function parseSkinDescription(_arg_1:XML, _arg_2:XMLList, _arg_3:ISkinRenderer, _arg_4:String, _arg_5:IAssetLibrary):void
         {
             var _local_8:* = null;
             var _local_10:* = null;
@@ -289,7 +289,7 @@ package com.sulake.core.window.graphics
             };
         }
 
-        protected static function parseTemplateList(_arg_1:ISkinRenderer, _arg_2:XML, _arg_3:Dictionary, _arg_4:_SafeStr_24, _arg_5:_SafeStr_21):void
+        protected static function parseTemplateList(_arg_1:ISkinRenderer, _arg_2:XML, _arg_3:Dictionary, _arg_4:_SafeStr_24, _arg_5:IAssetLibrary):void
         {
             var _local_9:uint;
             var _local_11:* = null;

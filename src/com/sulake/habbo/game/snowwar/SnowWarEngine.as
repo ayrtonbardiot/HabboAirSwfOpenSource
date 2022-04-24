@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.game.snowwar
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.sound._SafeStr_2088;
     import com.sulake.habbo.game.HabboGameManager;
@@ -44,7 +44,7 @@ package com.sulake.habbo.game.snowwar
     import com.sulake.iid.IIDHabboFriendList;
     import com.sulake.iid.IIDHabboGroupsManager;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.communication.messages.parser.game.snowwar.data.GameLobbyData;
     import com.sulake.habbo.game.snowwar.utils.WindowUtils;
     import com.sulake.core.runtime.IID;
@@ -81,7 +81,7 @@ package com.sulake.habbo.game.snowwar
     import _-PD.*;
     import _-EH.*;
 
-    public class SnowWarEngine extends _SafeStr_20 implements _SafeStr_41 
+    public class SnowWarEngine extends Component implements _SafeStr_41 
     {
 
         private static const GHOST_CHECKSUM_TURNS_TO_CHECK:int = 3;
@@ -142,7 +142,7 @@ package com.sulake.habbo.game.snowwar
         private var _SafeStr_5083:int = -1;
         private var _SafeStr_5082:Boolean = false;
 
-        public function SnowWarEngine(_arg_1:HabboGameManager, _arg_2:_SafeStr_31, _arg_3:uint=0, _arg_4:_SafeStr_21=null)
+        public function SnowWarEngine(_arg_1:HabboGameManager, _arg_2:_SafeStr_31, _arg_3:uint=0, _arg_4:IAssetLibrary=null)
         {
             super(_arg_2, _arg_3, _arg_4);
             _gameManager = _arg_1;

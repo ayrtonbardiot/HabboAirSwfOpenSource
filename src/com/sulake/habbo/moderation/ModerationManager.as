@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.moderation
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
@@ -14,7 +14,7 @@ package com.sulake.habbo.moderation
     import com.sulake.habbo.friendbar.IHabboFriendBar;
     import _-V1k._SafeStr_1652;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -33,7 +33,7 @@ package com.sulake.habbo.moderation
     import com.sulake.habbo.utils.HabboWebTools;
     import _-v1p._SafeStr_1638;
 
-    public class ModerationManager extends _SafeStr_20 implements IHabboModeration 
+    public class ModerationManager extends Component implements IHabboModeration 
     {
 
         private var _windowManager:_SafeStr_1695;
@@ -50,7 +50,7 @@ package com.sulake.habbo.moderation
         private var _initMsg:_SafeStr_1652;
         private var _SafeStr_3792:int;
 
-        public function ModerationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function ModerationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3788 = new StartPanelCtrl(this);

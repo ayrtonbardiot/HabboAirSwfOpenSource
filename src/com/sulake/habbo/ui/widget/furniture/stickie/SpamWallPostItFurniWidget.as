@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.furniture.stickie
 {
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetStickieDataUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
@@ -17,7 +17,7 @@ package com.sulake.habbo.ui.widget.furniture.stickie
 
         private var _location:String = "";
 
-        public function SpamWallPostItFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null)
+        public function SpamWallPostItFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null)
         {
             _windowName = "spamwall_postit_container";
             super(_arg_1, _arg_2, _arg_3);

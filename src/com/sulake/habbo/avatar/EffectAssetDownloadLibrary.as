@@ -6,7 +6,7 @@ package com.sulake.habbo.avatar
 {
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import _-x1P._SafeStr_1635;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.AssetLibraryCollection;
     import flash.net.URLRequest;
     import com.sulake.core.utils._SafeStr_39;
@@ -26,10 +26,10 @@ package com.sulake.habbo.avatar
         private var _name:String;
         private var _revision:String;
         private var _downloadUrl:String;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _animation:XML;
 
-        public function EffectAssetDownloadLibrary(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:_SafeStr_21, _arg_5:String)
+        public function EffectAssetDownloadLibrary(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:IAssetLibrary, _arg_5:String)
         {
             _SafeStr_3734 = STATE_IDLE;
             _assets = _arg_4;
@@ -39,7 +39,7 @@ package com.sulake.habbo.avatar
             _downloadUrl = _downloadUrl.replace("%libname%", _name);
             _downloadUrl = _downloadUrl.replace("%revision%", _revision);
             var _local_6:AssetLibraryCollection = (_assets as AssetLibraryCollection);
-            var _local_7:_SafeStr_21 = _local_6.getAssetLibraryByUrl((_name + ".swf"));
+            var _local_7:IAssetLibrary = _local_6.getAssetLibraryByUrl((_name + ".swf"));
             if (_local_7 != null)
             {
                 _SafeStr_3734 = STATE_READY;

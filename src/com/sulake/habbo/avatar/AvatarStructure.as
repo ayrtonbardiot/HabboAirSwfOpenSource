@@ -13,7 +13,7 @@ package com.sulake.habbo.avatar
     import com.sulake.habbo.avatar.animation.AnimationManager;
     import com.sulake.habbo.avatar.actions.ActionDefinition;
     import flash.utils.Dictionary;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.AssetLibraryCollection;
     import com.sulake.habbo.avatar.structure.figure.ISetType;
     import com.sulake.habbo.avatar.structure.figure._SafeStr_3202;
@@ -88,7 +88,7 @@ package com.sulake.habbo.avatar
             _geometry = new AvatarModelGeometry(_arg_1);
         }
 
-        public function initActions(_arg_1:_SafeStr_21, _arg_2:XML):void
+        public function initActions(_arg_1:IAssetLibrary, _arg_2:XML):void
         {
             if (!_arg_2)
             {

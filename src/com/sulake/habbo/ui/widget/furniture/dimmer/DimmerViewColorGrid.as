@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.furniture.dimmer
     import flash.display.BitmapData;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.geom.Point;
     import flash.geom.ColorTransform;
@@ -28,7 +28,7 @@ package com.sulake.habbo.ui.widget.furniture.dimmer
         private var _SafeStr_6756:BitmapData;
         private var _SafeStr_5575:_SafeStr_3133;
 
-        public function DimmerViewColorGrid(_arg_1:DimmerView, _arg_2:IItemGridWindow, _arg_3:_SafeStr_1695, _arg_4:_SafeStr_21)
+        public function DimmerViewColorGrid(_arg_1:DimmerView, _arg_2:IItemGridWindow, _arg_3:_SafeStr_1695, _arg_4:IAssetLibrary)
         {
             _SafeStr_3882 = _arg_1;
             _SafeStr_6755 = _arg_2;
@@ -150,7 +150,7 @@ package com.sulake.habbo.ui.widget.furniture.dimmer
             _SafeStr_3882.selectedColorIndex = _local_2;
         }
 
-        private function storeAssets(_arg_1:_SafeStr_21):void
+        private function storeAssets(_arg_1:IAssetLibrary):void
         {
             var _local_2:* = null;
             var _local_3:* = null;

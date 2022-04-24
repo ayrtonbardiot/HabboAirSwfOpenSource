@@ -4,7 +4,7 @@
 
 package com.sulake.core.runtime
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.IEventDispatcher;
     import flash.display.DisplayObjectContainer;
     import flash.net.URLRequest;
@@ -18,7 +18,7 @@ package com.sulake.core.runtime
     public /*dynamic*/ interface _SafeStr_31 extends IUnknown 
     {
 
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function get events():IEventDispatcher;
         function get root():_SafeStr_31;
         function error(_arg_1:String, _arg_2:Boolean, _arg_3:int=-1, _arg_4:Error=null):void;
@@ -29,8 +29,8 @@ package com.sulake.core.runtime
         function getLastWarningMessage():String;
         function get displayObjectContainer():DisplayObjectContainer;
         function loadFromFile(_arg_1:URLRequest, _arg_2:LoaderContext):_SafeStr_39;
-        function attachComponent(_arg_1:_SafeStr_20, _arg_2:Array):void;
-        function detachComponent(_arg_1:_SafeStr_20):void;
+        function attachComponent(_arg_1:Component, _arg_2:Array):void;
+        function detachComponent(_arg_1:Component):void;
         function prepareComponent(_arg_1:Class, _arg_2:uint=0, _arg_3:ApplicationDomain=null):IUnknown;
         function prepareAssetLibrary(_arg_1:XML, _arg_2:Class):Boolean;
         function registerUpdateReceiver(_arg_1:_SafeStr_41, _arg_2:uint):void;

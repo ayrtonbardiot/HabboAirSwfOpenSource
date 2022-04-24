@@ -8,7 +8,7 @@ package com.sulake.habbo.roomevents.userdefinedroomevents.common
     import com.sulake.core.window._SafeStr_3133;
     import flash.display.BitmapData;
     import com.sulake.habbo.roomevents.HabboUserDefinedRoomEvents;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.Event;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.window.events._SafeStr_3116;
@@ -30,7 +30,7 @@ package com.sulake.habbo.roomevents.userdefinedroomevents.common
         private var _SafeStr_6404:Number = 1;
         private var _SafeStr_6407:Number = 0;
 
-        public function SliderWindowController(_arg_1:HabboUserDefinedRoomEvents, _arg_2:_SafeStr_3133, _arg_3:_SafeStr_21, _arg_4:Number=0, _arg_5:Number=1, _arg_6:Number=0)
+        public function SliderWindowController(_arg_1:HabboUserDefinedRoomEvents, _arg_2:_SafeStr_3133, _arg_3:IAssetLibrary, _arg_4:Number=0, _arg_5:Number=1, _arg_6:Number=0)
         {
             _SafeStr_5880 = _SafeStr_3133(_arg_1.getXmlWindow("ude_slider"));
             _arg_2.addChild(_SafeStr_5880);
@@ -196,7 +196,7 @@ package com.sulake.habbo.roomevents.userdefinedroomevents.common
             };
         }
 
-        private function storeAssets(_arg_1:_SafeStr_21):void
+        private function storeAssets(_arg_1:IAssetLibrary):void
         {
             var _local_2:* = null;
             if (_arg_1 == null)

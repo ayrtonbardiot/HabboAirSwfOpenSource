@@ -10,7 +10,7 @@ package com.sulake.habbo.ui.widget.effects
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.ui.handler._SafeStr_3379;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.habbo.ui.widget.memenu._SafeStr_3271;
@@ -27,7 +27,7 @@ package com.sulake.habbo.ui.widget.effects
         private var _SafeStr_4162:IScrollableListWindow;
         private var _SafeStr_5221:_SafeStr_24;
 
-        public function EffectsWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function EffectsWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
             this.handler.widget = this;

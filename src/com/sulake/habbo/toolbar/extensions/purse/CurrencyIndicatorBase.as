@@ -6,7 +6,7 @@ package com.sulake.habbo.toolbar.extensions.purse
 {
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import __AS3__.vec.Vector;
     import flash.utils.Timer;
@@ -26,7 +26,7 @@ package com.sulake.habbo.toolbar.extensions.purse
 
         protected var _window:_SafeStr_3133;
         protected var _windowManager:_SafeStr_1695;
-        protected var _assets:_SafeStr_21;
+        protected var _assets:IAssetLibrary;
         private var _disposed:Boolean = false;
         private var _SafeStr_5157:IStaticBitmapWrapperWindow;
         private var _SafeStr_5159:uint;
@@ -43,7 +43,7 @@ package com.sulake.habbo.toolbar.extensions.purse
         private var _overlayStartValue:int;
         private var _overlayEndValue:int;
 
-        public function CurrencyIndicatorBase(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21)
+        public function CurrencyIndicatorBase(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary)
         {
             _window = null;
             _windowManager = _arg_1;

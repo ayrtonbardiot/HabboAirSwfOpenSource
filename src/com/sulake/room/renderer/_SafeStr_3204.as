@@ -5,7 +5,7 @@
 package com.sulake.room.renderer
 {
     import com.sulake.core.utils._SafeStr_24;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.room.object.IRoomObject;
     import flash.utils.getTimer;
     import com.sulake.core.utils.ErrorReportStorage;
@@ -17,11 +17,11 @@ package com.sulake.room.renderer
 
         private var _SafeStr_4621:_SafeStr_24;
         private var _SafeStr_4805:_SafeStr_24;
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
         private var _disposed:Boolean = false;
         private var _SafeStr_4804:String = null;
 
-        public function _SafeStr_3204(_arg_1:_SafeStr_20)
+        public function _SafeStr_3204(_arg_1:Component)
         {
             _SafeStr_4621 = new _SafeStr_24();
             _SafeStr_4805 = new _SafeStr_24();

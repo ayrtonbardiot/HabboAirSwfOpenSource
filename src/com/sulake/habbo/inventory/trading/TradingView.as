@@ -9,7 +9,7 @@ package com.sulake.habbo.inventory.trading
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.room.IRoomEngine;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.inventory.ItemPopupCtrl;
     import com.sulake.habbo.sound._SafeStr_2088;
     import com.sulake.core.window._SafeStr_3133;
@@ -47,7 +47,7 @@ package com.sulake.habbo.inventory.trading
         private var _windowManager:_SafeStr_1695;
         private var _localization:_SafeStr_18;
         private var _roomEngine:IRoomEngine;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_6326:ItemPopupCtrl;
         private var _soundManager:_SafeStr_2088;
         private var _disposed:Boolean = false;
@@ -59,7 +59,7 @@ package com.sulake.habbo.inventory.trading
         private var _SafeStr_5538:Boolean;
         private var _waitingSongInfo:Array = [];
 
-        public function TradingView(_arg_1:TradingModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IRoomEngine, _arg_5:_SafeStr_18, _arg_6:_SafeStr_2088)
+        public function TradingView(_arg_1:TradingModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IRoomEngine, _arg_5:_SafeStr_18, _arg_6:_SafeStr_2088)
         {
             _SafeStr_6324 = _arg_1;
             _windowManager = _arg_2;

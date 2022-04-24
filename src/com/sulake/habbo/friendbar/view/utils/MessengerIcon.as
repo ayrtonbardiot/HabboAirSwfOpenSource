@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.friendbar.view.utils
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.events.TimerEvent;
@@ -14,9 +14,9 @@ package com.sulake.habbo.friendbar.view.utils
 
         private static const _SafeStr_8583:int = 500;
 
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
 
-        public function MessengerIcon(_arg_1:_SafeStr_21, _arg_2:_SafeStr_3264)
+        public function MessengerIcon(_arg_1:IAssetLibrary, _arg_2:_SafeStr_3264)
         {
             _assets = _arg_1;
             alignment = (0x01 | 0x08);

@@ -8,7 +8,7 @@ package com.sulake.habbo.friendbar.view.tabs
     import com.sulake.habbo.friendlist._SafeStr_1874;
     import com.sulake.habbo.game._SafeStr_1699;
     import com.sulake.habbo.friendbar.view._SafeStr_3185;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.tracking._SafeStr_1704;
@@ -30,7 +30,7 @@ package com.sulake.habbo.friendbar.view.tabs
         public static var FRIENDS:_SafeStr_1874;
         public static var GAMES:_SafeStr_1699;
         public static var VIEW:_SafeStr_3185;
-        public static var ASSETS:_SafeStr_21;
+        public static var ASSETS:IAssetLibrary;
         public static var WINDOWING:_SafeStr_1695;
         public static var _SafeStr_5174:_SafeStr_18;
         public static var TRACKING:_SafeStr_1704;

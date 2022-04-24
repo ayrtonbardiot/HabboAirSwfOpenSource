@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory.effects
 {
     import com.sulake.habbo.inventory.IInventoryView;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.inventory.common.ThumbListManager;
     import com.sulake.core.assets.IAsset;
@@ -26,14 +26,14 @@ package com.sulake.habbo.inventory.effects
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3882:_SafeStr_3133;
         private var _SafeStr_4619:EffectsModel;
         private var _SafeStr_5968:ThumbListManager;
         private var _SafeStr_5969:ThumbListManager;
         private var _disposed:Boolean = false;
 
-        public function EffectsView(_arg_1:EffectsModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:IThumbListDataProvider, _arg_6:IThumbListDataProvider)
+        public function EffectsView(_arg_1:EffectsModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:IThumbListDataProvider, _arg_6:IThumbListDataProvider)
         {
             _SafeStr_4619 = _arg_1;
             _SafeStr_3745 = _arg_3;

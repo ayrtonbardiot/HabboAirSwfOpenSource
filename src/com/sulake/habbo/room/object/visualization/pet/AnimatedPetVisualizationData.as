@@ -5,23 +5,23 @@
 package com.sulake.habbo.room.object.visualization.pet
 {
     import com.sulake.habbo.room.object.visualization.furniture.AnimatedFurnitureVisualizationData;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.object.visualization.data.SizeData;
     import com.sulake.habbo.room.object.visualization.data.AnimationSizeData;
 
     public class AnimatedPetVisualizationData extends AnimatedFurnitureVisualizationData 
     {
 
-        private var _SafeStr_4099:_SafeStr_21 = null;
+        private var _SafeStr_4099:IAssetLibrary = null;
         private var _SafeStr_4100:Boolean = true;
 
 
-        public function set commonAssets(_arg_1:_SafeStr_21):void
+        public function set commonAssets(_arg_1:IAssetLibrary):void
         {
             _SafeStr_4099 = _arg_1;
         }
 
-        public function get commonAssets():_SafeStr_21
+        public function get commonAssets():IAssetLibrary
         {
             return (_SafeStr_4099);
         }

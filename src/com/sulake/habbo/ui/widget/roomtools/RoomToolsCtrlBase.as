@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.roomtools
 {
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
     import com.sulake.habbo.ui.handler.RoomToolsWidgetHandler;
@@ -21,13 +21,13 @@ package com.sulake.habbo.ui.widget.roomtools
         protected var _window:_SafeStr_3133;
         protected var _SafeStr_4981:RoomToolsWidget;
         protected var _windowManager:_SafeStr_1695;
-        protected var _assets:_SafeStr_21;
+        protected var _assets:IAssetLibrary;
         protected var _SafeStr_6103:Boolean = true;
         protected var _SafeStr_6100:Timer;
         protected var _SafeStr_6102:Boolean;
         protected var _SafeStr_6101:int;
 
-        public function RoomToolsCtrlBase(_arg_1:RoomToolsWidget, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function RoomToolsCtrlBase(_arg_1:RoomToolsWidget, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _SafeStr_4981 = _arg_1;
             _windowManager = _arg_2;

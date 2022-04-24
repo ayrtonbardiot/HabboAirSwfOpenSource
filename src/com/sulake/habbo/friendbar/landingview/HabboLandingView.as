@@ -19,7 +19,7 @@ package com.sulake.habbo.friendbar.landingview
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.tracking._SafeStr_1704;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -69,7 +69,7 @@ package com.sulake.habbo.friendbar.landingview
         private var _roomEngine:IRoomEngine;
         private var _SafeStr_3883:Boolean = false;
 
-        public function HabboLandingView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboLandingView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

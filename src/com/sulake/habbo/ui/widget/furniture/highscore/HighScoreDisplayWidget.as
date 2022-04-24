@@ -12,7 +12,7 @@ package com.sulake.habbo.ui.widget.furniture.highscore
     import flash.geom.Rectangle;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -43,7 +43,7 @@ package com.sulake.habbo.ui.widget.furniture.highscore
         private var _SafeStr_5181:int = -1;
         private var _lastPosition:Point = new Point(0, 0);
 
-        public function HighScoreDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function HighScoreDisplayWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _SafeStr_3313(_arg_1).widget = this;

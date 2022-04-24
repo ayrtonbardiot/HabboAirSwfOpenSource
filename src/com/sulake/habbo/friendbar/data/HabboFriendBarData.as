@@ -4,14 +4,14 @@
 
 package com.sulake.habbo.friendbar.data
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.friendlist._SafeStr_1874;
     import com.sulake.habbo.messenger._SafeStr_1700;
     import com.sulake.habbo.tracking._SafeStr_1704;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboConfigurationManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -51,7 +51,7 @@ package com.sulake.habbo.friendbar.data
     import com.sulake.habbo.friendbar.events.NotificationEvent;
     import _-JS._SafeStr_1600;
 
-    public class HabboFriendBarData extends _SafeStr_20 implements _SafeStr_3134 
+    public class HabboFriendBarData extends Component implements _SafeStr_3134 
     {
 
         private static const SHOW_OFFLINE_FRIENDS:Boolean = false;
@@ -78,7 +78,7 @@ package com.sulake.habbo.friendbar.data
         private var _SafeStr_3926:Array;
         private var _SafeStr_4209:int;
 
-        public function HabboFriendBarData(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboFriendBarData(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_4208 = [];

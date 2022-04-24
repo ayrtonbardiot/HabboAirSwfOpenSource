@@ -5,7 +5,7 @@
 package com.sulake.habbo.avatar.wardrobe
 {
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components._SafeStr_3264;
     import com.sulake.core.assets.XmlAsset;
@@ -18,11 +18,11 @@ package com.sulake.habbo.avatar.wardrobe
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _window:_SafeStr_3133;
         private var _SafeStr_4573:_SafeStr_3264;
 
-        public function OutfitView(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:Boolean)
+        public function OutfitView(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:Boolean)
         {
             _windowManager = _arg_1;
             _SafeStr_3745 = _arg_2;

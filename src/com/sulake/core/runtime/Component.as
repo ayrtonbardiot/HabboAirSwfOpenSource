@@ -4,7 +4,7 @@
 
 package com.sulake.core.runtime
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import __AS3__.vec.Vector;
     import com.sulake.core.assets.AssetLibrary;
@@ -19,7 +19,7 @@ package com.sulake.core.runtime
     import com.sulake.core.runtime.exceptions.*;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_20 implements IUnknown, _SafeStr_19 
+    public class Component implements IUnknown, _SafeStr_19 
     {
 
         public static const COMPONENT_EVENT_RUNNING:String = "COMPONENT_EVENT_RUNNING";
@@ -35,11 +35,11 @@ package com.sulake.core.runtime
         public static const COMPONENT_FLAG_CONTEXT:uint = 2;
         public static const COMPONENT_FLAG_DISPOSABLE:uint = 4;
 
-        protected var _SafeStr_8044:uint = 0;
+        protected var _references:uint = 0;
         protected var _lastError:String = "";
         protected var _SafeStr_8045:String = "";
         protected var _SafeStr_4904:String = "";
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_3983:EventDispatcherWrapper;
         private var _SafeStr_6583:uint;
         private var _SafeStr_8046:InterfaceStructList;
@@ -50,7 +50,7 @@ package com.sulake.core.runtime
         private var _SafeStr_8043:Vector.<String>;
         private var _SafeStr_8048:Vector.<Function> = new Vector.<Function>(0);
 
-        public function _SafeStr_20(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function Component(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             _SafeStr_6583 = _arg_2;
             _SafeStr_8046 = new InterfaceStructList();
@@ -77,7 +77,7 @@ package com.sulake.core.runtime
             allDependenciesRequested();
         }
 
-        public static function getInterfaceStructList(_arg_1:_SafeStr_20):InterfaceStructList
+        public static function getInterfaceStructList(_arg_1:Component):InterfaceStructList
         {
             return (_arg_1._SafeStr_8046);
         }
@@ -103,7 +103,7 @@ package com.sulake.core.runtime
             return (_SafeStr_3983);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_assets);
         }
@@ -138,7 +138,7 @@ package com.sulake.core.runtime
                     };
                     if (listeners != null)
                     {
-                        var eventDispatcher:IEventDispatcher = _SafeStr_20(unknown).events;
+                        var eventDispatcher:IEventDispatcher = Component(unknown).events;
                         for each (var listener:Object in listeners)
                         {
                             eventDispatcher.addEventListener(listener.type, listener.callback);
@@ -153,7 +153,7 @@ package com.sulake.core.runtime
                             var _local_2:* = null;
                             if (listeners != null)
                             {
-                                _local_2 = _SafeStr_20(component).events;
+                                _local_2 = Component(component).events;
                                 if (_local_2 != null)
                                 {
                                     for each (var _local_1:Object in listeners)
@@ -272,7 +272,7 @@ package com.sulake.core.runtime
                 _assets.dispose();
                 _assets = null;
                 _context = null;
-                _SafeStr_8044 = 0;
+                _references = 0;
                 _disposed = true;
             };
         }
@@ -300,7 +300,7 @@ package com.sulake.core.runtime
 
         public function toString():String
         {
-            return (((("[component " + ClassUtils.getSimpleQualifiedClassName(this)) + " refs: ") + _SafeStr_8044) + "]");
+            return (((("[component " + ClassUtils.getSimpleQualifiedClassName(this)) + " refs: ") + _references) + "]");
         }
 
         public function toXMLString(_arg_1:uint=0):String
@@ -407,7 +407,7 @@ package com.sulake.core.runtime
 // _SafeStr_5213 = "_-h18" (String#9458, DoABC#3)
 // _SafeStr_6583 = "_-61n" (String#6972, DoABC#3)
 // _SafeStr_8043 = "_-B9" (String#7325, DoABC#3)
-// _SafeStr_8044 = "_-o1A" (String#9924, DoABC#3)
+// _references = "_-o1A" (String#9924, DoABC#3)
 // _SafeStr_8045 = "_-618" (String#6942, DoABC#3)
 // _SafeStr_8046 = "_-n1j" (String#9886, DoABC#3)
 // _SafeStr_8047 = "_-Q1z" (String#8306, DoABC#3)

@@ -5,7 +5,7 @@
 package com.sulake.habbo.ui.widget.roomchat.style
 {
     import com.sulake.core.utils._SafeStr_24;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window.components.IRegionWindow;
     import flash.display.BitmapData;
@@ -21,7 +21,7 @@ package com.sulake.habbo.ui.widget.roomchat.style
 
         private var _styles:_SafeStr_24 = new _SafeStr_24();
 
-        public function ChatBubbleFactory(_arg_1:_SafeStr_21, _arg_2:_SafeStr_1695, _arg_3:XML)
+        public function ChatBubbleFactory(_arg_1:IAssetLibrary, _arg_2:_SafeStr_1695, _arg_3:XML)
         {
             var _local_4:int;
             var _local_5:* = null;

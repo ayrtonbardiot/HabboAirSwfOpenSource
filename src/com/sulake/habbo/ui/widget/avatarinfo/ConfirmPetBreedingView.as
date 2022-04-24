@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.session._SafeStr_3241;
     import com.sulake.habbo.avatar.pets.PetFigureData;
@@ -43,7 +43,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
         private var _SafeStr_4036:Boolean = false;
         private var _SafeStr_4981:AvatarInfoWidget;
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_5989:_SafeStr_24;
         private var _SafeStr_5539:int;
         private var _SafeStr_5540:int;

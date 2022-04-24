@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.room
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.room.IRoomObjectFactory;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
@@ -81,7 +81,7 @@ package com.sulake.habbo.room
     import com.sulake.room.RoomObjectManager;
     import com.sulake.room.IRoomObjectManager;
 
-    public class RoomObjectFactory extends _SafeStr_20 implements IRoomObjectFactory 
+    public class RoomObjectFactory extends Component implements IRoomObjectFactory 
     {
 
         private var _SafeStr_3787:_SafeStr_24 = new _SafeStr_24();

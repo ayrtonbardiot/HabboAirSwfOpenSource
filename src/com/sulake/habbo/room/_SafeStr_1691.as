@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.room
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.room.IRoomManagerListener;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
@@ -133,7 +133,7 @@ package com.sulake.habbo.room
     import com.sulake.room.object.visualization.IRoomObjectSpriteVisualization;
     import com.sulake.habbo.room.messages.RoomObjectRoomAdUpdateMessage;
     import com.sulake.habbo.advertisement.events.AdEvent;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.utils._SafeStr_3222;
     import com.sulake.habbo.room.messages.RoomObjectGroupBadgeUpdateMessage;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
@@ -146,7 +146,7 @@ package com.sulake.habbo.room
     import com.sulake.room.object.*;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_1691 extends _SafeStr_20 implements IRoomEngine, IRoomManagerListener, _SafeStr_1688, _SafeStr_1689, _SafeStr_41, _SafeStr_1690 
+    public class _SafeStr_1691 extends Component implements IRoomEngine, IRoomManagerListener, _SafeStr_1688, _SafeStr_1689, _SafeStr_41, _SafeStr_1690 
     {
 
         public static const SETUP_WITHOUT_TOOLBAR:uint = 1;

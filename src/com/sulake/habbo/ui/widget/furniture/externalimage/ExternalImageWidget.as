@@ -17,11 +17,11 @@ package com.sulake.habbo.ui.widget.furniture.externalimage
     import com.sulake.habbo.inventory._SafeStr_1708;
     import com.sulake.habbo.help.IHabboHelp;
     import com.sulake.habbo.room.IRoomEngine;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.window.components._SafeStr_3189;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler.ExternalImageWidgetHandler;
     import __AS3__.vec.Vector;
@@ -92,9 +92,9 @@ package com.sulake.habbo.ui.widget.furniture.externalimage
         private var reportWindow:_SafeStr_3133;
         private var _SafeStr_4569:int = 0;
         private var _SafeStr_4576:Boolean = false;
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
 
-        public function ExternalImageWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_1708, _arg_6:IHabboHelp, _arg_7:IRoomEngine, _arg_8:_SafeStr_20)
+        public function ExternalImageWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_1708, _arg_6:IHabboHelp, _arg_7:IRoomEngine, _arg_8:Component)
         {
             var _local_9:* = null;
             super(_arg_1, _arg_2, _arg_3, _arg_4);

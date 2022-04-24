@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.furniture.trophy
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetTrophyDataUpdateEvent;
@@ -27,7 +27,7 @@ package com.sulake.habbo.ui.widget.furniture.trophy
         private var _SafeStr_3882:ITrophyView;
         private var _SafeStr_4811:int;
 
-        public function TrophyFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19)
+        public function TrophyFurniWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _configuration = _arg_5;

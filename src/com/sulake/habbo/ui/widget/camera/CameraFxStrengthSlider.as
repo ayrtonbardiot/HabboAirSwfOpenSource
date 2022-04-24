@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.camera
     import com.sulake.core.window._SafeStr_3133;
     import flash.display.BitmapData;
     import com.sulake.core.window.components._SafeStr_3264;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -27,7 +27,7 @@ package com.sulake.habbo.ui.widget.camera
         private var _referenceWidth:int;
         private var _SafeStr_6580:int = 0;
 
-        public function CameraFxStrengthSlider(_arg_1:CameraPhotoLab, _arg_2:_SafeStr_3133, _arg_3:_SafeStr_21)
+        public function CameraFxStrengthSlider(_arg_1:CameraPhotoLab, _arg_2:_SafeStr_3133, _arg_3:IAssetLibrary)
         {
             _SafeStr_3882 = _arg_1;
             _SafeStr_5880 = _arg_2;
@@ -136,7 +136,7 @@ package com.sulake.habbo.ui.widget.camera
             };
         }
 
-        private function storeAssets(_arg_1:_SafeStr_21):void
+        private function storeAssets(_arg_1:IAssetLibrary):void
         {
             var _local_2:* = null;
             if (_arg_1 == null)

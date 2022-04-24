@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.furniture.mysterytrophy
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.ui.widget.furniture.contextmenu.FurnitureContextMenuWidget;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import _-02a._SafeStr_527;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -25,7 +25,7 @@ package com.sulake.habbo.ui.widget.furniture.mysterytrophy
         private var _disposed:Boolean = false;
         private var _SafeStr_4981:FurnitureContextMenuWidget;
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_5539:int;
 
         public function MysteryTrophyOpenDialogView(_arg_1:FurnitureContextMenuWidget)

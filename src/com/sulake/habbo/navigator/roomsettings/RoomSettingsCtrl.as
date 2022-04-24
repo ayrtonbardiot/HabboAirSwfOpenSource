@@ -31,7 +31,7 @@ package com.sulake.habbo.navigator.roomsettings
     import com.sulake.core.window.events._SafeStr_3116;
     import _-o1x._SafeStr_1363;
     import _-o1x._SafeStr_433;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils._SafeStr_3114;
     import _-o1x._SafeStr_811;
     import flash.utils.Dictionary;
@@ -1084,7 +1084,7 @@ package com.sulake.habbo.navigator.roomsettings
             };
             if (_navigator.windowManager != null)
             {
-                (_navigator.windowManager as _SafeStr_20).context.createLinkEvent("habbopages/builders-club/faq");
+                (_navigator.windowManager as Component).context.createLinkEvent("habbopages/builders-club/faq");
             };
         }
 

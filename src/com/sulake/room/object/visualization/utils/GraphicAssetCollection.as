@@ -5,7 +5,7 @@
 package com.sulake.room.object.visualization.utils
 {
     import com.sulake.core.utils._SafeStr_24;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.utils.Dictionary;
     import flash.utils.getTimer;
     import com.sulake.room.utils._SafeStr_1675;
@@ -22,7 +22,7 @@ package com.sulake.room.object.visualization.utils
         private static const USE_LAZY_ASSETS:Boolean = false;
 
         private var _assets:_SafeStr_24;
-        private var _SafeStr_4154:_SafeStr_21;
+        private var _SafeStr_4154:IAssetLibrary;
         private var _SafeStr_4148:_SafeStr_24;
         private var _SafeStr_4150:Array;
         private var _SafeStr_4149:_SafeStr_24;
@@ -87,7 +87,7 @@ package com.sulake.room.object.visualization.utils
             _SafeStr_4154 = null;
         }
 
-        public function set assetLibrary(_arg_1:_SafeStr_21):void
+        public function set assetLibrary(_arg_1:IAssetLibrary):void
         {
             _SafeStr_4154 = _arg_1;
         }

@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.furniture.friendfurni
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.handler._SafeStr_3305;
     import com.sulake.habbo.room.object.data.StringArrayStuffData;
@@ -18,7 +18,7 @@ package com.sulake.habbo.ui.widget.furniture.friendfurni
         private var _stuffId:int = -1;
         private var _SafeStr_4961:FriendFurniEngravingView;
 
-        public function FriendFurniEngravingWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18)
+        public function FriendFurniEngravingWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             engravingWidgetHandler.widget = this;

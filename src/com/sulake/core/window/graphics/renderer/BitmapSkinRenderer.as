@@ -11,7 +11,7 @@ package com.sulake.core.window.graphics.renderer
     import flash.geom.ColorTransform;
     import com.sulake.core.window.graphics._SafeStr_3423;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.display.BitmapData;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.utils.profiler.tracking.TrackedBitmapData;
@@ -34,7 +34,7 @@ package com.sulake.core.window.graphics.renderer
             _SafeStr_5882 = new ColorTransform();
         }
 
-        override public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:_SafeStr_21):void
+        override public function parse(_arg_1:IAsset, _arg_2:XMLList, _arg_3:IAssetLibrary):void
         {
             _SafeStr_3423.parseSkinDescription((_arg_1.content as XML), _arg_2, this, name, _arg_3);
         }

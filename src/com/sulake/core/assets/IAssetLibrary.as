@@ -8,7 +8,7 @@ package com.sulake.core.assets
     import com.sulake.core.utils._SafeStr_39;
     import flash.net.URLRequest;
 
-    public /*dynamic*/ interface _SafeStr_21 extends _SafeStr_13 
+    public interface IAssetLibrary extends _SafeStr_13 
     {
 
         function get url():String;

@@ -5,7 +5,7 @@
 package com.sulake.habbo.quest
 {
     import com.sulake.core.runtime._SafeStr_13;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
 
@@ -40,7 +40,7 @@ package com.sulake.habbo.quest
             var _local_2:* = null;
             if (_questEngine != null)
             {
-                _local_2 = _SafeStr_20(_questEngine.windowManager).assets.getAssetByName(_questEngine.interpolate(getImageUri(_arg_1)));
+                _local_2 = Component(_questEngine.windowManager).assets.getAssetByName(_questEngine.interpolate(getImageUri(_arg_1)));
                 if (((!(_local_2 == null)) && (_local_2 is BitmapDataAsset)))
                 {
                     return (_local_2.content as BitmapData);

@@ -10,7 +10,7 @@ package com.sulake.habbo.ui.widget.infostand
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.ui.handler.InfoStandWidgetHandler;
@@ -62,7 +62,7 @@ package com.sulake.habbo.ui.widget.infostand
         private var _SafeStr_5305:Timer;
         private var _config:_SafeStr_19;
 
-        public function InfoStandWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:IHabboCatalog)
+        public function InfoStandWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_19, _arg_6:IHabboCatalog)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _config = _arg_5;

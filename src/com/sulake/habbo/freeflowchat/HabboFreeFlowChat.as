@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.freeflowchat
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.avatar._SafeStr_1701;
     import com.sulake.habbo.session.IRoomSessionManager;
     import com.sulake.habbo.room.IRoomEngine;
@@ -27,7 +27,7 @@ package com.sulake.habbo.freeflowchat
     import com.sulake.habbo.freeflowchat.viewer.ChatBubbleFactory;
     import _-n1H._SafeStr_1626;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.display.Sprite;
     import flash.geom.Rectangle;
     import flash.display.BitmapData;
@@ -64,7 +64,7 @@ package com.sulake.habbo.freeflowchat
     import _-71W._SafeStr_204;
     import _-71W._SafeStr_151;
 
-    public class HabboFreeFlowChat extends _SafeStr_20 implements _SafeStr_1703 
+    public class HabboFreeFlowChat extends Component implements _SafeStr_1703 
     {
 
         private var _avatarRenderManager:_SafeStr_1701;
@@ -95,7 +95,7 @@ package com.sulake.habbo.freeflowchat
         private var _SafeStr_3785:int = 1;
         private var _SafeStr_3778:Boolean = false;
 
-        public function HabboFreeFlowChat(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboFreeFlowChat(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

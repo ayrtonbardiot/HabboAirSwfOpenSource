@@ -10,7 +10,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -167,7 +167,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
                     showButton("dance_menu", ((widget.hasClub) && (!(_local_5))), (!(widget.hasEffectOn)));
                     showButton("dance", (((!(widget.hasClub)) && (!(widget.isDancing))) && (!(_local_5))), (!(widget.hasEffectOn)));
                     showButton("dance_stop", (((!(widget.hasClub)) && (widget.isDancing)) && (!(_local_5))));
-                    if (!(_SafeStr_4981.windowManager as _SafeStr_20).getBoolean("memenu.effects.widget.disabled"))
+                    if (!(_SafeStr_4981.windowManager as Component).getBoolean("memenu.effects.widget.disabled"))
                     {
                         showButton("effects", (!(_local_5)));
                     };

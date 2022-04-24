@@ -17,7 +17,7 @@ package com.sulake.habbo.window.utils
     import com.sulake.core.window.graphics.renderer.NullSkinRenderer;
     import com.sulake.core.window.utils.DefaultAttStruct;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.graphics.SkinContainer;
 
     public class _SafeStr_3252 
@@ -33,7 +33,7 @@ package com.sulake.habbo.window.utils
         private static const RENDERER_TYPE_NULL:String = "null";
 
 
-        public static function parse(_arg_1:XML, _arg_2:_SafeStr_21, _arg_3:SkinContainer):void
+        public static function parse(_arg_1:XML, _arg_2:IAssetLibrary, _arg_3:SkinContainer):void
         {
             var _local_9:* = null;
             var _local_19:* = null;

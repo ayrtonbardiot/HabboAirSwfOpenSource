@@ -10,9 +10,9 @@ package com.sulake.habbo.notifications.singular
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -31,7 +31,7 @@ package com.sulake.habbo.notifications.singular
         private var _SafeStr_6437:ITextWindow;
         private var _SafeStr_4128:int;
 
-        public function SafetyLockedNotification(_arg_1:int, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695, _arg_4:IHabboCatalog, _arg_5:IHabboToolbar)
+        public function SafetyLockedNotification(_arg_1:int, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695, _arg_4:IHabboCatalog, _arg_5:IHabboToolbar)
         {
             if ((((!(_arg_2)) || (!(_arg_3))) || (!(_arg_4))))
             {
@@ -91,7 +91,7 @@ package com.sulake.habbo.notifications.singular
             {
                 case "unlock_link_region":
                 case "unlock_link":
-                    _local_3 = (_toolbar as _SafeStr_20).getProperty("link.format.safetylock_unlock");
+                    _local_3 = (_toolbar as Component).getProperty("link.format.safetylock_unlock");
                     HabboWebTools.openWebPage(_local_3, "habboMain");
                     return;
             };

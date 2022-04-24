@@ -34,7 +34,7 @@ package com.sulake.habbo.room
     import _-02a._SafeStr_906;
     import _-IU._SafeStr_645;
     import com.sulake.habbo.room.events.RoomObjectRoomAdEvent;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineSoundMachineEvent;
     import com.sulake.habbo.room.events.RoomObjectBadgeAssetEvent;
     import com.sulake.habbo.room.events.RoomObjectDimmerStateUpdateEvent;
@@ -1386,7 +1386,7 @@ package com.sulake.habbo.room
                         {
                             if (_local_5.clickUrl != "")
                             {
-                                (_roomEngine as _SafeStr_20).context.createLinkEvent(_local_5.clickUrl);
+                                (_roomEngine as Component).context.createLinkEvent(_local_5.clickUrl);
                             };
                         };
                     };

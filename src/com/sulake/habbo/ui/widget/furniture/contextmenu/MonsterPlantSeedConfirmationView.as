@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.session.furniture._SafeStr_3130;
     import com.sulake.room.object.IRoomObject;
     import flash.display.BitmapData;
@@ -33,7 +33,7 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
         private var _SafeStr_4036:Boolean = false;
         private var _SafeStr_4981:FurnitureContextMenuWidget;
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_5499:int = -1;
         private var _SafeStr_4720:int;
         private var _SafeStr_3867:_SafeStr_3130;

@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.catalog.vault
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -13,7 +13,7 @@ package com.sulake.habbo.catalog.vault
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -23,7 +23,7 @@ package com.sulake.habbo.catalog.vault
     import _-Fh._SafeStr_546;
     import _-Fh._SafeStr_535;
 
-    public class VaultController extends _SafeStr_20 implements ILinkEventTracker 
+    public class VaultController extends Component implements ILinkEventTracker 
     {
 
         private var _communicationManager:IHabboCommunicationManager;
@@ -33,7 +33,7 @@ package com.sulake.habbo.catalog.vault
         private var _SafeStr_3882:VaultView;
         private var _messageEvents:Vector.<IMessageEvent>;
 
-        public function VaultController(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function VaultController(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

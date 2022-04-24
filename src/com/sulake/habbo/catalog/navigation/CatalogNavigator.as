@@ -16,7 +16,7 @@ package com.sulake.habbo.catalog.navigation
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.catalog.navigation.events.CatalogPageOpenedEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
 
     public class CatalogNavigator implements _SafeStr_3107 
     {
@@ -554,7 +554,7 @@ package com.sulake.habbo.catalog.navigation
 
         public function get isDeepHierarchy():Boolean
         {
-            return ((_catalog as _SafeStr_20).getBoolean("catalog.deep.hierarchy"));
+            return ((_catalog as Component).getBoolean("catalog.deep.hierarchy"));
         }
 
         public function getItemTemplate(_arg_1:int):_SafeStr_3109

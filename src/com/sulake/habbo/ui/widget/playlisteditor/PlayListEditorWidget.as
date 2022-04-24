@@ -10,7 +10,7 @@ package com.sulake.habbo.ui.widget.playlisteditor
     import com.sulake.habbo.sound._SafeStr_2088;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.window._SafeStr_3109;
     import flash.events.IEventDispatcher;
@@ -45,7 +45,7 @@ package com.sulake.habbo.ui.widget.playlisteditor
         private var _SafeStr_4079:MainWindowHandler;
         private var _SafeStr_4318:int;
 
-        public function PlayListEditorWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_2088, _arg_4:_SafeStr_21, _arg_5:_SafeStr_18, _arg_6:_SafeStr_19, _arg_7:IHabboCatalog)
+        public function PlayListEditorWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_2088, _arg_4:IAssetLibrary, _arg_5:_SafeStr_18, _arg_6:_SafeStr_19, _arg_7:IHabboCatalog)
         {
             super(_arg_1, _arg_2, _arg_4, _arg_5);
             _soundManager = _arg_3;

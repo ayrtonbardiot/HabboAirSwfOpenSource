@@ -10,7 +10,7 @@ package com.sulake.habbo.notifications.feed
     import com.sulake.habbo.notifications.feed.view.content.FeedEntity;
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.notifications.feed.view.pane.NotificationsPane;
     import com.sulake.habbo.notifications.feed.view.pane.StreamPane;
@@ -79,7 +79,7 @@ package com.sulake.habbo.notifications.feed
             return (_SafeStr_4147.windowManager);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_SafeStr_4147.assets);
         }

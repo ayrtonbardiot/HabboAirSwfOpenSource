@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.advertisement
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
@@ -12,7 +12,7 @@ package com.sulake.habbo.advertisement
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboConfigurationManager;
@@ -31,7 +31,7 @@ package com.sulake.habbo.advertisement
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import com.sulake.habbo.advertisement.events.AdEvent;
 
-    public class AdManager extends _SafeStr_20 implements _SafeStr_1705 
+    public class AdManager extends Component implements _SafeStr_1705 
     {
 
         private static const INTERSTITIAL_COMPLETE_CALLBACK:String = "interstitialCompleted";
@@ -44,7 +44,7 @@ package com.sulake.habbo.advertisement
         private var _billboardImageLoaders:_SafeStr_24;
         private var _SafeStr_3806:IMessageEvent;
 
-        public function AdManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function AdManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

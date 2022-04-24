@@ -4,13 +4,13 @@
 
 package com.sulake.habbo.communication.demo
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.communication.login.ILoginProvider;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -39,7 +39,7 @@ package com.sulake.habbo.communication.demo
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_2027 extends _SafeStr_20 
+    public class _SafeStr_2027 extends Component 
     {
 
         public static const ERROR_TYPE_IO_ERROR:String = "ioError";
@@ -62,7 +62,7 @@ package com.sulake.habbo.communication.demo
         private var _autoLogin:Boolean;
         private var _SafeStr_8366:Boolean;
 
-        public function _SafeStr_2027(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function _SafeStr_2027(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _arg_1.events.addEventListener("unload", unloading);
@@ -379,11 +379,11 @@ package com.sulake.habbo.communication.demo
 
         public function dispatchLoginStepEvent(_arg_1:String):void
         {
-            if (((_SafeStr_20(context) == null) || (_SafeStr_20(context).events == null)))
+            if (((Component(context) == null) || (Component(context).events == null)))
             {
                 return;
             };
-            _SafeStr_20(context).events.dispatchEvent(new Event(_arg_1));
+            Component(context).events.dispatchEvent(new Event(_arg_1));
         }
 
         private function unloading(_arg_1:Event):void

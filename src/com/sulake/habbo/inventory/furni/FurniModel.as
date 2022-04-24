@@ -8,7 +8,7 @@ package com.sulake.habbo.inventory.furni
     import com.sulake.habbo.inventory.HabboInventory;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.inventory.items.GroupItem;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
@@ -52,7 +52,7 @@ package com.sulake.habbo.inventory.furni
         private var _SafeStr_4360:HabboInventory;
         private var _SafeStr_3882:FurniView;
         private var _SafeStr_4362:Vector.<GroupItem>;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _windowManager:_SafeStr_1695;
         private var _roomEngine:IRoomEngine;
         private var _communication:IHabboCommunicationManager;
@@ -73,7 +73,7 @@ package com.sulake.habbo.inventory.furni
         private var _SafeStr_4368:FurnitureItem = null;
         private var _isInRoom:Boolean = false;
 
-        public function FurniModel(_arg_1:HabboInventory, _arg_2:MarketplaceModel, _arg_3:_SafeStr_1695, _arg_4:IHabboCommunicationManager, _arg_5:_SafeStr_21, _arg_6:IRoomEngine, _arg_7:IHabboCatalog, _arg_8:_SafeStr_2088, _arg_9:_SafeStr_18)
+        public function FurniModel(_arg_1:HabboInventory, _arg_2:MarketplaceModel, _arg_3:_SafeStr_1695, _arg_4:IHabboCommunicationManager, _arg_5:IAssetLibrary, _arg_6:IRoomEngine, _arg_7:IHabboCatalog, _arg_8:_SafeStr_2088, _arg_9:_SafeStr_18)
         {
             _SafeStr_4360 = _arg_1;
             _communication = _arg_4;

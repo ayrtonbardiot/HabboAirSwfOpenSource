@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.session
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.tracking._SafeStr_1704;
@@ -41,7 +41,7 @@ package com.sulake.habbo.session
     import com.sulake.habbo.session.handler.BaseHandler;
     import com.sulake.iid.*;
 
-    public class RoomSessionManager extends _SafeStr_20 implements IRoomSessionManager, IRoomHandlerListener 
+    public class RoomSessionManager extends Component implements IRoomSessionManager, IRoomHandlerListener 
     {
 
         public static const _SafeStr_8305:uint = 2;

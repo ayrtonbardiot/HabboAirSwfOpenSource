@@ -10,10 +10,10 @@ package com.sulake.habbo.ui.widget.camera
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.core.window.components._SafeStr_3264;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
@@ -35,7 +35,7 @@ package com.sulake.habbo.ui.widget.camera
         private var _window:_SafeStr_3263 = null;
         private var _SafeStr_4146:_SafeStr_3264;
 
-        public function RoomThumbnailCameraWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:RoomUI)
+        public function RoomThumbnailCameraWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_19, _arg_5:_SafeStr_18, _arg_6:RoomUI)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_5);
             _SafeStr_4147 = _arg_6;
@@ -45,7 +45,7 @@ package com.sulake.habbo.ui.widget.camera
                 roomEngine.events.addEventListener("REE_DISPOSED", onRoomDisposed);
                 roomEngine.events.addEventListener("REE_ROOM_ZOOMED", onRoomZoomed);
             };
-            (_arg_2 as _SafeStr_20).context.addLinkEventTracker(this);
+            (_arg_2 as Component).context.addLinkEventTracker(this);
         }
 
         override public function dispose():void
@@ -54,7 +54,7 @@ package com.sulake.habbo.ui.widget.camera
             {
                 return;
             };
-            (windowManager as _SafeStr_20).context.removeLinkEventTracker(this);
+            (windowManager as Component).context.removeLinkEventTracker(this);
             super.dispose();
         }
 

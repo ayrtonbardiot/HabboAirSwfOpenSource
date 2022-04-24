@@ -13,7 +13,7 @@ package com.sulake.habbo.ui.handler
     import _-Ja._SafeStr_843;
     import _-31H._SafeStr_1082;
     import _-Ja._SafeStr_1569;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils._SafeStr_3114;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -77,7 +77,7 @@ package com.sulake.habbo.ui.handler
                     {
                         if (((!(_SafeStr_5272 == null)) && (_SafeStr_5272.length > 0)))
                         {
-                            (_container.roomEngine as _SafeStr_20).context.createLinkEvent(("navigator/goto/" + _SafeStr_5272));
+                            (_container.roomEngine as Component).context.createLinkEvent(("navigator/goto/" + _SafeStr_5272));
                         };
                     };
                     _arg_1.dispose();
@@ -135,7 +135,7 @@ package com.sulake.habbo.ui.handler
                             }
                             else
                             {
-                                (_container.roomEngine as _SafeStr_20).context.createLinkEvent(("navigator/goto/" + _local_3));
+                                (_container.roomEngine as Component).context.createLinkEvent(("navigator/goto/" + _local_3));
                             };
                         };
                     };

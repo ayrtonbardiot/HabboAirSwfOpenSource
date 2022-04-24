@@ -13,7 +13,7 @@ package com.sulake.habbo.ui.widget.roomtools
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.ui.RoomUI;
     import flash.events.TimerEvent;
     import com.sulake.habbo.ui.handler.RoomToolsWidgetHandler;
@@ -35,7 +35,7 @@ package com.sulake.habbo.ui.widget.roomtools
         private var _SafeStr_4390:_SafeStr_1703;
         private var _SafeStr_4391:Timer;
 
-        public function RoomToolsWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:RoomUI)
+        public function RoomToolsWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:RoomUI)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4.localization);
             handler.widget = this;

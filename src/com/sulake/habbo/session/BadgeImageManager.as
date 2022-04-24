@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.session
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.IEventDispatcher;
     import com.sulake.core.runtime._SafeStr_19;
     import flash.utils.Dictionary;
@@ -28,12 +28,12 @@ package com.sulake.habbo.session
         private const ASSET_PREFIX:String = "badge_";
         private const ASSET_SMALL_POSTFIX:String = "_32";
 
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_3983:IEventDispatcher;
         private var _configuration:_SafeStr_19;
         private var _SafeStr_5106:Dictionary = new Dictionary();
 
-        public function BadgeImageManager(_arg_1:_SafeStr_21, _arg_2:IEventDispatcher, _arg_3:_SafeStr_19)
+        public function BadgeImageManager(_arg_1:IAssetLibrary, _arg_2:IEventDispatcher, _arg_3:_SafeStr_19)
         {
             if (_arg_1 == null)
             {

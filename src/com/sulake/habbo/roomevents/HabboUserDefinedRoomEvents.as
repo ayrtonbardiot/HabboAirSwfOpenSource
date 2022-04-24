@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.roomevents
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -13,7 +13,7 @@ package com.sulake.habbo.roomevents
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboWindowManager;
@@ -34,7 +34,7 @@ package com.sulake.habbo.roomevents
     import flash.display.BitmapData;
     import com.sulake.habbo.session.events.RoomSessionEvent;
 
-    public class HabboUserDefinedRoomEvents extends _SafeStr_20 implements IHabboUserDefinedRoomEvents 
+    public class HabboUserDefinedRoomEvents extends Component implements IHabboUserDefinedRoomEvents 
     {
 
         private var _windowManager:_SafeStr_1695;
@@ -47,7 +47,7 @@ package com.sulake.habbo.roomevents
         private var _sessionDataManager:ISessionDataManager;
         private var _userName:String;
 
-        public function HabboUserDefinedRoomEvents(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboUserDefinedRoomEvents(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3929 = new UserDefinedRoomEventsCtrl(this);

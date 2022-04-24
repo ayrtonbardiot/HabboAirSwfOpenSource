@@ -4,12 +4,12 @@
 
 package com.sulake.habbo.room.object
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.room.object.IRoomObjectVisualizationFactory;
     import com.sulake.habbo.avatar._SafeStr_1701;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDAvatarRenderManager;
     import __AS3__.vec.Vector;
@@ -61,14 +61,14 @@ package com.sulake.habbo.room.object
     import com.sulake.room.object.visualization.utils.GraphicAssetCollection;
     import com.sulake.room.object.visualization.utils.IGraphicAssetCollection;
 
-    public class RoomObjectVisualizationFactory extends _SafeStr_20 implements IRoomObjectVisualizationFactory 
+    public class RoomObjectVisualizationFactory extends Component implements IRoomObjectVisualizationFactory 
     {
 
         private var _habboAvatar:_SafeStr_1701 = null;
         private var _SafeStr_3837:_SafeStr_24;
         private var _SafeStr_3838:Boolean = true;
 
-        public function RoomObjectVisualizationFactory(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function RoomObjectVisualizationFactory(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3838 = (_arg_2 == 0);

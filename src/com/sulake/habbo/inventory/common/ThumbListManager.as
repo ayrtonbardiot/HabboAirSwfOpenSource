@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory.common
 {
     import flash.display.BitmapData;
     import com.sulake.core.assets.BitmapDataAsset;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.geom.Point;
     import flash.geom.Rectangle;
     import com.sulake.habbo.inventory.IThumbListDrawableItem;
@@ -27,7 +27,7 @@ package com.sulake.habbo.inventory.common
         private var _SafeStr_6766:BitmapData;
         private var _SafeStr_6773:BitmapData;
 
-        public function ThumbListManager(_arg_1:_SafeStr_21, _arg_2:IThumbListDataProvider, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:int)
+        public function ThumbListManager(_arg_1:IAssetLibrary, _arg_2:IThumbListDataProvider, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:int)
         {
             _SafeStr_6772 = _arg_2;
             var _local_7:BitmapDataAsset = BitmapDataAsset(_arg_1.getAssetByName(_arg_3));

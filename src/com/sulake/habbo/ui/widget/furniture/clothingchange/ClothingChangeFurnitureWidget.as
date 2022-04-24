@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.furniture.clothingchange
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetClothingChangeUpdateEvent;
@@ -31,7 +31,7 @@ package com.sulake.habbo.ui.widget.furniture.clothingchange
         private var _SafeStr_4750:int = 0;
         private var _SafeStr_3693:int = 0;
 
-        public function ClothingChangeFurnitureWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function ClothingChangeFurnitureWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
         }

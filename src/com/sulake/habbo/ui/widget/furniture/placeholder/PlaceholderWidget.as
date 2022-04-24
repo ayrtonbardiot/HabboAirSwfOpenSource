@@ -7,7 +7,7 @@ package com.sulake.habbo.ui.widget.furniture.placeholder
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetShowPlaceholderEvent;
@@ -17,7 +17,7 @@ package com.sulake.habbo.ui.widget.furniture.placeholder
 
         private var _SafeStr_3882:PlaceholderView;
 
-        public function PlaceholderWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function PlaceholderWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
         }

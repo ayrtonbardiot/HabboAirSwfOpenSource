@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.friendlist
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.avatar._SafeStr_1875;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -23,7 +23,7 @@ package com.sulake.habbo.friendlist
     import com.sulake.habbo.friendlist.domain.FriendCategoriesDeps;
     import com.sulake.habbo.friendlist.domain.AvatarSearchDeps;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboTracking;
@@ -96,7 +96,7 @@ package com.sulake.habbo.friendlist
     import _-Po.*;
     import _-wm.*;
 
-    public class HabboFriendList extends _SafeStr_20 implements _SafeStr_1874, _SafeStr_1875, ILinkEventTracker 
+    public class HabboFriendList extends Component implements _SafeStr_1874, _SafeStr_1875, ILinkEventTracker 
     {
 
         public static const AVATAR_FACE_NAME:String = "face";
@@ -124,7 +124,7 @@ package com.sulake.habbo.friendlist
         private var _SafeStr_3927:Boolean = false;
         private var _lastRoomInvitationTime:int = -60000;
 
-        public function HabboFriendList(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboFriendList(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3921 = new FriendCategories(new FriendCategoriesDeps(this));

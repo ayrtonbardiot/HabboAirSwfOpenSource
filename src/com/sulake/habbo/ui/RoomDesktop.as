@@ -32,7 +32,7 @@ package com.sulake.habbo.ui
     import com.sulake.habbo.game._SafeStr_1699;
     import com.sulake.habbo.quest._SafeStr_2046;
     import com.sulake.habbo.freeflowchat._SafeStr_1703;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.window.components._SafeStr_3189;
@@ -124,7 +124,7 @@ package com.sulake.habbo.ui
     import flash.events.TimerEvent;
     import flash.utils.getTimer;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import flash.filters.BlurFilter;
     import flash.display.BitmapData;
     import flash.filters.DisplacementMapFilter;
@@ -172,7 +172,7 @@ package com.sulake.habbo.ui
         private var _gameManager:_SafeStr_1699;
         private var _questEngine:_SafeStr_2046;
         private var _freeFlowChat:_SafeStr_1703;
-        private var _assets:_SafeStr_21 = null;
+        private var _assets:IAssetLibrary = null;
         private var _session:IRoomSession = null;
         private var _SafeStr_4345:Array = [];
         private var _SafeStr_4346:_SafeStr_24;
@@ -197,7 +197,7 @@ package com.sulake.habbo.ui
         private var _SafeStr_4350:Number = 0;
         private var _SafeStr_4354:Boolean;
 
-        public function RoomDesktop(_arg_1:IRoomSession, _arg_2:_SafeStr_21, _arg_3:IConnection)
+        public function RoomDesktop(_arg_1:IRoomSession, _arg_2:IAssetLibrary, _arg_3:IConnection)
         {
             _SafeStr_3983 = new EventDispatcherWrapper();
             _session = _arg_1;
@@ -1678,7 +1678,7 @@ package com.sulake.habbo.ui
             var _local_3:* = null;
             if (_session != null)
             {
-                if ((_roomEngine as _SafeStr_20).getBoolean("zoom.enabled"))
+                if ((_roomEngine as Component).getBoolean("zoom.enabled"))
                 {
                     _local_1 = _roomEngine.getRoomCanvasScale(_roomEngine.activeRoomId);
                     _local_2 = ((_local_1 == 1) ? 0.5 : 1);

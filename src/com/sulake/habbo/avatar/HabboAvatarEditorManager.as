@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.avatar
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.inventory._SafeStr_1708;
@@ -15,7 +15,7 @@ package com.sulake.habbo.avatar
     import com.sulake.habbo.ui.IRoomUI;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDCoreWindowManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -34,7 +34,7 @@ package com.sulake.habbo.avatar
     import com.sulake.habbo.ui.IRoomDesktop;
     import com.sulake.iid.*;
 
-    public class HabboAvatarEditorManager extends _SafeStr_20 implements _SafeStr_1758, ILinkEventTracker 
+    public class HabboAvatarEditorManager extends Component implements _SafeStr_1758, ILinkEventTracker 
     {
 
         public static const _SafeStr_8303:uint = 1;
@@ -53,7 +53,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_3914:AvatarEditorMessageHandler;
         private var _editors:_SafeStr_24;
 
-        public function HabboAvatarEditorManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboAvatarEditorManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _editors = new _SafeStr_24();

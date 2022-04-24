@@ -7,7 +7,7 @@ package com.sulake.habbo.notifications.utils
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.inventory._SafeStr_1708;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
 
@@ -51,21 +51,21 @@ package com.sulake.habbo.notifications.utils
                         switch (_local_5)
                         {
                             case 2:
-                                _local_7 = ((_inventory as _SafeStr_20).assets.getAssetByName("icon_wallpaper_png") as BitmapDataAsset);
+                                _local_7 = ((_inventory as Component).assets.getAssetByName("icon_wallpaper_png") as BitmapDataAsset);
                                 if (_local_7 != null)
                                 {
                                     _local_6 = (_local_7.content as BitmapData).clone();
                                 };
                                 break;
                             case 4:
-                                _local_7 = ((_inventory as _SafeStr_20).assets.getAssetByName("icon_landscape_png") as BitmapDataAsset);
+                                _local_7 = ((_inventory as Component).assets.getAssetByName("icon_landscape_png") as BitmapDataAsset);
                                 if (_local_7 != null)
                                 {
                                     _local_6 = (_local_7.content as BitmapData).clone();
                                 };
                                 break;
                             case 3:
-                                _local_7 = ((_inventory as _SafeStr_20).assets.getAssetByName("icon_floor_png") as BitmapDataAsset);
+                                _local_7 = ((_inventory as Component).assets.getAssetByName("icon_floor_png") as BitmapDataAsset);
                                 if (_local_7 != null)
                                 {
                                     _local_6 = (_local_7.content as BitmapData).clone();
@@ -76,7 +76,7 @@ package com.sulake.habbo.notifications.utils
                     };
                     break;
                 case "e":
-                    _local_7 = ((_inventory as _SafeStr_20).assets.getAssetByName((("fx_icon_" + _arg_2) + "_png")) as BitmapDataAsset);
+                    _local_7 = ((_inventory as Component).assets.getAssetByName((("fx_icon_" + _arg_2) + "_png")) as BitmapDataAsset);
                     if (_local_7 != null)
                     {
                         _local_6 = (_local_7.content as BitmapData).clone();

@@ -12,7 +12,7 @@ package com.sulake.habbo.ui.widget.furniture.guildfurnicontextmenu
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.habbo.ui.widget.furniture.contextmenu.FurnitureContextMenuWidget;
@@ -128,7 +128,7 @@ package com.sulake.habbo.ui.widget.furniture.guildfurnicontextmenu
                         case "open_forum":
                             if (((!(widget == null)) && (!(widget.roomEngine == null))))
                             {
-                                _local_4 = (widget.roomEngine as _SafeStr_20);
+                                _local_4 = (widget.roomEngine as Component);
                                 if (_local_4.context != null)
                                 {
                                     _local_4.context.createLinkEvent(("groupforum/" + _SafeStr_4332));

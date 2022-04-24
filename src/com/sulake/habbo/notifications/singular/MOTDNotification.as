@@ -10,7 +10,7 @@ package com.sulake.habbo.notifications.singular
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window._SafeStr_3109;
@@ -24,7 +24,7 @@ package com.sulake.habbo.notifications.singular
         private var _SafeStr_4020:_SafeStr_18;
         private var _SafeStr_5642:Array;
 
-        public function MOTDNotification(_arg_1:Array, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695)
+        public function MOTDNotification(_arg_1:Array, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695)
         {
             var _local_9:* = null;
             var _local_8:* = null;

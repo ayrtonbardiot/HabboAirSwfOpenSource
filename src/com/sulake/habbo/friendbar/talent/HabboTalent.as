@@ -13,7 +13,7 @@ package com.sulake.habbo.friendbar.talent
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.avatar._SafeStr_1758;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.tracking._SafeStr_1704;
@@ -46,7 +46,7 @@ package com.sulake.habbo.friendbar.talent
         private var _toolbar:IHabboToolbar;
         private var _avatarEditor:_SafeStr_1758;
 
-        public function HabboTalent(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboTalent(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

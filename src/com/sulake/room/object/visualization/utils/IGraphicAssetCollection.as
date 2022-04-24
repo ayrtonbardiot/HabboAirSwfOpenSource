@@ -4,14 +4,14 @@
 
 package com.sulake.room.object.visualization.utils
 {
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.display.BitmapData;
 
     public /*dynamic*/ interface IGraphicAssetCollection 
     {
 
         function dispose():void;
-        function set assetLibrary(_arg_1:_SafeStr_21):void;
+        function set assetLibrary(_arg_1:IAssetLibrary):void;
         function addReference():void;
         function removeReference():void;
         function getReferenceCount():int;

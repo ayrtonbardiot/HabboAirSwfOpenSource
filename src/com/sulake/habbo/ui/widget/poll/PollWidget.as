@@ -8,7 +8,7 @@ package com.sulake.habbo.ui.widget.poll
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPollUpdateEvent;
@@ -21,7 +21,7 @@ package com.sulake.habbo.ui.widget.poll
 
         private var _SafeStr_5092:_SafeStr_24;
 
-        public function PollWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function PollWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _SafeStr_5092 = new _SafeStr_24();

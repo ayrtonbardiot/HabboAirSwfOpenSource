@@ -9,7 +9,7 @@ package com.sulake.habbo.toolbar.extensions.purse.indicators
     import com.sulake.habbo.toolbar.HabboToolbar;
     import com.sulake.habbo.catalog.purse._SafeStr_3226;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.localization._SafeStr_17;
     import flash.events.IEventDispatcher;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -26,7 +26,7 @@ package com.sulake.habbo.toolbar.extensions.purse.indicators
         private var _SafeStr_4712:int = -1;
         private var _toolbar:HabboToolbar;
 
-        public function SeasonalCurrencyIndicator(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IHabboCatalog, _arg_5:_SafeStr_17)
+        public function SeasonalCurrencyIndicator(_arg_1:HabboToolbar, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IHabboCatalog, _arg_5:_SafeStr_17)
         {
             super(_arg_2, _arg_3);
             _toolbar = _arg_1;

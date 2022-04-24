@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.catalog.clubcenter
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.catalog.offers.IOfferExtension;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
@@ -20,7 +20,7 @@ package com.sulake.habbo.catalog.clubcenter
     import _-W1K._SafeStr_1632;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -43,7 +43,7 @@ package com.sulake.habbo.catalog.clubcenter
     import com.sulake.habbo.catalog.purse._SafeStr_3142;
     import flash.display.Stage;
 
-    public class HabboClubCenter extends _SafeStr_20 implements ILinkEventTracker, IOfferExtension 
+    public class HabboClubCenter extends Component implements ILinkEventTracker, IOfferExtension 
     {
 
         private static const USE_FAKE_DATA:Boolean = false;
@@ -68,7 +68,7 @@ package com.sulake.habbo.catalog.clubcenter
         private var _SafeStr_4980:int;
         private var _SafeStr_4985:Vector.<_SafeStr_24>;
 
-        public function HabboClubCenter(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboClubCenter(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

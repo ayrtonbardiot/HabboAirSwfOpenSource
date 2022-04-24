@@ -6,7 +6,7 @@ package com.sulake.habbo.inventory.marketplace
 {
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -33,7 +33,7 @@ package com.sulake.habbo.inventory.marketplace
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3882:_SafeStr_3263;
         private var _SafeStr_4619:MarketplaceModel;
         private var _roomEngine:IRoomEngine;
@@ -44,7 +44,7 @@ package com.sulake.habbo.inventory.marketplace
         private var _furniName:String;
         private var _SafeStr_5453:HabboInventory;
 
-        public function MarketplaceView(_arg_1:MarketplaceModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IRoomEngine, _arg_5:_SafeStr_18, _arg_6:HabboInventory)
+        public function MarketplaceView(_arg_1:MarketplaceModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IRoomEngine, _arg_5:_SafeStr_18, _arg_6:HabboInventory)
         {
             _SafeStr_4619 = _arg_1;
             _SafeStr_3745 = _arg_3;

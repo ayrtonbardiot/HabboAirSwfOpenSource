@@ -7,7 +7,7 @@ package com.sulake.habbo.notifications.feed.view.content
     import __AS3__.vec.Vector;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.habbo.localization._SafeStr_18;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.notifications.feed.NotificationController;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window.components._SafeStr_3122;
@@ -40,7 +40,7 @@ package com.sulake.habbo.notifications.feed.view.content
 
         public static var _SafeStr_6696:_SafeStr_3133;
         public static var _SafeStr_6697:_SafeStr_18;
-        public static var ASSETS:_SafeStr_21;
+        public static var ASSETS:IAssetLibrary;
         public static var FEED_CONTROLLER:NotificationController;
 
         protected var _window:_SafeStr_3133;
@@ -57,7 +57,7 @@ package com.sulake.habbo.notifications.feed.view.content
             _window = (_SafeStr_6696.clone() as _SafeStr_3133);
         }
 
-        public static function assignHandles(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:_SafeStr_18, _arg_4:NotificationController):void
+        public static function assignHandles(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:_SafeStr_18, _arg_4:NotificationController):void
         {
             _SafeStr_6696 = (_arg_1.buildFromXML((_arg_2.getAssetByName("feed_entity_xml").content as XML)) as _SafeStr_3133);
             ASSETS = _arg_2;

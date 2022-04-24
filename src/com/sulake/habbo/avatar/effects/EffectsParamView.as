@@ -9,7 +9,7 @@ package com.sulake.habbo.avatar.effects
     import com.sulake.habbo.window._SafeStr_1695;
     import flash.utils.Timer;
     import com.sulake.habbo.avatar._SafeStr_3339;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
@@ -28,7 +28,7 @@ package com.sulake.habbo.avatar.effects
         private var _SafeStr_6820:int = 0;
         private var _SafeStr_6819:_SafeStr_3339 = null;
 
-        public function EffectsParamView(_arg_1:EffectsModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function EffectsParamView(_arg_1:EffectsModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _SafeStr_4619 = _arg_1;
             _windowManager = _arg_2;

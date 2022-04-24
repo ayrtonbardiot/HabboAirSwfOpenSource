@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.uihelpbubbles
 {
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.friendbar.view._SafeStr_3185;
@@ -15,7 +15,7 @@ package com.sulake.habbo.ui.widget.uihelpbubbles
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.ui.IRoomDesktop;
     import flash.geom.Rectangle;
     import com.sulake.core.window._SafeStr_3109;
@@ -29,7 +29,7 @@ package com.sulake.habbo.ui.widget.uihelpbubbles
     public class UiHelpBubblesWidget extends RoomWidgetBase implements ILinkEventTracker 
     {
 
-        private var _SafeStr_4147:_SafeStr_20;
+        private var _SafeStr_4147:Component;
         private var _SafeStr_4660:_SafeStr_24;
         private var _toolBar:IHabboToolbar;
         private var _friendBar:_SafeStr_3185;
@@ -39,7 +39,7 @@ package com.sulake.habbo.ui.widget.uihelpbubbles
         private var _SafeStr_4963:int = 0;
         private var _localization:_SafeStr_18;
 
-        public function UiHelpBubblesWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:_SafeStr_18, _arg_5:_SafeStr_3185, _arg_6:IHabboToolbar, _arg_7:IRoomDesktop, _arg_8:_SafeStr_20)
+        public function UiHelpBubblesWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:_SafeStr_18, _arg_5:_SafeStr_3185, _arg_6:IHabboToolbar, _arg_7:IRoomDesktop, _arg_8:Component)
         {
             super(_arg_1, _arg_2, _arg_3, _arg_4);
             _SafeStr_4147 = _arg_8;
@@ -53,7 +53,7 @@ package com.sulake.habbo.ui.widget.uihelpbubbles
                 _roomTools = (_arg_7.getWidget("RWE_ROOM_TOOLS") as RoomToolsWidget);
                 _SafeStr_4964 = (_arg_7.getWidget("RWE_CHAT_INPUT_WIDGET") as RoomChatInputWidget);
             };
-            (_arg_2 as _SafeStr_20).context.addLinkEventTracker(this);
+            (_arg_2 as Component).context.addLinkEventTracker(this);
         }
 
         override public function dispose():void

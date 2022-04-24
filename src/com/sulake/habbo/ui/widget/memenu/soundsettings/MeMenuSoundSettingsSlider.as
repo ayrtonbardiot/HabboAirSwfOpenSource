@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.memenu.soundsettings
 {
     import com.sulake.core.window._SafeStr_3133;
     import flash.display.BitmapData;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import com.sulake.core.window.events._SafeStr_3116;
     import com.sulake.core.window.components._SafeStr_3264;
@@ -24,7 +24,7 @@ package com.sulake.habbo.ui.widget.memenu.soundsettings
         private var _SafeStr_6403:Number = 0;
         private var _SafeStr_6404:Number = 1;
 
-        public function MeMenuSoundSettingsSlider(_arg_1:MeMenuSoundSettingsItem, _arg_2:_SafeStr_3133, _arg_3:_SafeStr_21, _arg_4:Number=0, _arg_5:Number=1)
+        public function MeMenuSoundSettingsSlider(_arg_1:MeMenuSoundSettingsItem, _arg_2:_SafeStr_3133, _arg_3:IAssetLibrary, _arg_4:Number=0, _arg_5:Number=1)
         {
             _SafeStr_6951 = _arg_1;
             _SafeStr_5880 = _arg_2;
@@ -107,7 +107,7 @@ package com.sulake.habbo.ui.widget.memenu.soundsettings
             };
         }
 
-        private function storeAssets(_arg_1:_SafeStr_21):void
+        private function storeAssets(_arg_1:IAssetLibrary):void
         {
             var _local_2:* = null;
             if (_arg_1 == null)

@@ -5,7 +5,7 @@
 package com.sulake.habbo.moderation
 {
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components._SafeStr_3263;
     import com.sulake.core.window.components.ITabContextWindow;
     import com.sulake.core.window._SafeStr_3133;
@@ -25,7 +25,7 @@ package com.sulake.habbo.moderation
 
         private var _SafeStr_3789:IssueManager;
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _window:_SafeStr_3263;
         private var _tabContext:ITabContextWindow;
         private var _SafeStr_5410:IIssueBrowserView;
@@ -33,7 +33,7 @@ package com.sulake.habbo.moderation
         private var _SafeStr_5412:IIssueBrowserView;
         private var _SafeStr_5413:PickedIssuesView;
 
-        public function IssueBrowser(_arg_1:IssueManager, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21)
+        public function IssueBrowser(_arg_1:IssueManager, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary)
         {
             _SafeStr_3789 = _arg_1;
             _windowManager = _arg_2;
@@ -45,7 +45,7 @@ package com.sulake.habbo.moderation
             return (_windowManager);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_assets);
         }

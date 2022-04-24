@@ -16,7 +16,7 @@ package com.sulake.habbo.room.preview
     import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.IStuffData;
     import flash.display.DisplayObject;
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
     import com.sulake.habbo.room._SafeStr_3140;
@@ -343,7 +343,7 @@ package com.sulake.habbo.room.preview
                 _local_2 = _roomEngine.getRoomCanvasGeometry(_SafeStr_4631, 1);
                 if (((_currentPreviewRectangle.width > (_currentPreviewCanvasWidth * (1 + 0.25))) || (_currentPreviewRectangle.height > (_SafeStr_4637 * (1 + 0.25)))))
                 {
-                    if ((_roomEngine as _SafeStr_20).getBoolean("zoom.enabled"))
+                    if ((_roomEngine as Component).getBoolean("zoom.enabled"))
                     {
                         if (_roomEngine.getRoomCanvasScale(_SafeStr_4631, 1) != 0.5)
                         {
@@ -378,7 +378,7 @@ package com.sulake.habbo.room.preview
                 {
                     if ((((_currentPreviewRectangle.width << 1) < ((_currentPreviewCanvasWidth * (1 + 0.25)) - 5)) && ((_currentPreviewRectangle.height << 1) < ((_SafeStr_4637 * (1 + 0.25)) - 5))))
                     {
-                        if ((_roomEngine as _SafeStr_20).getBoolean("zoom.enabled"))
+                        if ((_roomEngine as Component).getBoolean("zoom.enabled"))
                         {
                             if (((!(_roomEngine.getRoomCanvasScale(_SafeStr_4631, 1) == 1)) && (!(_SafeStr_4638))))
                             {
@@ -409,7 +409,7 @@ package com.sulake.habbo.room.preview
             var _local_1:* = null;
             if (isRoomEngineReady)
             {
-                if ((_roomEngine as _SafeStr_20).getBoolean("zoom.enabled"))
+                if ((_roomEngine as Component).getBoolean("zoom.enabled"))
                 {
                     _roomEngine.setRoomCanvasScale(_SafeStr_4631, 1, 1);
                 };
@@ -428,7 +428,7 @@ package com.sulake.habbo.room.preview
             var _local_1:* = null;
             if (isRoomEngineReady)
             {
-                if ((_roomEngine as _SafeStr_20).getBoolean("zoom.enabled"))
+                if ((_roomEngine as Component).getBoolean("zoom.enabled"))
                 {
                     _roomEngine.setRoomCanvasScale(_SafeStr_4631, 1, 0.5);
                 }

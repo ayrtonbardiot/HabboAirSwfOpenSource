@@ -17,7 +17,7 @@ package com.sulake.habbo.window
     import com.sulake.core.assets.IResourceManager;
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.utils._SafeStr_24;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.text.StyleSheet;
 
     public /*dynamic*/ interface _SafeStr_1695 extends IUnknown, _SafeStr_1694 
@@ -41,7 +41,7 @@ package com.sulake.habbo.window
         function get resourceManager():IResourceManager;
         function buildModalDialogFromXML(_arg_1:XML):IModalDialog;
         function simpleAlert(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:String=null, _arg_6:_SafeStr_24=null, _arg_7:String=null, _arg_8:Function=null, _arg_9:Function=null):void;
-        function get assets():_SafeStr_21;
+        function get assets():IAssetLibrary;
         function registerHintWindow(_arg_1:String, _arg_2:_SafeStr_3109, _arg_3:int=1):void;
         function unregisterHintWindow(_arg_1:String):void;
         function showHint(_arg_1:String, _arg_2:Rectangle=null):void;

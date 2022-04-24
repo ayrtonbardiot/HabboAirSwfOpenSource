@@ -10,7 +10,7 @@ package com.sulake.habbo.toolbar
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core._SafeStr_79;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3109;
     import flash.utils.Timer;
     import com.sulake.habbo.toolbar.events.ExtensionViewEvent;
@@ -32,7 +32,7 @@ package com.sulake.habbo.toolbar
         private var _windowManager:_SafeStr_1695;
         private var _extraMargin:int = 0;
 
-        public function ExtensionView(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:HabboToolbar)
+        public function ExtensionView(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:HabboToolbar)
         {
             _toolbar = _arg_3;
             _windowManager = _arg_1;

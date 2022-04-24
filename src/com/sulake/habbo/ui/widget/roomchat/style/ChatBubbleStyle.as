@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.roomchat.style
 {
     import com.sulake.core.window.components.IRegionWindow;
     import flash.display.BitmapData;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.assets.IAsset;
 
@@ -27,7 +27,7 @@ package com.sulake.habbo.ui.widget.roomchat.style
         private var _SafeStr_6801:BitmapData;
         private var _SafeStr_6802:BitmapData;
 
-        public function ChatBubbleStyle(_arg_1:_SafeStr_21, _arg_2:_SafeStr_1695, _arg_3:XML)
+        public function ChatBubbleStyle(_arg_1:IAssetLibrary, _arg_2:_SafeStr_1695, _arg_3:XML)
         {
             _SafeStr_5982 = _arg_3.@id[0];
             _styleName = _arg_3.@name[0];
@@ -141,7 +141,7 @@ package com.sulake.habbo.ui.widget.roomchat.style
             return (_SafeStr_6802);
         }
 
-        private function buildBubbleWindow(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:String):IRegionWindow
+        private function buildBubbleWindow(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:String):IRegionWindow
         {
             if (_arg_3 == null)
             {
@@ -164,7 +164,7 @@ package com.sulake.habbo.ui.widget.roomchat.style
             return ((("roomchat_styles_" + _styleName) + "_") + _arg_1);
         }
 
-        private function getBitmapDataFor(_arg_1:String, _arg_2:_SafeStr_21):BitmapData
+        private function getBitmapDataFor(_arg_1:String, _arg_2:IAssetLibrary):BitmapData
         {
             var _local_3:IAsset = _arg_2.getAssetByName(localAssetName(_arg_1));
             if (_local_3)

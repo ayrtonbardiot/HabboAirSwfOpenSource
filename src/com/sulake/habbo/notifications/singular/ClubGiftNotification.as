@@ -10,7 +10,7 @@ package com.sulake.habbo.notifications.singular
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.window.components._SafeStr_3264;
     import flash.display.BitmapData;
@@ -34,7 +34,7 @@ package com.sulake.habbo.notifications.singular
         private var _toolbar:IHabboToolbar;
         private var _SafeStr_6437:ITextWindow;
 
-        public function ClubGiftNotification(_arg_1:int, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695, _arg_4:IHabboCatalog, _arg_5:IHabboToolbar)
+        public function ClubGiftNotification(_arg_1:int, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695, _arg_4:IHabboCatalog, _arg_5:IHabboToolbar)
         {
             if ((((!(_arg_2)) || (!(_arg_3))) || (!(_arg_4))))
             {

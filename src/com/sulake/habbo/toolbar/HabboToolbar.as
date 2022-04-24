@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.toolbar
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.toolbar.extensions.PurseAreaExtension;
@@ -37,7 +37,7 @@ package com.sulake.habbo.toolbar
     import com.sulake.habbo.campaign.HabboCampaigns;
     import com.sulake.iid.IIDHabboCampaigns;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboConfigurationManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -80,7 +80,7 @@ package com.sulake.habbo.toolbar
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;
     import com.sulake.core.runtime._SafeStr_800;
 
-    public class HabboToolbar extends _SafeStr_20 implements IHabboToolbar 
+    public class HabboToolbar extends Component implements IHabboToolbar 
     {
 
         private var _windowManager:_SafeStr_1695;
@@ -115,7 +115,7 @@ package com.sulake.habbo.toolbar
         private var _SafeStr_3918:Timer;
         private var _SafeStr_3919:Timer;
 
-        public function HabboToolbar(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboToolbar(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _arg_1.attachComponent(new HabboPhoneNumber(_arg_1, 0, _arg_3), [new IIDHabboPhoneNumber()]);

@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.navigator
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.IRoomSessionManager;
@@ -26,7 +26,7 @@ package com.sulake.habbo.navigator
     import __AS3__.vec.Vector;
     import com.sulake.habbo.navigator.cache.NavigatorCache;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboRoomSessionManager;
@@ -68,7 +68,7 @@ package com.sulake.habbo.navigator
     import _-kT._SafeStr_963;
     import _-kT._SafeStr_964;
 
-    public class HabboNewNavigator extends _SafeStr_20 implements IHabboNewNavigator, ILinkEventTracker 
+    public class HabboNewNavigator extends Component implements IHabboNewNavigator, ILinkEventTracker 
     {
 
         private var _communication:IHabboCommunicationManager;
@@ -100,7 +100,7 @@ package com.sulake.habbo.navigator
         private var _SafeStr_3971:Boolean = false;
         private var _noPushToHistoryDueToNavigation:Boolean = false;
 
-        public function HabboNewNavigator(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboNewNavigator(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3965 = new LegacyNavigator(this, _SafeStr_3964);

@@ -7,7 +7,7 @@ package com.sulake.habbo.avatar
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import flash.utils.Dictionary;
     import com.sulake.core.assets.AssetLoaderStruct;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.utils.Timer;
     import flash.net.URLRequest;
     import com.sulake.core.assets.IAsset;
@@ -28,7 +28,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_5400:Dictionary;
         private var _SafeStr_4691:int = 3;
         private var _SafeStr_4690:AssetLoaderStruct;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _SafeStr_4697:Boolean;
         private var _SafeStr_4692:String;
         private var _SafeStr_4694:String;
@@ -41,7 +41,7 @@ package com.sulake.habbo.avatar
         private var _SafeStr_4700:Array;
         private var _SafeStr_4699:Array;
 
-        public function EffectAssetDownloadManager(_arg_1:_SafeStr_21, _arg_2:String, _arg_3:String, _arg_4:AvatarStructure, _arg_5:String)
+        public function EffectAssetDownloadManager(_arg_1:IAssetLibrary, _arg_2:String, _arg_3:String, _arg_4:AvatarStructure, _arg_5:String)
         {
             var _local_9:* = null;
             var _local_7:* = null;

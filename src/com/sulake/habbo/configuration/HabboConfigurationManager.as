@@ -4,13 +4,13 @@
 
 package com.sulake.habbo.configuration
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_19;
     import flash.utils.Dictionary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.utils.CommunicationUtils;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboLocalizationManager;
     import __AS3__.vec.Vector;
@@ -28,7 +28,7 @@ package com.sulake.habbo.configuration
     import com.sulake.core.runtime._SafeStr_35;
     import flash.display.Stage;
 
-    public class HabboConfigurationManager extends _SafeStr_20 implements _SafeStr_19, _SafeStr_22 
+    public class HabboConfigurationManager extends Component implements _SafeStr_19, _SafeStr_22 
     {
 
         private static const INTERPOLATION_DEPTH_LIMIT:int = 3;
@@ -43,7 +43,7 @@ package com.sulake.habbo.configuration
         private var _SafeStr_8391:String;
         private var _localization:_SafeStr_18;
 
-        public function HabboConfigurationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboConfigurationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _arg_1.configuration = this;

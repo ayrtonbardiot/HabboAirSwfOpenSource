@@ -5,7 +5,7 @@
 package com.sulake.room
 {
     import flash.events.IEventDispatcher;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.room.object.visualization.utils.IGraphicAssetCollection;
     import com.sulake.room.object.IRoomObject;
 
@@ -18,7 +18,7 @@ package com.sulake.room
         function getContentType(_arg_1:String):String;
         function hasInternalContent(_arg_1:String):Boolean;
         function loadObjectContent(_arg_1:String, _arg_2:IEventDispatcher):Boolean;
-        function insertObjectContent(_arg_1:int, _arg_2:int, _arg_3:_SafeStr_21):Boolean;
+        function insertObjectContent(_arg_1:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean;
         function getVisualizationType(_arg_1:String):String;
         function getLogicType(_arg_1:String):String;
         function hasVisualizationXML(_arg_1:String):Boolean;

@@ -6,7 +6,7 @@ package com.sulake.habbo.catalog.offers
 {
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.core.window._SafeStr_3133;
     import __AS3__.vec.Vector;
@@ -27,7 +27,7 @@ package com.sulake.habbo.catalog.offers
 
         private var _disposed:Boolean;
         private var _windowManager:_SafeStr_1695;
-        private var _assets:_SafeStr_21;
+        private var _assets:IAssetLibrary;
         private var _catalog:IHabboCatalog;
         private var _offerExtension:IOfferExtension;
         private var _window:_SafeStr_3133;
@@ -38,7 +38,7 @@ package com.sulake.habbo.catalog.offers
         private var _SafeStr_5182:Timer;
         private var _offerRewardDeliveredMessageEvent:_SafeStr_613;
 
-        public function OfferCenter(_arg_1:_SafeStr_1695, _arg_2:_SafeStr_21, _arg_3:IHabboCatalog)
+        public function OfferCenter(_arg_1:_SafeStr_1695, _arg_2:IAssetLibrary, _arg_3:IHabboCatalog)
         {
             _windowManager = _arg_1;
             _assets = _arg_2;

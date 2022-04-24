@@ -9,7 +9,7 @@ package com.sulake.habbo.ui.widget.furniture.requirementsmissing
     import com.sulake.habbo.ui.handler.CustomUserNotificationWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.inventory._SafeStr_3123;
     import com.sulake.core.window.events._SafeStr_3116;
@@ -27,7 +27,7 @@ package com.sulake.habbo.ui.widget.furniture.requirementsmissing
         private var _window:_SafeStr_3263;
         private var _SafeStr_5258:CustomUserNotificationWidgetHandler;
 
-        public function CustomUserNotificationWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null)
+        public function CustomUserNotificationWidget(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_5258 = CustomUserNotificationWidgetHandler(_arg_1);

@@ -9,7 +9,7 @@ package com.sulake.core.runtime
     import flash.display.DisplayObjectContainer;
     import flash.display.Sprite;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import flash.events.Event;
     import com.sulake.core.runtime.events.WarningEvent;
     import com.sulake.core.runtime.events.ErrorEvent;
@@ -25,7 +25,7 @@ package com.sulake.core.runtime
     import com.sulake.core.runtime.events.LockEvent;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_799 extends _SafeStr_20 implements _SafeStr_31 
+    public class _SafeStr_799 extends Component implements _SafeStr_31 
     {
 
         protected var _loaders:Vector.<_SafeStr_39>;
@@ -33,11 +33,11 @@ package com.sulake.core.runtime
         private var _configuration:_SafeStr_19;
 
         protected var _SafeStr_8049:DisplayObjectContainer = new Sprite();
-        protected var _SafeStr_8050:Vector.<_SafeStr_20> = new Vector.<_SafeStr_20>();
+        protected var _SafeStr_8050:Vector.<Component> = new Vector.<Component>();
         protected var _SafeStr_8051:Vector.<_SafeStr_1526> = new Vector.<_SafeStr_1526>();
         private var _linkEventTrackers:Vector.<ILinkEventTracker> = new Vector.<ILinkEventTracker>(0);
 
-        public function _SafeStr_799(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function _SafeStr_799(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, (_arg_2 | 0x02), _arg_3);
         }
@@ -59,7 +59,7 @@ package com.sulake.core.runtime
         override public function purge():void
         {
             super.purge();
-            for each (var _local_1:_SafeStr_20 in _SafeStr_8050)
+            for each (var _local_1:Component in _SafeStr_8050)
             {
                 if (_local_1 != this)
                 {
@@ -231,7 +231,7 @@ package com.sulake.core.runtime
                 _local_4 = _local_6.attribute("class");
                 _local_17 = _local_6.child("assets");
                 var _local_22:XMLList = _local_6.child("aliases");
-                var _local_24:_SafeStr_21 = null;
+                var _local_24:IAssetLibrary = null;
                 if (_local_17.length() > 0)
                 {
                     _local_20 = new XML("<manifest><library /></manifest>");
@@ -289,7 +289,7 @@ package com.sulake.core.runtime
             return (_local_21 as IUnknown);
         }
 
-        final public function attachComponent(_arg_1:_SafeStr_20, _arg_2:Array):void
+        final public function attachComponent(_arg_1:Component, _arg_2:Array):void
         {
             var _local_6:uint;
             var _local_4:* = null;
@@ -335,7 +335,7 @@ package com.sulake.core.runtime
             };
         }
 
-        final public function detachComponent(_arg_1:_SafeStr_20):void
+        final public function detachComponent(_arg_1:Component):void
         {
             var _local_2:* = null;
             var _local_4:uint;
@@ -446,7 +446,7 @@ package com.sulake.core.runtime
             return (null);
         }
 
-        final protected function announceInterfaceAvailability(_arg_1:IID, _arg_2:_SafeStr_20):void
+        final protected function announceInterfaceAvailability(_arg_1:IID, _arg_2:Component):void
         {
             var _local_6:* = null;
             var _local_4:uint;
@@ -515,7 +515,7 @@ package com.sulake.core.runtime
         {
             var _local_2:* = null;
             var _local_4:* = null;
-            var _local_3:_SafeStr_20 = (_arg_1.unknown as _SafeStr_20);
+            var _local_3:Component = (_arg_1.unknown as Component);
             if (!_local_3.disposed)
             {
                 _local_3.events.removeEventListener("_INTERNAL_EVENT_UNLOCKED", unlockEventHandler);
@@ -562,7 +562,7 @@ package com.sulake.core.runtime
             _local_11 = 0;
             while (_local_11 < _SafeStr_8050.length)
             {
-                _local_4 = (_SafeStr_8050[_local_11] as _SafeStr_20);
+                _local_4 = (_SafeStr_8050[_local_11] as Component);
                 if (_local_4 != this)
                 {
                     _local_2 = (_local_2 + _local_4.toXMLString((_arg_1 + 1)));

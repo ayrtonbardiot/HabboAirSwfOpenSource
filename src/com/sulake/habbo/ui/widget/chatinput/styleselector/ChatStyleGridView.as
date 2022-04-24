@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget.chatinput.styleselector
 {
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.core.window.components._SafeStr_3195;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.window.components.IItemGridWindow;
     import flash.geom.Rectangle;
@@ -24,7 +24,7 @@ package com.sulake.habbo.ui.widget.chatinput.styleselector
         public function ChatStyleGridView(_arg_1:ChatStyleSelector, _arg_2:ISessionDataManager)
         {
             _SafeStr_8965 = _arg_1;
-            var _local_3:_SafeStr_21 = _arg_1.chatInputView.widget.assets;
+            var _local_3:IAssetLibrary = _arg_1.chatInputView.widget.assets;
             _window = _SafeStr_3195(_arg_1.chatInputView.widget.windowManager.buildFromXML(XML(_local_3.getAssetByName("styleselector_menu_new_xml").content)));
             _window.visible = false;
         }

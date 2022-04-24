@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget
 {
     import com.sulake.habbo.ui.IRoomWidgetFactory;
     import com.sulake.habbo.ui.RoomUI;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.ui.widget.roomchat.RoomChatWidget;
     import com.sulake.habbo.ui.widget.chatinput.RoomChatInputWidget;
@@ -76,7 +76,7 @@ package com.sulake.habbo.ui.widget
             {
                 return (null);
             };
-            var _local_3:_SafeStr_21 = _roomUI.assets;
+            var _local_3:IAssetLibrary = _roomUI.assets;
             var _local_4:_SafeStr_1695 = _roomUI.windowManager;
             switch (_arg_1)
             {

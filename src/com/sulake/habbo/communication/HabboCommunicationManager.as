@@ -4,14 +4,14 @@
 
 package com.sulake.habbo.communication
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.communication.connection._SafeStr_26;
     import com.sulake.core.communication._SafeStr_46;
     import com.sulake.core.communication.messages.IMessageConfiguration;
     import flash.utils.Timer;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDCoreCommunicationManager;
     import com.sulake.iid.IIDHabboConfigurationManager;
@@ -31,7 +31,7 @@ package com.sulake.habbo.communication
     import flash.events.TimerEvent;
     import flash.events.SecurityErrorEvent;
 
-    public class HabboCommunicationManager extends _SafeStr_20 implements IHabboCommunicationManager, _SafeStr_26 
+    public class HabboCommunicationManager extends Component implements IHabboCommunicationManager, _SafeStr_26 
     {
 
         private static const DEFAULT_CONNECTION_ATTEMPTS:int = 2;
@@ -52,7 +52,7 @@ package com.sulake.habbo.communication
         private var _SafeStr_3771:int = 0;
         private var _requiresInitialRetryAttempt:Boolean = true;
 
-        public function HabboCommunicationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboCommunicationManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _arg_1.events.addEventListener("unload", unloading);

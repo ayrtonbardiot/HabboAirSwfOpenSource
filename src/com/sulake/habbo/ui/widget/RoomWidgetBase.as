@@ -6,7 +6,7 @@ package com.sulake.habbo.ui.widget
 {
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import flash.events.IEventDispatcher;
@@ -19,11 +19,11 @@ package com.sulake.habbo.ui.widget
         private var _SafeStr_3983:EventDispatcherWrapper;
         private var _SafeStr_3733:IRoomWidgetMessageListener;
         private var _windowManager:_SafeStr_1695;
-        protected var _assets:_SafeStr_21;
+        protected var _assets:IAssetLibrary;
         protected var _SafeStr_4020:_SafeStr_18;
         protected var _SafeStr_3914:IRoomWidgetHandler;
 
-        public function RoomWidgetBase(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21=null, _arg_4:_SafeStr_18=null)
+        public function RoomWidgetBase(_arg_1:IRoomWidgetHandler, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary=null, _arg_4:_SafeStr_18=null)
         {
             _SafeStr_3914 = _arg_1;
             _windowManager = _arg_2;
@@ -83,7 +83,7 @@ package com.sulake.habbo.ui.widget
             return (_windowManager);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_assets);
         }

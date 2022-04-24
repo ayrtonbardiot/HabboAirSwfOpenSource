@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.tracking
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import __AS3__.vec.Vector;
@@ -14,7 +14,7 @@ package com.sulake.habbo.tracking
     import com.sulake.core.runtime._SafeStr_31;
     import com.sulake.core.utils.ErrorReportStorage;
     import flash.system.Capabilities;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboCommunicationManager;
     import com.sulake.iid.IIDHabboConfigurationManager;
@@ -53,7 +53,7 @@ package com.sulake.habbo.tracking
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.iid.*;
 
-    public class HabboTracking extends _SafeStr_20 implements _SafeStr_1704, _SafeStr_41 
+    public class HabboTracking extends Component implements _SafeStr_1704, _SafeStr_41 
     {
 
         private static const ERROR_DATA_FLAG_COUNT:uint = 11;
@@ -79,7 +79,7 @@ package com.sulake.habbo.tracking
         private var _SafeStr_3800:int = -1;
         private var onceTrackedEvents:Vector.<String> = new Vector.<String>(0);
 
-        public function HabboTracking(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboTracking(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             var _local_5:uint;
             if (_SafeStr_3793 == null)
@@ -290,7 +290,7 @@ package com.sulake.habbo.tracking
             addMessageEvent(new _SafeStr_484(onRoomEnter));
             addMessageEvent(new _SafeStr_201(onAchievementNotification));
             addMessageEvent(new _SafeStr_834(onPingResponse));
-            var _local_1:IEventDispatcher = _SafeStr_20(context).events;
+            var _local_1:IEventDispatcher = Component(context).events;
             _local_1.addEventListener("HABBO_CONNECTION_EVENT_INIT", onConnectionEvent);
             _local_1.addEventListener("HABBO_CONNECTION_EVENT_ESTABLISHED", onConnectionEvent);
             _local_1.addEventListener("HABBO_CONNECTION_EVENT_HANDSHAKING", onConnectionEvent);
@@ -388,7 +388,7 @@ package com.sulake.habbo.tracking
                     loadConversionTrackingFrame();
                     trackLoginStep("client.init.auth.ok");
             };
-            _SafeStr_20(context).events.removeEventListener(_arg_1.type, onConnectionEvent);
+            Component(context).events.removeEventListener(_arg_1.type, onConnectionEvent);
         }
 
         private function onWindowTrackingEvent(_arg_1:Event):void

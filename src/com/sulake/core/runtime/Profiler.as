@@ -4,7 +4,7 @@
 
 package com.sulake.core.runtime
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime._SafeStr_1099;
     import flash.utils.Dictionary;
     import com.sulake.core.runtime._SafeStr_31;
@@ -19,7 +19,7 @@ package com.sulake.core.runtime
     import com.sulake.core.utils.profiler.ProfilerAgent;
     import com.sulake.core.runtime.*;
 
-    internal class Profiler extends _SafeStr_20 implements _SafeStr_1099 
+    internal class Profiler extends Component implements _SafeStr_1099 
     {
 
         public static const PROFILER_START:String = "PROFILER_START";

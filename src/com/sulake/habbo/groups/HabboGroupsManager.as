@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.groups
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -20,7 +20,7 @@ package com.sulake.habbo.groups
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDHabboCommunicationManager;
@@ -85,7 +85,7 @@ package com.sulake.habbo.groups
     import _-XO._SafeStr_313;
     import _-XO._SafeStr_909;
 
-    public class HabboGroupsManager extends _SafeStr_20 implements _SafeStr_1757, ILinkEventTracker 
+    public class HabboGroupsManager extends Component implements _SafeStr_1757, ILinkEventTracker 
     {
 
         public static const GROUPS_TRACKING_CATEGORY:String = "HabboGroups";
@@ -114,7 +114,7 @@ package com.sulake.habbo.groups
         private var _SafeStr_3910:GuildKickData;
         private var _messageEvents:Vector.<IMessageEvent>;
 
-        public function HabboGroupsManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboGroupsManager(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _SafeStr_3904 = new DetailsWindowCtrl(this);

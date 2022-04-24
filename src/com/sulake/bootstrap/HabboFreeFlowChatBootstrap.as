@@ -6,12 +6,12 @@ package com.sulake.bootstrap
 {
     import com.sulake.habbo.freeflowchat.HabboFreeFlowChat;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
 
     public class HabboFreeFlowChatBootstrap extends HabboFreeFlowChat 
     {
 
-        public function HabboFreeFlowChatBootstrap(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
+        public function HabboFreeFlowChatBootstrap(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:IAssetLibrary)
         {
             super(_arg_1, _arg_2, _arg_3);
         }

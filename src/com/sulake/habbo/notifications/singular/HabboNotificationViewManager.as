@@ -5,7 +5,7 @@
 package com.sulake.habbo.notifications.singular
 {
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.notifications.HabboNotifications;
@@ -18,7 +18,7 @@ package com.sulake.habbo.notifications.singular
 
         private static const SPACING:int = 4;
 
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _windowManager:_SafeStr_1695;
         private var _toolbar:IHabboToolbar;
         private var _notifications:HabboNotifications;
@@ -27,7 +27,7 @@ package com.sulake.habbo.notifications.singular
         private var _disposed:Boolean = false;
         private var _viewItems:Array;
 
-        public function HabboNotificationViewManager(_arg_1:HabboNotifications, _arg_2:_SafeStr_21, _arg_3:_SafeStr_1695, _arg_4:IHabboToolbar, _arg_5:_SafeStr_24, _arg_6:_SafeStr_24)
+        public function HabboNotificationViewManager(_arg_1:HabboNotifications, _arg_2:IAssetLibrary, _arg_3:_SafeStr_1695, _arg_4:IHabboToolbar, _arg_5:_SafeStr_24, _arg_6:_SafeStr_24)
         {
             _notifications = _arg_1;
             _SafeStr_3745 = _arg_2;

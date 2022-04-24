@@ -7,7 +7,7 @@ package com.sulake.habbo.inventory.pets
     import com.sulake.habbo.inventory.IInventoryView;
     import com.sulake.habbo.room._SafeStr_3140;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.habbo.room.IRoomEngine;
@@ -36,7 +36,7 @@ package com.sulake.habbo.inventory.pets
         private const STATE_CONTENT:int = 3;
 
         private var _windowManager:_SafeStr_1695;
-        private var _SafeStr_3745:_SafeStr_21;
+        private var _SafeStr_3745:IAssetLibrary;
         private var _SafeStr_3882:_SafeStr_3133;
         private var _SafeStr_4619:PetsModel;
         private var _disposed:Boolean = false;
@@ -48,7 +48,7 @@ package com.sulake.habbo.inventory.pets
         private var _SafeStr_6114:int;
         private var _SafeStr_3883:Boolean = false;
 
-        public function PetsView(_arg_1:PetsModel, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_21, _arg_4:IRoomEngine)
+        public function PetsView(_arg_1:PetsModel, _arg_2:_SafeStr_1695, _arg_3:IAssetLibrary, _arg_4:IRoomEngine)
         {
             _SafeStr_4619 = _arg_1;
             _SafeStr_3745 = _arg_3;

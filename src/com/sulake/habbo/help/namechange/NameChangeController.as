@@ -11,7 +11,7 @@ package com.sulake.habbo.help.namechange
     import _-W1K._SafeStr_206;
     import _-a1N._SafeStr_331;
     import _-a1N._SafeStr_685;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window._SafeStr_3109;
@@ -51,7 +51,7 @@ package com.sulake.habbo.help.namechange
             return (_habboHelp);
         }
 
-        public function get assets():_SafeStr_21
+        public function get assets():IAssetLibrary
         {
             return (_habboHelp.assets);
         }

@@ -4,7 +4,7 @@
 
 package com.sulake.habbo.friendbar
 {
-    import com.sulake.core.runtime._SafeStr_20;
+    import com.sulake.core.runtime.Component;
     import com.sulake.habbo.friendbar.data.HabboFriendBarData;
     import com.sulake.iid.IIDHabboFriendBarData;
     import com.sulake.habbo.friendbar.view.HabboFriendBarView;
@@ -18,13 +18,13 @@ package com.sulake.habbo.friendbar
     import com.sulake.habbo.friendbar.groupforums.GroupForumController;
     import com.sulake.iid.IIDHabboGroupForumController;
     import com.sulake.core.runtime._SafeStr_31;
-    import com.sulake.core.assets._SafeStr_21;
+    import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.friendbar.view._SafeStr_3185;
 
-    public class HabboFriendBar extends _SafeStr_20 implements IHabboFriendBar 
+    public class HabboFriendBar extends Component implements IHabboFriendBar 
     {
 
-        public function HabboFriendBar(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:_SafeStr_21=null)
+        public function HabboFriendBar(_arg_1:_SafeStr_31, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(_arg_1, _arg_2, _arg_3);
             _arg_1.attachComponent(new HabboFriendBarData(_arg_1, 0, _arg_3), [new IIDHabboFriendBarData()]);
