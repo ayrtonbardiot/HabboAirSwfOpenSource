@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.room._SafeStr_1691
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.room
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.room.IRoomManagerListener;
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.room.renderer.IRoomRendererFactory;
     import com.sulake.room.IRoomManager;
     import com.sulake.room.IRoomObjectFactory;
@@ -166,7 +165,7 @@ package com.sulake.habbo.room
         private static const ROOM_DRAG_THRESHOLD:int = 15;
         private static const _SafeStr_8899:int = 40;
 
-        private var _communication:_SafeStr_25 = null;
+        private var _communication:IHabboCommunicationManager = null;
         private var _roomRendererFactory:IRoomRendererFactory = null;
         private var _roomManager:IRoomManager = null;
         private var _roomObjectFactory:IRoomObjectFactory = null;
@@ -289,7 +288,7 @@ package com.sulake.habbo.room
             }), new ComponentDependency(new IIDRoomRendererFactory(), function (_arg_1:IRoomRendererFactory):void
             {
                 _roomRendererFactory = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }, ((flags & 0x05) == 0)), new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{

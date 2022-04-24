@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.notifications._SafeStr_3118
 
 package com.sulake.habbo.notifications
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import _-x1P._SafeStr_643;
@@ -70,10 +69,10 @@ package com.sulake.habbo.notifications
         private const CALL_FOR_HELP_NOTIFICATION_TYPE:String = "cfh.created";
 
         private var _notifications:HabboNotifications;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _messageEvents:Vector.<IMessageEvent>;
 
-        public function _SafeStr_3118(_arg_1:HabboNotifications, _arg_2:_SafeStr_25)
+        public function _SafeStr_3118(_arg_1:HabboNotifications, _arg_2:IHabboCommunicationManager)
         {
             _notifications = _arg_1;
             _communication = _arg_2;

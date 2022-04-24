@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_skin_border_sunk_xml$88e853e59872623c9e75a0ce54d55f1b908301803
 

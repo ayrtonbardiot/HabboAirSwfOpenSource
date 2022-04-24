@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //boygirl_xml$763e4481aabe0a772c1515e801f63377606593164
 

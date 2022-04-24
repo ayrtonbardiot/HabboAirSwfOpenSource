@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_dropmenu_xml$53330ceb26cec8fcd2d0c5724298d55f14133885
 

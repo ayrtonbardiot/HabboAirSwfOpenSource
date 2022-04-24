@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.game.snowwar._SafeStr_3118
 
 package com.sulake.habbo.game.snowwar
 {
     import com.sulake.core.runtime._SafeStr_13;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-K1h._SafeStr_308;
     import _-1O._SafeStr_837;
     import _-1O.Game2StopCounterMessageEvent;
@@ -123,7 +122,7 @@ package com.sulake.habbo.game.snowwar
         public function _SafeStr_3118(_arg_1:SnowWarEngine)
         {
             _SafeStr_3758 = _arg_1;
-            var _local_2:_SafeStr_25 = _SafeStr_3758.communication;
+            var _local_2:IHabboCommunicationManager = _SafeStr_3758.communication;
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_308(onStageEnding));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_837(onGameCreated));
             _local_2.addHabboConnectionMessageEvent(new Game2StopCounterMessageEvent(onLobbyCounterStop));

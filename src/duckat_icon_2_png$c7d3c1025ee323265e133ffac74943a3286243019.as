@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //duckat_icon_2_png$c7d3c1025ee323265e133ffac74943a3286243019
 

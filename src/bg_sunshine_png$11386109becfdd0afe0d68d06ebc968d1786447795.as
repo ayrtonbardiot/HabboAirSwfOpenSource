@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //bg_sunshine_png$11386109becfdd0afe0d68d06ebc968d1786447795
 

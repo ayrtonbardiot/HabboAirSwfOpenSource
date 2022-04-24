@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.groups.HabboGroupsManager
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.groups
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.navigator._SafeStr_1696;
@@ -91,7 +90,7 @@ package com.sulake.habbo.groups
 
         public static const GROUPS_TRACKING_CATEGORY:String = "HabboGroups";
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _localization:_SafeStr_18;
         private var _navigator:_SafeStr_1696;
@@ -133,7 +132,7 @@ package com.sulake.habbo.groups
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (_arg_1:_SafeStr_18):void

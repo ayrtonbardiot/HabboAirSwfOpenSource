@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //xmas_hover_png$0883855d63c558aa1eee38d5b2f535dd1357453720
 

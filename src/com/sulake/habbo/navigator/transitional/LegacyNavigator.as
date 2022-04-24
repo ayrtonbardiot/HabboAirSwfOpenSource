@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.navigator.transitional.LegacyNavigator
 
@@ -23,7 +22,7 @@ package com.sulake.habbo.navigator.transitional
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.navigator.mainview.ITransitionalMainViewCtrl;
     import com.sulake.habbo.navigator.domain.Tabs;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.toolbar.IHabboToolbar;
@@ -116,7 +115,7 @@ package com.sulake.habbo.navigator.transitional
             return (_SafeStr_3744);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_SafeStr_3964.communication);
         }

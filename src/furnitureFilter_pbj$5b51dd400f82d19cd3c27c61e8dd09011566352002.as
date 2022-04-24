@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //furnitureFilter_pbj$5b51dd400f82d19cd3c27c61e8dd09011566352002
 

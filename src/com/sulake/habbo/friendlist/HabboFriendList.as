@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendlist.HabboFriendList
 
@@ -9,7 +8,7 @@ package com.sulake.habbo.friendlist
     import com.sulake.habbo.avatar._SafeStr_1875;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.messenger._SafeStr_1700;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.avatar._SafeStr_1701;
@@ -103,7 +102,7 @@ package com.sulake.habbo.friendlist
         public static const AVATAR_FACE_NAME:String = "face";
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _messenger:_SafeStr_1700;
         private var _localization:_SafeStr_18;
         private var _avatarManager:_SafeStr_1701;
@@ -136,7 +135,7 @@ package com.sulake.habbo.friendlist
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboTracking(), function (_arg_1:_SafeStr_1704):void

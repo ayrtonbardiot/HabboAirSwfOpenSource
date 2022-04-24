@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_scaler_xml$48cd1cd9c35f6748029494f9d5790364824758031
 

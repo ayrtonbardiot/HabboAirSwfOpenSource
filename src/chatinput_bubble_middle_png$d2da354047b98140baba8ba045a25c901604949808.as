@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //chatinput_bubble_middle_png$d2da354047b98140baba8ba045a25c901604949808
 

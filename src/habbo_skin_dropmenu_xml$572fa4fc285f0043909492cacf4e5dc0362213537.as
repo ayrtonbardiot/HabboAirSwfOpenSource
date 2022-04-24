@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_dropmenu_xml$572fa4fc285f0043909492cacf4e5dc0362213537
 

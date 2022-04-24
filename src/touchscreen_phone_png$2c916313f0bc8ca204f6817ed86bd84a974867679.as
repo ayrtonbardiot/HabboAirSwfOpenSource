@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //touchscreen_phone_png$2c916313f0bc8ca204f6817ed86bd84a974867679
 

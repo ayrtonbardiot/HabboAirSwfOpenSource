@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.demo._SafeStr_3118
 
 package com.sulake.habbo.communication.demo
 {
-    import com.sulake.habbo.communication._SafeStr_25;
-    import com.sulake.core.communication.handshake._SafeStr_42;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.hurlant.crypto.rsa.RSAKey;
@@ -44,22 +43,22 @@ package com.sulake.habbo.communication.demo
     import com.sulake.habbo.utils.HabboWebTools;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.communication.demo.utils._SafeStr_3298;
-    import com.sulake.habbo.communication.demo.utils._SafeStr_3364;
+    import com.sulake.habbo.communication.demo.utils.KeyObfuscator;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_3118 
+    public class HabboCommunicationDemo 
     {
 
         private var _SafeStr_4147:_SafeStr_2027;
-        private var _communication:_SafeStr_25;
-        private var _SafeStr_5118:_SafeStr_42;
+        private var _communication:IHabboCommunicationManager;
+        private var _keyExchange:IKeyExchange;
         private var _privateKey:String;
-        private var _SafeStr_5119:Boolean;
+        private var _handshakeInProgress:Boolean;
         private var _SafeStr_5120:Boolean;
         private var _messageEvents:Vector.<IMessageEvent> = new Vector.<IMessageEvent>(0);
         private var _rsa:RSAKey;
 
-        public function _SafeStr_3118(_arg_1:_SafeStr_2027, _arg_2:_SafeStr_25)
+        public function HabboCommunicationDemo(_arg_1:_SafeStr_2027, _arg_2:IHabboCommunicationManager)
         {
             _SafeStr_4147 = _arg_1;
             _communication = _arg_2;
@@ -113,7 +112,7 @@ package com.sulake.habbo.communication.demo
             };
             _SafeStr_4147 = null;
             _communication = null;
-            _SafeStr_5118 = null;
+            _keyExchange = null;
         }
 
         private function addHabboConnectionMessageEvent(_arg_1:IMessageEvent):void
@@ -154,15 +153,15 @@ package com.sulake.habbo.communication.demo
                 _SafeStr_79.crash("Invalid DH prime and generator", 29);
                 return;
             };
-            _SafeStr_5118 = _communication.initializeKeyExchange(_local_11, _local_12);
+            _keyExchange = _communication.initializeKeyExchange(_local_11, _local_12);
             var _local_6:String;
             var _local_13:int = 10;
             var _local_7:String;
             while (_local_13 > 0)
             {
                 _local_7 = generateRandomHexString(30);
-                _SafeStr_5118.init(_local_7);
-                _local_9 = _SafeStr_5118.getPublicKey(10);
+                _keyExchange.init(_local_7);
+                _local_9 = _keyExchange.getPublicKey(10);
                 if (_local_9.length < 64)
                 {
                     if (((_local_6 == null) || (_local_9.length > _local_6.length)))
@@ -181,7 +180,7 @@ package com.sulake.habbo.communication.demo
             };
             if (_local_7 != _privateKey)
             {
-                _SafeStr_5118.init(_privateKey);
+                _keyExchange.init(_privateKey);
             };
             var _local_15:ByteArray = new ByteArray();
             var _local_14:ByteArray = new ByteArray();
@@ -200,9 +199,9 @@ package com.sulake.habbo.communication.demo
             _local_6.writeBytes(CryptoTools.hexStringToByteArray(_local_4.encryptedPublicKey));
             _rsa.verify(_local_6, _local_3, _local_6.length);
             _rsa.dispose();
-            _SafeStr_5118.generateSharedKey(_local_3.toString(), 10);
-            var _local_2:String = _SafeStr_5118.getSharedKey(16).toUpperCase();
-            if (!_SafeStr_5118.isValidServerPublicKey())
+            _keyExchange.generateSharedKey(_local_3.toString(), 10);
+            var _local_2:String = _keyExchange.getSharedKey(16).toUpperCase();
+            if (!_keyExchange.isValidServerPublicKey())
             {
                 return;
             };
@@ -216,7 +215,7 @@ package com.sulake.habbo.communication.demo
                 _local_9.init(_local_8);
             };
             _local_7.setEncryption(_local_5, _local_9);
-            _SafeStr_5119 = false;
+            _handshakeInProgress = false;
             _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_HANDSHAKED");
             _SafeStr_4147.sendConnectionParameters(_local_7);
         }
@@ -298,7 +297,7 @@ package com.sulake.habbo.communication.demo
                 updateRsaData();
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_ESTABLISHED");
                 _SafeStr_5120 = false;
-                _SafeStr_5119 = true;
+                _handshakeInProgress = true;
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_HANDSHAKING");
                 _local_2.sendUnencrypted(new _SafeStr_475());
                 _local_2.sendUnencrypted(new _SafeStr_588());
@@ -316,13 +315,13 @@ package com.sulake.habbo.communication.demo
 
         private function onDisconnectReason(_arg_1:_SafeStr_274):void
         {
-            if (_SafeStr_5119)
+            if (_handshakeInProgress)
             {
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL");
             };
             _SafeStr_14.log(("[HabboLogin] Got disconnect reason: " + _arg_1.reason));
             _SafeStr_4147.disconnected(_arg_1.reason, _arg_1.getReasonName());
-            _SafeStr_5119 = false;
+            _handshakeInProgress = false;
             _SafeStr_5120 = true;
         }
 
@@ -361,7 +360,7 @@ package com.sulake.habbo.communication.demo
             {
                 return;
             };
-            if (_SafeStr_5119)
+            if (_handshakeInProgress)
             {
                 _SafeStr_4147.dispatchLoginStepEvent("HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL");
             };
@@ -409,7 +408,7 @@ package com.sulake.habbo.communication.demo
             var _local_3:String = _SafeStr_3298.decode(_local_5);
             var _local_2:int = _local_3.charCodeAt(0);
             var _local_4:int = _local_3.charCodeAt((_local_2 + 1));
-            var _local_1:Array = _SafeStr_3364.getRsaData();
+            var _local_1:Array = KeyObfuscator.getRsaData();
             _local_1[0] = _local_3.substr(1, _local_2);
             _local_1[1] = _local_3.substr((_local_2 + 2), _local_4);
         }
@@ -444,8 +443,8 @@ package com.sulake.habbo.communication.demo
 // _SafeStr_459 = "_-y9" (String#18590, DoABC#4)
 // _SafeStr_461 = "_-Q17" (String#7013, DoABC#4)
 // _SafeStr_475 = "_-c1t" (String#29475, DoABC#4)
-// _SafeStr_5118 = "_-f1Q" (String#6919, DoABC#4)
-// _SafeStr_5119 = "_-B1P" (String#8733, DoABC#4)
+// _keyExchange = "_-f1Q" (String#6919, DoABC#4)
+// _handshakeInProgress = "_-B1P" (String#8733, DoABC#4)
 // _SafeStr_5120 = "_-J1W" (String#6242, DoABC#4)
 // _SafeStr_588 = "_-T1Q" (String#28389, DoABC#4)
 // _SafeStr_7 = "_a_-_---" (String#39228, DoABC#4)

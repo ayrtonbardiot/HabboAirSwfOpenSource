@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_scrollbar_xml$299d2e86b417d62306541c989daa2c361011042807
 

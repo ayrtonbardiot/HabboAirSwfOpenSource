@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //effectbox_xml$f3f8faa46df77b655e656bf8f2bdc2db682277548
 

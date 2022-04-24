@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //bully_png$aaf9ac8ac7b5be56bbd6808061de09992143939667
 

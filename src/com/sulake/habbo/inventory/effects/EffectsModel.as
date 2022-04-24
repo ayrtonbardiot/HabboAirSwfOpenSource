@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory.effects.EffectsModel
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.inventory.effects
     import com.sulake.habbo.inventory.IInventoryModel;
     import com.sulake.habbo.inventory.HabboInventory;
     import com.sulake.core.assets._SafeStr_21;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.assets.BitmapDataAsset;
@@ -29,13 +28,13 @@ package com.sulake.habbo.inventory.effects
         private var _SafeStr_3882:EffectsView;
         private var _SafeStr_5396:Array;
         private var _assets:_SafeStr_21;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _SafeStr_5394:EffectListProxy;
         private var _SafeStr_5395:EffectListProxy;
         private var _disposed:Boolean = false;
         private var _SafeStr_5393:int = -1;
 
-        public function EffectsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_25, _arg_4:_SafeStr_21, _arg_5:_SafeStr_18)
+        public function EffectsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21, _arg_5:_SafeStr_18)
         {
             _SafeStr_4360 = _arg_1;
             _SafeStr_5396 = [];

@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.navigator._SafeStr_3118
 
 package com.sulake.habbo.navigator
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-Ja._SafeStr_466;
     import _-JS._SafeStr_404;
     import _-1O._SafeStr_400;
@@ -114,7 +113,7 @@ package com.sulake.habbo.navigator
         public function _SafeStr_3118(_arg_1:HabboNavigator)
         {
             _navigator = _arg_1;
-            var _local_2:_SafeStr_25 = _navigator.communication;
+            var _local_2:IHabboCommunicationManager = _navigator.communication;
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_466(onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_404(onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_400(onGameStarted));

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //trophy_xml$3fcc35ad806762087618199a0cb1e60a1260230304
 

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_checkbox_basic_png$8d7bf1419c98a1045620e46d5ae420391078529232
 

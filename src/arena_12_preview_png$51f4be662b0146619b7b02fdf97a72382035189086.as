@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //arena_12_preview_png$51f4be662b0146619b7b02fdf97a72382035189086
 

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //floor_plan_editor_bc_xml$062c717775d2a3b3243c0af41d3309951861357089
 

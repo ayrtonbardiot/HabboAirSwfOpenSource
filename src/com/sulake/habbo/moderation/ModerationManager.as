@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.moderation.ModerationManager
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.moderation
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.navigator._SafeStr_1696;
     import com.sulake.habbo.sound._SafeStr_2088;
@@ -38,7 +37,7 @@ package com.sulake.habbo.moderation
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _sessionDataManager:ISessionDataManager;
         private var _navigator:_SafeStr_1696;
         private var _soundManager:_SafeStr_2088;
@@ -63,7 +62,7 @@ package com.sulake.habbo.moderation
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDSessionDataManager(), function (_arg_1:ISessionDataManager):void

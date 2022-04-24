@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.tracking.HabboTracking
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.tracking
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.room.IRoomEngine;
@@ -61,7 +60,7 @@ package com.sulake.habbo.tracking
 
         private static var _SafeStr_3793:HabboTracking;
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _SafeStr_3794:Array;
         private var _SafeStr_3515:Boolean = false;
         private var _messageEvents:Vector.<IMessageEvent>;
@@ -117,7 +116,7 @@ package com.sulake.habbo.tracking
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboConfigurationManager(), function (_arg_1:_SafeStr_19):void
@@ -895,7 +894,7 @@ package com.sulake.habbo.tracking
             };
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //balls_1_png$a32225dbe6e85be22c5bb3bdbe4d2e62141072177
 

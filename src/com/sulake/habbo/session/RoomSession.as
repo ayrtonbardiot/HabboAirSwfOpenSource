@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.session.RoomSession
 
@@ -23,7 +22,7 @@ package com.sulake.habbo.session
     import _-L1z._SafeStr_550;
     import _-L1z._SafeStr_684;
     import _-L1z._SafeStr_866;
-    import _-02a._SafeStr_992;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
     import _-02a._SafeStr_722;
     import _-02a._SafeStr_370;
     import _-02a._SafeStr_628;
@@ -340,7 +339,7 @@ package com.sulake.habbo.session
 
         public function sendCreditFurniRedeemMessage(_arg_1:int):void
         {
-            _connection.send(new _SafeStr_992(_arg_1));
+            _connection.send(new CreditFurniRedeemMessageComposer(_arg_1));
         }
 
         public function sendPresentOpenMessage(_arg_1:int):void

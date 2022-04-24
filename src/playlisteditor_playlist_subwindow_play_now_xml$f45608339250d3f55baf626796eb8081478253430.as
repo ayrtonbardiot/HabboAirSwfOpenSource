@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //playlisteditor_playlist_subwindow_play_now_xml$f45608339250d3f55baf626796eb8081478253430
 

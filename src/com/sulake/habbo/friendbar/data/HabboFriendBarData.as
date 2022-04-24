@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendbar.data.HabboFriendBarData
 
 package com.sulake.habbo.friendbar.data
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.friendlist._SafeStr_1874;
     import com.sulake.habbo.messenger._SafeStr_1700;
     import com.sulake.habbo.tracking._SafeStr_1704;
@@ -70,7 +69,7 @@ package com.sulake.habbo.friendbar.data
         private static const LEGACY_TRACKING_EVENT_TYPE_FRIENDLIST:String = "FRIENDLIST";
         private static const LEGACY_TRACKING_EVENT_TYPE_MESSENGER:String = "MESSENGER";
 
-        private var _habboCommunicationManager:_SafeStr_25;
+        private var _habboCommunicationManager:IHabboCommunicationManager;
         private var _habboFriendListComponent:_SafeStr_1874;
         private var _habboMessengerComponent:_SafeStr_1700;
         private var _tracking:_SafeStr_1704;
@@ -89,7 +88,7 @@ package com.sulake.habbo.friendbar.data
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboConfigurationManager(), null), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboConfigurationManager(), null), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _habboCommunicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboFriendList(), function (_arg_1:_SafeStr_1874):void

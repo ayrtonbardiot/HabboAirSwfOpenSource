@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //talent_track_xml$f8845831fa894425d54b606a50517f831325293730
 

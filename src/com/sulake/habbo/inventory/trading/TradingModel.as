@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory.trading.TradingModel
 
@@ -10,7 +9,7 @@ package com.sulake.habbo.inventory.trading
     import com.sulake.habbo.inventory.HabboInventory;
     import com.sulake.core.assets._SafeStr_21;
     import com.sulake.habbo.room.IRoomEngine;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.sound._SafeStr_2088;
     import com.sulake.core.utils._SafeStr_24;
@@ -60,7 +59,7 @@ package com.sulake.habbo.inventory.trading
         private var _inventory:HabboInventory;
         private var _SafeStr_3745:_SafeStr_21;
         private var _roomEngine:IRoomEngine;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _localization:_SafeStr_18;
         private var _soundManager:_SafeStr_2088;
         private var _SafeStr_5359:TradingView;
@@ -82,7 +81,7 @@ package com.sulake.habbo.inventory.trading
         private var _SafeStr_5357:Boolean = false;
         private var _SafeStr_5358:Boolean = false;
 
-        public function TradingModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_25, _arg_4:_SafeStr_21, _arg_5:IRoomEngine, _arg_6:_SafeStr_18, _arg_7:_SafeStr_2088)
+        public function TradingModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21, _arg_5:IRoomEngine, _arg_6:_SafeStr_18, _arg_7:_SafeStr_2088)
         {
             _inventory = _arg_1;
             _communication = _arg_3;

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.window.HabboWindowManagerComponent
 
@@ -20,7 +19,7 @@ package com.sulake.habbo.window
     import com.sulake.core.utils.profiler.ProfilerAgentTask;
     import com.sulake.habbo.window.theme.ThemeManager;
     import com.sulake.habbo.avatar._SafeStr_1701;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.window.utils.floorplaneditor.BCFloorPlanEditor;
@@ -104,7 +103,7 @@ package com.sulake.habbo.window
         private var _SafeStr_3723:ResourceManager;
         private var _hintManager:HintManager;
         private var _avatarRenderer:_SafeStr_1701;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _sessionDataManager:ISessionDataManager;
         private var _SafeStr_3883:Boolean = false;
         private var _roomEngine:IRoomEngine;
@@ -148,7 +147,7 @@ package com.sulake.habbo.window
             }, false)]));
         }
 
-        private function setCommunicationManager(_arg_1:_SafeStr_25):void
+        private function setCommunicationManager(_arg_1:IHabboCommunicationManager):void
         {
             _communication = _arg_1;
         }
@@ -615,7 +614,7 @@ package com.sulake.habbo.window
             return (new ModalDialog(this, _arg_1));
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //doormode_doorbell_small_png$8bfedb8b963e4a0b62dcc22dea08045a1196504483
 

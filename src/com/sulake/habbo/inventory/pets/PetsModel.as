@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory.pets.PetsModel
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.inventory.pets
     import com.sulake.habbo.inventory.IInventoryModel;
     import com.sulake.habbo.inventory.HabboInventory;
     import com.sulake.core.assets._SafeStr_21;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.core.utils._SafeStr_24;
@@ -27,7 +26,7 @@ package com.sulake.habbo.inventory.pets
         private var _SafeStr_4360:HabboInventory;
         private var _SafeStr_3882:PetsView;
         private var _assets:_SafeStr_21;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _roomEngine:IRoomEngine;
         private var _catalog:IHabboCatalog;
         private var _SafeStr_4271:_SafeStr_24;
@@ -35,7 +34,7 @@ package com.sulake.habbo.inventory.pets
         private var _disposed:Boolean = false;
         private var _SafeStr_4365:Boolean;
 
-        public function PetsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_25, _arg_4:_SafeStr_21, _arg_5:IRoomEngine, _arg_6:IHabboCatalog)
+        public function PetsModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21, _arg_5:IRoomEngine, _arg_6:IHabboCatalog)
         {
             _SafeStr_4360 = _arg_1;
             _assets = _arg_4;

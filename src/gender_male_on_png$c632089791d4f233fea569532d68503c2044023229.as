@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //gender_male_on_png$c632089791d4f233fea569532d68503c2044023229
 

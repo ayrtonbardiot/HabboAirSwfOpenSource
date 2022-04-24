@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_camera_png$b2aadd39065d7645383e8cc6ee70d935412232386
 

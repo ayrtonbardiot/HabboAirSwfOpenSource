@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //chat_grapbar_bg_png$1f0ffbcdbdf5f6226ce00b3857c15880486789720
 

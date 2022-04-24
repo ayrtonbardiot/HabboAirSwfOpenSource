@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.advertisement.AdManager
 
 package com.sulake.habbo.advertisement
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import flash.display.BitmapData;
@@ -37,7 +36,7 @@ package com.sulake.habbo.advertisement
 
         private static const INTERSTITIAL_COMPLETE_CALLBACK:String = "interstitialCompleted";
 
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _sessionDataManager:ISessionDataManager;
         private var _catalog:IHabboCatalog;
         private var _SafeStr_3807:BitmapData = null;
@@ -52,7 +51,7 @@ package com.sulake.habbo.advertisement
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboConfigurationManager(), null), new ComponentDependency(new IIDSessionDataManager(), function (_arg_1:ISessionDataManager):void

@@ -1,21 +1,20 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //_-02a._SafeStr_992
 
-package _-02a
+package _-02a-02a-02a-02a-02a
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_992 implements IMessageComposer 
+    public class CreditFurniRedeemMessageComposer implements IMessageComposer 
     {
 
-        private var _SafeStr_4157:int;
+        private var _objectId:int;
 
-        public function _SafeStr_992(_arg_1:int)
+        public function CreditFurniRedeemMessageComposer(_arg_1:int)
         {
-            _SafeStr_4157 = _arg_1;
+            _objectId = _arg_1;
         }
 
         public function dispose():void
@@ -24,7 +23,7 @@ package _-02a
 
         public function getMessageArray():Array
         {
-            return ([_SafeStr_4157]);
+            return ([_objectId]);
         }
 
 

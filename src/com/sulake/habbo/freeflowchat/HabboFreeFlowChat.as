@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.freeflowchat.HabboFreeFlowChat
 
@@ -15,7 +14,7 @@ package com.sulake.habbo.freeflowchat
     import com.sulake.habbo.game._SafeStr_1699;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.toolbar.IHabboToolbar;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.freeflowchat.data.ChatEventHandler;
@@ -77,7 +76,7 @@ package com.sulake.habbo.freeflowchat
         private var _gameManager:_SafeStr_1699;
         private var _localizationManager:_SafeStr_18;
         private var _toolbar:IHabboToolbar;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _sessionDataManager:ISessionDataManager;
         private var _SafeStr_3775:ChatEventHandler;
@@ -158,7 +157,7 @@ package com.sulake.habbo.freeflowchat
             }), new ComponentDependency(new IIDRoomEngine(), function (_arg_1:IRoomEngine):void
             {
                 _roomEngine = _arg_1;
-            }, false), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }, false), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboNavigator(), function (_arg_1:_SafeStr_1696):void

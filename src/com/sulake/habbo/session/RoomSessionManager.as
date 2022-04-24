@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.session.RoomSessionManager
 
 package com.sulake.habbo.session
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.tracking._SafeStr_1704;
     import com.sulake.habbo.room.IRoomEngine;
@@ -49,7 +48,7 @@ package com.sulake.habbo.session
         public static const SETUP_WITHOUT_TRACKING:uint = 3;
         public static const _SafeStr_8926:uint = 4;
 
-        private var _communication:_SafeStr_25 = null;
+        private var _communication:IHabboCommunicationManager = null;
         private var _handlers:Array = null;
         private var _SafeStr_3930:Boolean = false;
         private var _SafeStr_3933:_SafeStr_24 = null;
@@ -83,7 +82,7 @@ package com.sulake.habbo.session
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }, ((flags & 0x02) == 0)), new ComponentDependency(new IIDHabboTracking(), function (_arg_1:_SafeStr_1704):void

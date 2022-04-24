@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //rarity_item_plaque_png$3724aa5dac60df343476a3a98b7bdbcb315716698
 

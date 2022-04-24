@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.room._SafeStr_3180
 
@@ -67,7 +66,7 @@ package com.sulake.habbo.room
     import _-02a._SafeStr_664;
     import _-j1G._SafeStr_793;
     import _-02a._SafeStr_1002;
-    import _-02a._SafeStr_384;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
     import _-02a._SafeStr_402;
     import _-j1G._SafeStr_225;
     import _-02a._SafeStr_199;
@@ -2364,7 +2363,7 @@ package com.sulake.habbo.room
                         _roomEngine.connection.send(new _SafeStr_1002(_arg_2));
                         return;
                     case "ROFCAE_DICE_OFF":
-                        _roomEngine.connection.send(new _SafeStr_384(_arg_2));
+                        _roomEngine.connection.send(new DiceOffMessageComposer(_arg_2));
                         return;
                     case "ROFCAE_USE_HABBOWHEEL":
                         _roomEngine.connection.send(new _SafeStr_402(_arg_2));

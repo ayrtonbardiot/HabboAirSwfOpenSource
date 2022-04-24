@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //guild_color_btm_png$7f69001a79033c76c3867e505b779cc61819614803
 

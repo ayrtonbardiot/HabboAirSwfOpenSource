@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //dimmer_slider_button_png$d5691ee403bc0b53383c09f9fda767211326573186
 

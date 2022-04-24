@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.game.snowwar.SnowWarEngine
 
@@ -9,7 +8,7 @@ package com.sulake.habbo.game.snowwar
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.habbo.sound._SafeStr_2088;
     import com.sulake.habbo.game.HabboGameManager;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -101,7 +100,7 @@ package com.sulake.habbo.game.snowwar
         private static var _soundManager:_SafeStr_2088;
 
         private var _gameManager:HabboGameManager;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _configuration:_SafeStr_19;
         private var _localization:_SafeStr_18;
@@ -202,7 +201,7 @@ package com.sulake.habbo.game.snowwar
             return (_sessionDataManager);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }
@@ -398,7 +397,7 @@ package com.sulake.habbo.game.snowwar
 
         private function onHabboCommunicationReady(_arg_1:IID, _arg_2:IUnknown):void
         {
-            _communication = (_arg_2 as _SafeStr_25);
+            _communication = (_arg_2 as IHabboCommunicationManager);
             _SafeStr_3757 = new _SafeStr_3118(this);
         }
 

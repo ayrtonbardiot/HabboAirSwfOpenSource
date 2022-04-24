@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //parts_hilite_png$6b5edc01218a221a4e559247b3af407d106553928
 

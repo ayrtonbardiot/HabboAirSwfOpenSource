@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //playlisteditor_playlist_subwindow_add_songs_xml$0e45ff7802e940c89851e6a0346e34441096985771
 

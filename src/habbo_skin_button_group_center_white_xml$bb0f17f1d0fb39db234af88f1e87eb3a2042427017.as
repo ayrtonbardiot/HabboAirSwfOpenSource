@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_button_group_center_white_xml$bb0f17f1d0fb39db234af88f1e87eb3a2042427017
 

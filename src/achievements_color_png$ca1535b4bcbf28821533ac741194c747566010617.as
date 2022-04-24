@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //achievements_color_png$ca1535b4bcbf28821533ac741194c747566010617
 

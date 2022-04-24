@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_border_frame_png$059081213adecd3aedb184c1145add861975506440
 

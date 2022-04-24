@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_bubble_pointer_right_xml$0455ab335e5f123a22faf3afc270d4b11919554824
 

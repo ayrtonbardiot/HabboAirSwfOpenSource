@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication._SafeStr_25
 
@@ -10,10 +9,10 @@ package com.sulake.habbo.communication
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.communication.encryption.IEncryption;
     import com.hurlant.math.BigInteger;
-    import com.sulake.core.communication.handshake._SafeStr_42;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import flash.events.IEventDispatcher;
 
-    public /*dynamic*/ interface _SafeStr_25 extends IUnknown 
+    public /*dynamic*/ interface IHabboCommunicationManager extends IUnknown 
     {
 
         function disconnect():void;
@@ -27,7 +26,7 @@ package com.sulake.habbo.communication
         function addHabboConnectionMessageEvent(_arg_1:IMessageEvent):IMessageEvent;
         function removeHabboConnectionMessageEvent(_arg_1:IMessageEvent):void;
         function initializeEncryption():IEncryption;
-        function initializeKeyExchange(_arg_1:BigInteger, _arg_2:BigInteger):_SafeStr_42;
+        function initializeKeyExchange(_arg_1:BigInteger, _arg_2:BigInteger):IKeyExchange;
         function setMessageQueueErrorDebugData():void;
         function createHabboWebApiSession(_arg_1:_SafeStr_33, _arg_2:String):IHabboWebApiSession;
         function getHabboWebApiSession():IHabboWebApiSession;

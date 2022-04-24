@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendbar.groupforums.GroupForumController
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.friendbar.groupforums
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.core.runtime._SafeStr_19;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.help.IHabboHelp;
@@ -76,7 +75,7 @@ package com.sulake.habbo.friendbar.groupforums
         public static const _SafeStr_8549:int = -1;
 
         private var _configurationManager:_SafeStr_19;
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _localizationManager:_SafeStr_18;
         private var _help:IHabboHelp;
@@ -161,7 +160,7 @@ package com.sulake.habbo.friendbar.groupforums
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboConfigurationManager(), function (_arg_1:_SafeStr_19):void
             {
                 _configurationManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (_arg_1:_SafeStr_18):void

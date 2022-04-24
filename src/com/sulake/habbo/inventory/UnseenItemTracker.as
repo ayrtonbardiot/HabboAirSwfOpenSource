@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory.UnseenItemTracker
 
 package com.sulake.habbo.inventory
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import flash.utils.Dictionary;
     import flash.events.IEventDispatcher;
     import _-EK._SafeStr_524;
@@ -18,12 +17,12 @@ package com.sulake.habbo.inventory
     public class UnseenItemTracker implements _SafeStr_3184 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _inventory:HabboInventory;
         private var _unseenItems:Dictionary;
         private var _SafeStr_3983:IEventDispatcher;
 
-        public function UnseenItemTracker(_arg_1:_SafeStr_25, _arg_2:IEventDispatcher, _arg_3:HabboInventory)
+        public function UnseenItemTracker(_arg_1:IHabboCommunicationManager, _arg_2:IEventDispatcher, _arg_3:HabboInventory)
         {
             _communication = _arg_1;
             _inventory = _arg_3;

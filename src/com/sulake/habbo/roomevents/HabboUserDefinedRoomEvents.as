@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.roomevents.HabboUserDefinedRoomEvents
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.roomevents
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.roomevents.userdefinedroomevents.UserDefinedRoomEventsCtrl;
     import com.sulake.habbo.room.IRoomEngine;
@@ -39,7 +38,7 @@ package com.sulake.habbo.roomevents
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _localization:_SafeStr_18;
         private var _SafeStr_3929:UserDefinedRoomEventsCtrl;
         private var _SafeStr_3757:_SafeStr_3118;
@@ -54,7 +53,7 @@ package com.sulake.habbo.roomevents
             _SafeStr_3929 = new UserDefinedRoomEventsCtrl(this);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }
@@ -71,7 +70,7 @@ package com.sulake.habbo.roomevents
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void

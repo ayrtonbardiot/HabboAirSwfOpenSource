@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //meter_needle9_png$9e52e3ff6d6623a42191d50e43015d51759179635
 

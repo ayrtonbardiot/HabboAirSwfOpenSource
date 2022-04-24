@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //feeling_confused_png$768a0a7248600af0f7788d7c6beb9b66828921604
 

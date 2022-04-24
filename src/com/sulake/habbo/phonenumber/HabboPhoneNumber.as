@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.phonenumber.HabboPhoneNumber
 
 package com.sulake.habbo.phonenumber
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.toolbar.IHabboToolbar;
@@ -33,7 +32,7 @@ package com.sulake.habbo.phonenumber
     public class HabboPhoneNumber extends _SafeStr_20 
     {
 
-        protected var _communicationManager:_SafeStr_25;
+        protected var _communicationManager:IHabboCommunicationManager;
         protected var _localizationManager:_SafeStr_18;
         protected var _sessionDataManager:ISessionDataManager;
         protected var _toolbar:IHabboToolbar;
@@ -52,7 +51,7 @@ package com.sulake.habbo.phonenumber
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }, true), new ComponentDependency(new IIDSessionDataManager(), function (_arg_1:ISessionDataManager):void

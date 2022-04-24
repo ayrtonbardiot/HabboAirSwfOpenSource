@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //doormode_invisible_png$4a8f277f8008ace25ad3c339e485fdb4991307444
 

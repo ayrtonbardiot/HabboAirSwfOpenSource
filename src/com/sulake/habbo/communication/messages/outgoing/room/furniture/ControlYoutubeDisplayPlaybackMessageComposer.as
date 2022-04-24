@@ -1,21 +1,18 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
-//_-02a._SafeStr_422
-
-package _-02a
+package com.sulake.habbo.communication.messages.outgoing.room.furniture;
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_422 implements IMessageComposer 
+    public class ControlYoutubeDisplayPlaybackMessageComposer implements IMessageComposer 
     {
 
         private var _SafeStr_6600:Array;
 
-        public function _SafeStr_422(_arg_1:int, _arg_2:int)
+        public function ControlYoutubeDisplayPlaybackMessageComposer(_itemId:int, _state:int)
         {
-            _SafeStr_6600 = [_arg_1, _arg_2];
+            _SafeStr_6600 = [_itemId, _state];
         }
 
         public function getMessageArray():Array

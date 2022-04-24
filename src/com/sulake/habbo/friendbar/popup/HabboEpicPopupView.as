@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendbar.popup.HabboEpicPopupView
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.friendbar.popup
 {
     import com.sulake.habbo.friendbar.view.AbstractView;
     import com.sulake.habbo.friendbar._SafeStr_3148;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.window._SafeStr_3133;
     import com.sulake.core.runtime._SafeStr_31;
     import com.sulake.core.assets._SafeStr_21;
@@ -22,7 +21,7 @@ package com.sulake.habbo.friendbar.popup
     public class HabboEpicPopupView extends AbstractView implements _SafeStr_3148 
     {
 
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _activeFrame:_SafeStr_3133;
 
         public function HabboEpicPopupView(_arg_1:_SafeStr_31, _arg_2:uint, _arg_3:_SafeStr_21)
@@ -32,7 +31,7 @@ package com.sulake.habbo.friendbar.popup
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             })]));

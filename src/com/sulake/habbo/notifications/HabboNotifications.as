@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.notifications.HabboNotifications
 
 package com.sulake.habbo.notifications
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -44,7 +43,7 @@ package com.sulake.habbo.notifications
     public class HabboNotifications extends _SafeStr_20 implements _SafeStr_2081 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _sessionDataManager:ISessionDataManager;
         private var _windowManager:_SafeStr_1695;
         private var _localization:_SafeStr_18;
@@ -165,7 +164,7 @@ package com.sulake.habbo.notifications
             }, false), new ComponentDependency(new IIDSessionDataManager(), function (_arg_1:ISessionDataManager):void
             {
                 _sessionDataManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDRoomEngine(), function (_arg_1:IRoomEngine):void

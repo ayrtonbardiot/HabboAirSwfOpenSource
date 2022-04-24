@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //minimizebutton_png$153f2c8d11c8ab173f1cb968699655ec827091829
 

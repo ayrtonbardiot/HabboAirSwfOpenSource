@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //QuestEntry_xml$50df40562bc6c3055e8093a07f704efc2004724633
 

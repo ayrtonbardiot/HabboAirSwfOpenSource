@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //grs_guest_room_details_phase_one_xml$87c4c4bee539674832de519795255105780565509
 

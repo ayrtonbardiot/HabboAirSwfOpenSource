@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //pet_experience_bubble_png$4ba259a921eb795d2e54b31eb54b076f971323561
 

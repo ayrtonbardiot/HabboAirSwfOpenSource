@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.quest.HabboQuestEngine
 
@@ -9,7 +8,7 @@ package com.sulake.habbo.quest
     import com.sulake.core.runtime._SafeStr_41;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.core.runtime._SafeStr_19;
     import com.sulake.habbo.toolbar.IHabboToolbar;
@@ -59,7 +58,7 @@ package com.sulake.habbo.quest
         private static const _SafeStr_3957:Array = ["MOVEITEM", "ENTEROTHERSROOM", "CHANGEFIGURE", "FINDLIFEGUARDTOWER", "SCRATCHAPET"];
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _localization:_SafeStr_18;
         private var _configuration:_SafeStr_19;
         private var _SafeStr_3757:_SafeStr_3118;
@@ -218,7 +217,7 @@ package com.sulake.habbo.quest
 
         private function onCommunicationComponentInit(_arg_1:IID=null, _arg_2:IUnknown=null):void
         {
-            _communication = _SafeStr_25(_arg_2);
+            _communication = IHabboCommunicationManager(_arg_2);
             _SafeStr_3757 = new _SafeStr_3118(this);
         }
 
@@ -305,7 +304,7 @@ package com.sulake.habbo.quest
             _tracking = (_arg_2 as _SafeStr_1704);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }

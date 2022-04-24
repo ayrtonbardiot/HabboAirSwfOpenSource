@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //bubble_shout_xml$adacea558418b187d00d8cac826d6886119377807
 

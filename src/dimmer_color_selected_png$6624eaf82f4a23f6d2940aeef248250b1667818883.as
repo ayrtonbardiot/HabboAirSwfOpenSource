@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //dimmer_color_selected_png$6624eaf82f4a23f6d2940aeef248250b1667818883
 

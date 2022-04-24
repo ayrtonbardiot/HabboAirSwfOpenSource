@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ui_me_health_5_png$15ee17cabf4ad9227cf90e677b28ac27369657170
 

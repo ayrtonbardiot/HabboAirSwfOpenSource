@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //clothes_highlighter_blue_png$05adc1137738caf866a8473e70bf79c0141859027
 

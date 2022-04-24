@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //mystery_box_reward_xml$7bbf96921e2d461274b37e67476174271026459305
 

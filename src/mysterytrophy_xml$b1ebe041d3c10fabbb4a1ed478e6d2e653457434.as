@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //mysterytrophy_xml$b1ebe041d3c10fabbb4a1ed478e6d2e653457434
 

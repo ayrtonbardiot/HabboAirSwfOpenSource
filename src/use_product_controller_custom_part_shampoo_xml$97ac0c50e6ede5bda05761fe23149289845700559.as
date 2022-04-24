@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //use_product_controller_custom_part_shampoo_xml$97ac0c50e6ede5bda05761fe23149289845700559
 

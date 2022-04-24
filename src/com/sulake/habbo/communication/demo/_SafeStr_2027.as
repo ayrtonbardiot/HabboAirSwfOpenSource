@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.demo._SafeStr_2027
 
 package com.sulake.habbo.communication.demo
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.communication.login.ILoginProvider;
@@ -50,8 +49,8 @@ package com.sulake.habbo.communication.demo
         private var _SafeStr_3947:_SafeStr_3233;
         private var _SafeStr_5120:Boolean;
         private var _SafeStr_3950:String;
-        private var _SafeStr_3757:_SafeStr_3118;
-        private var _communication:_SafeStr_25;
+        private var _SafeStr_3757:HabboCommunicationDemo;
+        private var _communication:IHabboCommunicationManager;
         private var _localization:_SafeStr_18;
         private var _windowManager:_SafeStr_1695;
         private var _SafeStr_3946:String;
@@ -69,7 +68,7 @@ package com.sulake.habbo.communication.demo
             _arg_1.events.addEventListener("unload", unloading);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }
@@ -99,7 +98,7 @@ package com.sulake.habbo.communication.demo
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }, (!(isRoomViewerMode))), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }, (!(isRoomViewerMode))), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (_arg_1:_SafeStr_18):void
@@ -131,7 +130,7 @@ package com.sulake.habbo.communication.demo
                     _communication.renewSocket();
                 };
             };
-            _SafeStr_3757 = new _SafeStr_3118(this, _communication);
+            _SafeStr_3757 = new HabboCommunicationDemo(this, _communication);
             context.events.addEventListener("HHVE_ERROR", onHotelViewError);
             prepareProperties();
             HabboWebTools.baseUrl = getProperty("url.prefix");

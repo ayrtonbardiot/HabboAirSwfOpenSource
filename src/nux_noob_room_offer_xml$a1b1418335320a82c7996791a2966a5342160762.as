@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //nux_noob_room_offer_xml$a1b1418335320a82c7996791a2966a5342160762
 

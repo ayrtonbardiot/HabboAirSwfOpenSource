@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.ui.RoomDesktop
 
@@ -11,7 +10,7 @@ package com.sulake.habbo.ui
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.session.IRoomSessionManager;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.avatar._SafeStr_1701;
     import com.sulake.habbo.friendlist._SafeStr_1874;
     import com.sulake.habbo.inventory._SafeStr_1708;
@@ -151,7 +150,7 @@ package com.sulake.habbo.ui
         private var _SafeStr_3938:IRoomWidgetFactory = null;
         private var _sessionDataManager:ISessionDataManager = null;
         private var _roomSessionManager:IRoomSessionManager = null;
-        private var _communicationManager:_SafeStr_25 = null;
+        private var _communicationManager:IHabboCommunicationManager = null;
         private var _avatarRenderManager:_SafeStr_1701 = null;
         private var _friendList:_SafeStr_1874 = null;
         private var _inventory:_SafeStr_1708 = null;
@@ -283,7 +282,7 @@ package com.sulake.habbo.ui
             return (_habboGroupsManager);
         }
 
-        public function get communicationManager():_SafeStr_25
+        public function get communicationManager():IHabboCommunicationManager
         {
             return (_communicationManager);
         }
@@ -389,7 +388,7 @@ package com.sulake.habbo.ui
             checkInterrupts();
         }
 
-        public function set communicationManager(_arg_1:_SafeStr_25):void
+        public function set communicationManager(_arg_1:IHabboCommunicationManager):void
         {
             _communicationManager = _arg_1;
         }

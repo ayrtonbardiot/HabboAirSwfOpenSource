@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //memenu_dance_xml$e9056f627c8834dbc318b75637ebd6191483487714
 

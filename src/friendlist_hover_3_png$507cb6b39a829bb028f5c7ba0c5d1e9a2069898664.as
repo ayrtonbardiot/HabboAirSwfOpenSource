@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //friendlist_hover_3_png$507cb6b39a829bb028f5c7ba0c5d1e9a2069898664
 

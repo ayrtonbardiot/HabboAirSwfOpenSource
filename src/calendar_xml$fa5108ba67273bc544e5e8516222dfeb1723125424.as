@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //calendar_xml$fa5108ba67273bc544e5e8516222dfeb1723125424
 

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.enum.HabboCommunicationEvent
 
@@ -11,11 +10,11 @@ package com.sulake.habbo.communication.enum
         public static const INIT:String = "HABBO_CONNECTION_EVENT_INIT";
         public static const ESTABLISHED:String = "HABBO_CONNECTION_EVENT_ESTABLISHED";
         public static const HANDSHAKING:String = "HABBO_CONNECTION_EVENT_HANDSHAKING";
-        public static const _SafeStr_8382:String = "HABBO_CONNECTION_EVENT_HANDSHAKED";
-        public static const _SafeStr_8383:String = "HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL";
+        public static const HANDSHAKED:String = "HABBO_CONNECTION_EVENT_HANDSHAKED";
+        public static const HANDSHAKE_FAIL:String = "HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL";
         public static const AUTHENTICATED:String = "HABBO_CONNECTION_EVENT_AUTHENTICATED";
         public static const REGISTER:String = "HABBO_CONNECTION_EVENT_REGISTER";
-        public static const _SafeStr_8384:String = "HABBO_POCKET_SESSION_CREATED";
+        public static const POCKET_SESSION_CREATED:String = "HABBO_POCKET_SESSION_CREATED";
 
 
     }

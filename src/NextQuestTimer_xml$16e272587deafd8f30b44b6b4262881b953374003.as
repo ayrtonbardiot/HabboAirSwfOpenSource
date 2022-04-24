@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //NextQuestTimer_xml$16e272587deafd8f30b44b6b4262881b953374003
 

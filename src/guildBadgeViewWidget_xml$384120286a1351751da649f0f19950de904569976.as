@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //guildBadgeViewWidget_xml$384120286a1351751da649f0f19950de904569976
 

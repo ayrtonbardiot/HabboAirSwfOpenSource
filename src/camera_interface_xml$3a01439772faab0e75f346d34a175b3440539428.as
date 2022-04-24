@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //camera_interface_xml$3a01439772faab0e75f346d34a175b3440539428
 

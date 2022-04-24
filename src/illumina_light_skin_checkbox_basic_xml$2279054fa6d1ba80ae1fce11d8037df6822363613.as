@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_skin_checkbox_basic_xml$2279054fa6d1ba80ae1fce11d8037df6822363613
 

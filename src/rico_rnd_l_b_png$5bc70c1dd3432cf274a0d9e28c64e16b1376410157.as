@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //rico_rnd_l_b_png$5bc70c1dd3432cf274a0d9e28c64e16b1376410157
 

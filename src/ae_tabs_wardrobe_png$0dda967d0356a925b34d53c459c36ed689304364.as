@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ae_tabs_wardrobe_png$0dda967d0356a925b34d53c459c36ed689304364
 

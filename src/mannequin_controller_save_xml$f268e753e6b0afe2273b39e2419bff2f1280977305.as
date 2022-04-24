@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //mannequin_controller_save_xml$f268e753e6b0afe2273b39e2419bff2f1280977305
 

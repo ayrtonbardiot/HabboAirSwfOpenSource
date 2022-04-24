@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.ui.RoomUI
 
@@ -32,7 +31,7 @@ package com.sulake.habbo.ui
     import com.sulake.habbo.friendbar.IHabboLandingView;
     import com.sulake.habbo.quest._SafeStr_2046;
     import com.sulake.habbo.freeflowchat._SafeStr_1703;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.habbo.tracking._SafeStr_1704;
     import com.sulake.habbo.roomevents.IHabboUserDefinedRoomEvents;
@@ -125,7 +124,7 @@ package com.sulake.habbo.ui
         private var _landingView:IHabboLandingView;
         private var _questEngine:_SafeStr_2046;
         private var _freeFlowChat:_SafeStr_1703;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _SafeStr_3939:_SafeStr_24;
         private var _SafeStr_3944:int = -1;
         private var _SafeStr_3942:Boolean;
@@ -473,7 +472,7 @@ package com.sulake.habbo.ui
             }), new ComponentDependency(new IIDHabboSoundManager(), function (_arg_1:_SafeStr_2088):void
             {
                 _soundManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboUserDefinedRoomEvents(), function (_arg_1:IHabboUserDefinedRoomEvents):void

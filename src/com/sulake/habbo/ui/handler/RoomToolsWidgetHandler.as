@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.ui.handler.RoomToolsWidgetHandler
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.ui.handler
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.navigator._SafeStr_1696;
     import com.sulake.habbo.ui.widget.roomtools.RoomToolsWidget;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
@@ -27,7 +26,7 @@ package com.sulake.habbo.ui.handler
 
         private var _disposed:Boolean;
         private var _communicationManagerMessageEvents:Vector.<IMessageEvent> = new Vector.<IMessageEvent>();
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _navigator:_SafeStr_1696;
         private var _SafeStr_4981:RoomToolsWidget;
         private var _container:IRoomWidgetHandlerContainer;
@@ -152,7 +151,7 @@ package com.sulake.habbo.ui.handler
             return (_container.sessionDataManager);
         }
 
-        public function set communicationManager(_arg_1:_SafeStr_25):void
+        public function set communicationManager(_arg_1:IHabboCommunicationManager):void
         {
             _communicationManager = _arg_1;
             _communicationManagerMessageEvents.push(_communicationManager.addHabboConnectionMessageEvent(new _SafeStr_843(onRoomInfo)));

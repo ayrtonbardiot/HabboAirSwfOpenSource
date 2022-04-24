@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.toolbar.HabboToolbar
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.toolbar
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.toolbar.extensions.PurseAreaExtension;
     import com.sulake.habbo.toolbar.extensions.SettingsExtension;
     import com.sulake.core.communication.connection.IConnection;
@@ -85,7 +84,7 @@ package com.sulake.habbo.toolbar
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _SafeStr_3882:BottomBarLeft;
         private var _bottomBarBackground:BottomBackgroundBorder;
         private var _SafeStr_3883:Boolean;
@@ -129,7 +128,7 @@ package com.sulake.habbo.toolbar
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
                 "type":"complete",
                 "callback":onConfigurationComplete
-            }]), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }]), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
@@ -845,7 +844,7 @@ package com.sulake.habbo.toolbar
             return (_sessionDataManager);
         }
 
-        public function get communicationManager():_SafeStr_25
+        public function get communicationManager():IHabboCommunicationManager
         {
             return (_communicationManager);
         }

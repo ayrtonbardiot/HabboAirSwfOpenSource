@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_tab_context_xml$d520acf3a2327a8513c1a886a4cf48621758444304
 

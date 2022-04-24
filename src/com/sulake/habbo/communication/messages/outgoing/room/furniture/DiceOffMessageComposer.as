@@ -1,19 +1,16 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
-//_-02a._SafeStr_384
-
-package _-02a
+package com.sulake.habbo.communication.messages.outgoing.room.furniture
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
     [SecureSWF(rename="true")]
-    public class _SafeStr_384 implements IMessageComposer 
+    public class DiceOffMessageComposer implements IMessageComposer 
     {
 
         private var _SafeStr_4157:int;
 
-        public function _SafeStr_384(_arg_1:int)
+        public function DiceOffMessageComposer(_arg_1:int)
         {
             _SafeStr_4157 = _arg_1;
         }

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.messenger.HabboMessenger
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.messenger
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.friendlist._SafeStr_1874;
     import com.sulake.habbo.sound._SafeStr_2088;
@@ -52,7 +51,7 @@ package com.sulake.habbo.messenger
     {
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _localization:_SafeStr_18;
         private var _friendList:_SafeStr_1874;
         private var _soundManager:_SafeStr_2088;
@@ -78,7 +77,7 @@ package com.sulake.habbo.messenger
             }), new ComponentDependency(new IIDHabboSoundManager(), function (_arg_1:_SafeStr_2088):void
             {
                 _soundManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (_arg_1:_SafeStr_18):void

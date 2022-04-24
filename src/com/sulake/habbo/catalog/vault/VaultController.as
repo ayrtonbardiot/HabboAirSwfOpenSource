@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.catalog.vault.VaultController
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.catalog.vault
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.window._SafeStr_1695;
@@ -27,7 +26,7 @@ package com.sulake.habbo.catalog.vault
     public class VaultController extends _SafeStr_20 implements ILinkEventTracker 
     {
 
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _localizationManager:_SafeStr_18;
         private var _sessionDataManager:ISessionDataManager;
         private var _windowManager:_SafeStr_1695;
@@ -41,7 +40,7 @@ package com.sulake.habbo.catalog.vault
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }, true), new ComponentDependency(new IIDSessionDataManager(), function (_arg_1:ISessionDataManager):void

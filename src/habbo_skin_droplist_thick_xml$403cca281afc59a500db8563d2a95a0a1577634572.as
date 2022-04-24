@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_droplist_thick_xml$403cca281afc59a500db8563d2a95a0a1577634572
 

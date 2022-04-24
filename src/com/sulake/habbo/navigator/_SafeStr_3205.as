@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.navigator._SafeStr_3205
 
 package com.sulake.habbo.navigator
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-21f._SafeStr_150;
     import _-g1x._SafeStr_285;
     import _-21f._SafeStr_716;
@@ -102,13 +101,13 @@ package com.sulake.habbo.navigator
         public function _SafeStr_3205(_arg_1:HabboNewNavigator)
         {
             _navigator = _arg_1;
-            var _local_2:_SafeStr_25 = _navigator.communication;
+            var _local_2:IHabboCommunicationManager = _navigator.communication;
             addMessageListeners();
         }
 
         public function addMessageListeners():void
         {
-            var _local_1:_SafeStr_25 = _navigator.communication;
+            var _local_1:IHabboCommunicationManager = _navigator.communication;
             _messageListeners.push(_local_1.connection.addMessageEvent(new _SafeStr_150(onNavigatorSearchResultBlocks)));
             _messageListeners.push(_local_1.addHabboConnectionMessageEvent(new _SafeStr_285(onNoOwnedRoomsAlert)));
             _messageListeners.push(_local_1.connection.addMessageEvent(new _SafeStr_716(onNavigatorMetaData)));
@@ -155,7 +154,7 @@ package com.sulake.habbo.navigator
 
         public function removeLegacyMessageListeners():void
         {
-            var _local_1:_SafeStr_25 = _navigator.communication;
+            var _local_1:IHabboCommunicationManager = _navigator.communication;
             for each (var _local_2:IMessageEvent in _messageListeners)
             {
                 _local_1.removeHabboConnectionMessageEvent(_local_2);

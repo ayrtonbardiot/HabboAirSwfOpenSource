@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.navigator._SafeStr_1697
 
@@ -12,7 +11,7 @@ package com.sulake.habbo.navigator
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.habbo.navigator.inroom.RoomInfoViewCtrl;
     import com.sulake.habbo.navigator.roomsettings.RoomCreateViewCtrl;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.navigator.inroom.RoomEventViewCtrl;
@@ -42,7 +41,7 @@ package com.sulake.habbo.navigator
         function get tabs():Tabs;
         function get roomInfoViewCtrl():RoomInfoViewCtrl;
         function get roomCreateViewCtrl():RoomCreateViewCtrl;
-        function get communication():_SafeStr_25;
+        function get communication():IHabboCommunicationManager;
         function get roomSettingsCtrl():RoomSettingsCtrl;
         function get sessionData():ISessionDataManager;
         function get passwordInput():GuestRoomPasswordInput;

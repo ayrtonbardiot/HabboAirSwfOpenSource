@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.sound.HabboSoundManagerFlash10
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.sound
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime._SafeStr_41;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.notifications._SafeStr_2081;
@@ -38,7 +37,7 @@ package com.sulake.habbo.sound
     public class HabboSoundManagerFlash10 extends _SafeStr_20 implements _SafeStr_2088, _SafeStr_41 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _connection:IConnection;
         private var _roomEngine:IRoomEngine;
         private var _notifications:_SafeStr_2081;
@@ -342,7 +341,7 @@ package com.sulake.habbo.sound
             var _local_3:* = null;
             if (_arg_2 != null)
             {
-                _communication = _SafeStr_25(_arg_2);
+                _communication = IHabboCommunicationManager(_arg_2);
                 _local_3 = _communication.connection;
                 if (_local_3 != null)
                 {

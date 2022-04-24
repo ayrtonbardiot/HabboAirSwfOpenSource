@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.quest._SafeStr_3118
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.quest
 {
     import com.sulake.core.runtime._SafeStr_13;
     import com.sulake.habbo.window.utils._SafeStr_3114;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-y1x._SafeStr_605;
     import _-q1B._SafeStr_839;
     import _-q1B._SafeStr_948;
@@ -61,7 +60,7 @@ package com.sulake.habbo.quest
         public function _SafeStr_3118(_arg_1:HabboQuestEngine)
         {
             _questEngine = _arg_1;
-            var _local_2:_SafeStr_25 = _questEngine.communication;
+            var _local_2:IHabboCommunicationManager = _questEngine.communication;
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_605(onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_839(onAchievementResolutions));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_948(onAchievementResolutionCompleted));

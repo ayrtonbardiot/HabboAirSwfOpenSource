@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //snowwar_timer_xml$9fef53f69eff26dc18d8a96b96837f151654852394
 

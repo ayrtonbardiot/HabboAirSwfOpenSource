@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.login.WebApiLoginProvider
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.communication.login
 {
     import flash.events.EventDispatcher;
     import com.sulake.habbo.communication._SafeStr_33;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.IHabboWebApiSession;
     import com.sulake.habbo.utils.CommunicationUtils;
     import __AS3__.vec.Vector;
@@ -22,7 +21,7 @@ package com.sulake.habbo.communication.login
         private static const POCKET_MODE_LOGIN_AND_REGISTER:int = 1;
         private static const _SafeStr_8390:int = 2;
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _SafeStr_8391:String;
         private var _SafeStr_3947:ILoginViewer;
         private var _pendingLoginError:Object;
@@ -49,7 +48,7 @@ package com.sulake.habbo.communication.login
             return (false);
         }
 
-        public function init(_arg_1:_SafeStr_25):void
+        public function init(_arg_1:IHabboCommunicationManager):void
         {
             _communication = _arg_1;
             var _local_2:String = getProperty("web.api");

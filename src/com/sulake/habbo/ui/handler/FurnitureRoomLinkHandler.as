@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.ui.handler.FurnitureRoomLinkHandler
 
@@ -10,7 +9,7 @@ package com.sulake.habbo.ui.handler
     import com.sulake.habbo.window.utils._SafeStr_3198;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-Ja._SafeStr_843;
     import _-31H._SafeStr_1082;
     import _-Ja._SafeStr_1569;
@@ -31,7 +30,7 @@ package com.sulake.habbo.ui.handler
         private var _container:IRoomWidgetHandlerContainer;
         private var _confirmDialog:_SafeStr_3198;
         private var _communicationManagerMessageEvents:Vector.<IMessageEvent> = new Vector.<IMessageEvent>();
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _SafeStr_6321:int = 0;
         private var _SafeStr_5272:String;
 
@@ -46,7 +45,7 @@ package com.sulake.habbo.ui.handler
             _container = _arg_1;
         }
 
-        public function set communicationManager(_arg_1:_SafeStr_25):void
+        public function set communicationManager(_arg_1:IHabboCommunicationManager):void
         {
             _communicationManager = _arg_1;
             _communicationManagerMessageEvents.push(_communicationManager.addHabboConnectionMessageEvent(new _SafeStr_843(onRoomInfo)));

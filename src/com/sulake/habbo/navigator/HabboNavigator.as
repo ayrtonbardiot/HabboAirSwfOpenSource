@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.navigator.HabboNavigator
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.navigator
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.IRoomSessionManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -71,7 +70,7 @@ package com.sulake.habbo.navigator
     public class HabboNavigator extends _SafeStr_20 implements _SafeStr_1696, _SafeStr_1697, ILinkEventTracker 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _roomSessionManager:IRoomSessionManager;
         private var _windowManager:_SafeStr_1695;
         private var _localization:_SafeStr_18;
@@ -153,7 +152,7 @@ package com.sulake.habbo.navigator
             return (_SafeStr_3745);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }
@@ -220,7 +219,7 @@ package com.sulake.habbo.navigator
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), function (_arg_1:IRoomSessionManager):void

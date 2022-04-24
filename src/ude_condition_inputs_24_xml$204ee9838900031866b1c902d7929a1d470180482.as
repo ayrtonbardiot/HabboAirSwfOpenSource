@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ude_condition_inputs_24_xml$204ee9838900031866b1c902d7929a1d470180482
 

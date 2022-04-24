@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //layout_spaces_new_xml$8c30d3601f1c9998d82768422f415fea2001229142
 

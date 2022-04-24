@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //use_product_controller_rebreed_monsterplant_xml$95be1282891425ca9497663148d49b21610032677
 

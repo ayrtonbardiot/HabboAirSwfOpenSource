@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //explosion0009_png$fa04f94d0152c58af903195ae5fd04fb568951338
 

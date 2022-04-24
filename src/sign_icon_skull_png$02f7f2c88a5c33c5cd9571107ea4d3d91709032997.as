@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //sign_icon_skull_png$02f7f2c88a5c33c5cd9571107ea4d3d91709032997
 

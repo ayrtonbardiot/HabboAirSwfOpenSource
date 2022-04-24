@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //label_plaque_border_png$6b69b807abf863118f44b86fa29f84e91500959998
 

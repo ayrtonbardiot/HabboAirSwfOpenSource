@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //red_ball_rematch_png$7d3fba8d8599ae6ea2e42b9bb063c4ed978826268
 

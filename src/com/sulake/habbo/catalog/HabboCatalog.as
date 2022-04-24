@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.catalog.HabboCatalog
 
@@ -12,7 +11,7 @@ package com.sulake.habbo.catalog
     import com.sulake.habbo.session.furniture._SafeStr_1707;
     import flash.geom.Point;
     import com.sulake.habbo.window._SafeStr_1695;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.session.IRoomSessionManager;
@@ -249,7 +248,7 @@ package com.sulake.habbo.catalog
         private static const NO_KNOWN_OFFER:int = -1;
 
         private var _windowManager:_SafeStr_1695;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _toolbar:IHabboToolbar;
         private var _roomEngine:IRoomEngine;
         private var _roomSessionManager:IRoomSessionManager;
@@ -456,7 +455,7 @@ package com.sulake.habbo.catalog
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }), new ComponentDependency(new IIDHabboToolbar(), function (_arg_1:IHabboToolbar):void
@@ -3372,3 +3371,4 @@ package com.sulake.habbo.catalog
 // _SafeStr_990 = "_-D1i" (String#4238, DoABC#4)
 
 
+

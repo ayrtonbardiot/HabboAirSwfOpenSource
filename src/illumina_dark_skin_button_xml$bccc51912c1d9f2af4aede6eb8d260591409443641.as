@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_dark_skin_button_xml$bccc51912c1d9f2af4aede6eb8d260591409443641
 

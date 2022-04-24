@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_dark_scrollbar_horizontal_png$863dd90a531f09731724104bfcb8ee831970376023
 

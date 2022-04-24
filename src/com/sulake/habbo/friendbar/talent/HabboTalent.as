@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendbar.talent.HabboTalent
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.friendbar.talent
     import com.sulake.habbo.friendbar.view.AbstractView;
     import com.sulake.habbo.friendbar.IHabboTalent;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.help.IHabboHelp;
     import com.sulake.habbo.navigator._SafeStr_1696;
     import com.sulake.habbo.toolbar.IHabboToolbar;
@@ -41,7 +40,7 @@ package com.sulake.habbo.friendbar.talent
         private var _talentLevelUp:TalentLevelUpController;
         private var _talentPromo:TalentPromoCtrl;
         private var _citizenshipPopup:CitizenshipPopupController;
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _habboHelp:IHabboHelp;
         private var _navigator:_SafeStr_1696;
         private var _toolbar:IHabboToolbar;
@@ -52,7 +51,7 @@ package com.sulake.habbo.friendbar.talent
             super(_arg_1, _arg_2, _arg_3);
         }
 
-        public function get communicationManager():_SafeStr_25
+        public function get communicationManager():IHabboCommunicationManager
         {
             return (_communicationManager);
         }
@@ -119,7 +118,7 @@ package com.sulake.habbo.friendbar.talent
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboHelp(), function (_arg_1:IHabboHelp):void

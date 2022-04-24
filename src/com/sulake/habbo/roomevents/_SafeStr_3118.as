@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.roomevents._SafeStr_3118
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.roomevents
     import com.sulake.core.runtime._SafeStr_13;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-l12._SafeStr_736;
     import _-l12._SafeStr_968;
     import _-l12._SafeStr_975;
@@ -40,7 +39,7 @@ package com.sulake.habbo.roomevents
         {
             _roomEvents = _arg_1;
             _messageEvents = new Vector.<IMessageEvent>(0);
-            var _local_2:_SafeStr_25 = _roomEvents.communication;
+            var _local_2:IHabboCommunicationManager = _roomEvents.communication;
             addMessageEvent(new _SafeStr_736(onValidationError));
             addMessageEvent(new _SafeStr_968(onCondition));
             addMessageEvent(new _SafeStr_975(onSaveSuccess));
@@ -137,7 +136,7 @@ package com.sulake.habbo.roomevents
             {
                 return;
             };
-            var _local_2:_SafeStr_25 = _roomEvents.communication;
+            var _local_2:IHabboCommunicationManager = _roomEvents.communication;
             if (((!(_messageEvents == null)) && (!(_local_2 == null))))
             {
                 for each (var _local_1:IMessageEvent in _messageEvents)

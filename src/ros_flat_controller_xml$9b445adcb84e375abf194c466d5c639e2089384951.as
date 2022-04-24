@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ros_flat_controller_xml$9b445adcb84e375abf194c466d5c639e2089384951
 

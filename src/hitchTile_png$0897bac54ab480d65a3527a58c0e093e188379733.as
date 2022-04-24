@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //hitchTile_png$0897bac54ab480d65a3527a58c0e093e188379733
 

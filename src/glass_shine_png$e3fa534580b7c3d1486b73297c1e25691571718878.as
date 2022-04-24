@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //glass_shine_png$e3fa534580b7c3d1486b73297c1e25691571718878
 

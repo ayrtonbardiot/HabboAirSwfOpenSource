@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ach_progressbar4_png$c2319bc6943d1fb89bd1a7847d593c32844508301
 

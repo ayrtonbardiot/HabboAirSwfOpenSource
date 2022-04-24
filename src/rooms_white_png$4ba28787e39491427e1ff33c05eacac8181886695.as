@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //rooms_white_png$4ba28787e39491427e1ff33c05eacac8181886695
 

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //bg_sky_png$999a3feaa8ccf54069a29aaa20eaca551624320859
 

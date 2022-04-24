@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_skin_switch_xml$3864a9009193b580826491e60b7a9dd12662739
 

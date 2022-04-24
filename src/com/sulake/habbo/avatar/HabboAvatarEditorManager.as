@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.avatar.HabboAvatarEditorManager
 
@@ -10,7 +9,7 @@ package com.sulake.habbo.avatar
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.inventory._SafeStr_1708;
     import com.sulake.habbo.localization._SafeStr_18;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.ui.IRoomUI;
@@ -47,7 +46,7 @@ package com.sulake.habbo.avatar
         private var _avatarRenderManager:_SafeStr_1701;
         private var _inventory:_SafeStr_1708;
         private var _localization:_SafeStr_18;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _catalog:IHabboCatalog;
         private var _sessionData:ISessionDataManager;
         private var _roomUI:IRoomUI;
@@ -65,7 +64,7 @@ package com.sulake.habbo.avatar
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDCoreWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }, ((flags & 0x03) == 0)), new ComponentDependency(new IIDAvatarRenderManager(), function (_arg_1:_SafeStr_1701):void
@@ -231,7 +230,7 @@ package com.sulake.habbo.avatar
             this.events.dispatchEvent(new Event("AVATAR_EDITOR_READY"));
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }

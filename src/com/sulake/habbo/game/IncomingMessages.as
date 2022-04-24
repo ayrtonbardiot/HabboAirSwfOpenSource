@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.game.IncomingMessages
 
 package com.sulake.habbo.game
 {
     import com.sulake.core.runtime._SafeStr_13;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-a5._SafeStr_648;
     import _-a5._SafeStr_900;
     import _-a5._SafeStr_1021;
@@ -21,7 +20,7 @@ package com.sulake.habbo.game
         public function IncomingMessages(_arg_1:HabboGameManager)
         {
             _gameManager = _arg_1;
-            var _local_2:_SafeStr_25 = _gameManager.communication;
+            var _local_2:IHabboCommunicationManager = _gameManager.communication;
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_648(onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_900(onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new _SafeStr_1021(onHotelClosed));

@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.session.SessionDataManager
 
 package com.sulake.habbo.session
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import flash.utils.Dictionary;
     import com.sulake.habbo.session.product.ProductDataParser;
@@ -83,7 +82,7 @@ package com.sulake.habbo.session
 
         public static const _SafeStr_8305:uint = 1;
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _roomSessionManager:IRoomSessionManager;
         private var _SafeStr_3810:PerkManager;
@@ -139,7 +138,7 @@ package com.sulake.habbo.session
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void
             {
                 _windowManager = _arg_1;
-            }, false), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            }, false), new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communication = _arg_1;
             }, ((flags & 0x01) == 0)), new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
@@ -672,7 +671,7 @@ package com.sulake.habbo.session
             return (_SafeStr_3831);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }

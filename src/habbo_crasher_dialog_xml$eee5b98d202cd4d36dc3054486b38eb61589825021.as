@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_crasher_dialog_xml$eee5b98d202cd4d36dc3054486b38eb61589825021
 

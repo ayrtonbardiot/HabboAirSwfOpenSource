@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.ui.handler._SafeStr_3306
 
@@ -23,7 +22,7 @@ package com.sulake.habbo.ui.handler
     import _-02a._SafeStr_564;
     import flash.events.Event;
     import _-02a._SafeStr_153;
-    import _-02a._SafeStr_422;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
 
     public class _SafeStr_3306 implements IRoomWidgetHandler 
     {
@@ -163,22 +162,22 @@ package com.sulake.habbo.ui.handler
 
         public function switchToPreviousVideo(_arg_1:int):void
         {
-            _container.connection.send(new _SafeStr_422(_arg_1, 0));
+            _container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(_arg_1, 0));
         }
 
         public function switchToNextVideo(_arg_1:int):void
         {
-            _container.connection.send(new _SafeStr_422(_arg_1, 1));
+            _container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(_arg_1, 1));
         }
 
         public function pauseVideo(_arg_1:int):void
         {
-            _container.connection.send(new _SafeStr_422(_arg_1, 2));
+            _container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(_arg_1, 2));
         }
 
         public function continueVideo(_arg_1:int):void
         {
-            _container.connection.send(new _SafeStr_422(_arg_1, 3));
+            _container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(_arg_1, 3));
         }
 
 

@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory._SafeStr_3118
 
 package com.sulake.habbo.inventory
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import __AS3__.vec.Vector;
     import com.sulake.core.utils._SafeStr_24;
     import _-Go._SafeStr_268;
@@ -118,7 +117,7 @@ package com.sulake.habbo.inventory
         private static const GROUPED_FURNI_TYPE:String = "credit_groupitem_type_id";
 
         private var _inventory:HabboInventory;
-        private var _com:_SafeStr_25;
+        private var _com:IHabboCommunicationManager;
         private var _SafeStr_4987:Vector.<_SafeStr_24>;
         private var _SafeStr_4984:Vector.<_SafeStr_24>;
         private var _SafeStr_8634:Vector.<_SafeStr_24>;

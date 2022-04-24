@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_button_checkbox_xml$0a1cb50b5fefc19021258422c35ef403373298765
 

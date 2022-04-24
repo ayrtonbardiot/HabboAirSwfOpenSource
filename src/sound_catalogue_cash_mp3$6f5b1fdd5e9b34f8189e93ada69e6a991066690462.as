@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //sound_catalogue_cash_mp3$6f5b1fdd5e9b34f8189e93ada69e6a991066690462
 

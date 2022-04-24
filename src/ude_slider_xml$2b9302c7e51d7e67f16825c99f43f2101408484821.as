@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //ude_slider_xml$2b9302c7e51d7e67f16825c99f43f2101408484821
 

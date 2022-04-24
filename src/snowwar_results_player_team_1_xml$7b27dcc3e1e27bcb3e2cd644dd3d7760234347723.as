@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //snowwar_results_player_team_1_xml$7b27dcc3e1e27bcb3e2cd644dd3d7760234347723
 

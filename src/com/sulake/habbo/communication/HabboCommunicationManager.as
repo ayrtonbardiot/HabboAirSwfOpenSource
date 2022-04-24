@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.HabboCommunicationManager
 
@@ -26,13 +25,13 @@ package com.sulake.habbo.communication
     import com.sulake.core.communication.encryption.IEncryption;
     import com.sulake.habbo.communication.encryption.DiffieHellman;
     import com.hurlant.math.BigInteger;
-    import com.sulake.core.communication.handshake._SafeStr_42;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import _-g18._SafeStr_44;
     import flash.events.IOErrorEvent;
     import flash.events.TimerEvent;
     import flash.events.SecurityErrorEvent;
 
-    public class HabboCommunicationManager extends _SafeStr_20 implements _SafeStr_25, _SafeStr_26 
+    public class HabboCommunicationManager extends _SafeStr_20 implements IHabboCommunicationManager, _SafeStr_26 
     {
 
         private static const DEFAULT_CONNECTION_ATTEMPTS:int = 2;
@@ -316,7 +315,7 @@ package com.sulake.habbo.communication
             return (new ArcFour());
         }
 
-        public function initializeKeyExchange(_arg_1:BigInteger, _arg_2:BigInteger):_SafeStr_42
+        public function initializeKeyExchange(_arg_1:BigInteger, _arg_2:BigInteger):IKeyExchange
         {
             return (new DiffieHellman(_arg_1, _arg_2));
         }

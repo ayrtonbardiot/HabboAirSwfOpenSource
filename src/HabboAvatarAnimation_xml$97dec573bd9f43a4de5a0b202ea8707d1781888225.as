@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //HabboAvatarAnimation_xml$97dec573bd9f43a4de5a0b202ea8707d1781888225
 

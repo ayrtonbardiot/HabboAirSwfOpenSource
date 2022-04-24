@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //register_cutout_character_png$1893f32ecadef93faf7ab59122d3be11982314307
 

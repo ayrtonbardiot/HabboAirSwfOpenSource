@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //talents_white_png$b2a1c209bee58b35091cbaf353615806998973750
 

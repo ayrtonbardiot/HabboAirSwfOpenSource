@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.core.communication.handshake._SafeStr_42
 
 package com.sulake.core.communication.handshake
 {
-    public /*dynamic*/ interface _SafeStr_42 
+    public interface IKeyExchange 
     {
 
         function init(_arg_1:String, _arg_2:uint=16):Boolean;

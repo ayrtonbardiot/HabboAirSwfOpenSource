@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //floor_editor_tile_entry_large_png$3003d167d7869e06425601ed0069482f584956522
 

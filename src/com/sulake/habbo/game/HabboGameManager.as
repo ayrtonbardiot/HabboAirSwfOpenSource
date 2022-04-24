@@ -1,12 +1,11 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.game.HabboGameManager
 
 package com.sulake.habbo.game
 {
     import com.sulake.core.runtime._SafeStr_20;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
     import com.sulake.habbo.session.ISessionDataManager;
@@ -50,7 +49,7 @@ package com.sulake.habbo.game
     public class HabboGameManager extends _SafeStr_20 implements _SafeStr_1699 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _localization:_SafeStr_18;
         private var _sessionDataManager:ISessionDataManager;
@@ -101,7 +100,7 @@ package com.sulake.habbo.game
             return (_sessionDataManager);
         }
 
-        public function get communication():_SafeStr_25
+        public function get communication():IHabboCommunicationManager
         {
             return (_communication);
         }
@@ -229,7 +228,7 @@ package com.sulake.habbo.game
 
         private function onHabboCommunicationReady(_arg_1:IID, _arg_2:IUnknown):void
         {
-            _communication = (_arg_2 as _SafeStr_25);
+            _communication = (_arg_2 as IHabboCommunicationManager);
             _SafeStr_3757 = new IncomingMessages(this);
         }
 

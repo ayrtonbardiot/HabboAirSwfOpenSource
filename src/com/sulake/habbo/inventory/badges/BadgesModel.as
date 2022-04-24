@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.inventory.badges.BadgesModel
 
@@ -10,7 +9,7 @@ package com.sulake.habbo.inventory.badges
     import __AS3__.vec.Vector;
     import com.sulake.core.utils._SafeStr_24;
     import com.sulake.core.assets._SafeStr_21;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -34,11 +33,11 @@ package com.sulake.habbo.inventory.badges
         private var _SafeStr_5029:Vector.<Badge>;
         private var _SafeStr_5028:_SafeStr_24;
         private var _assets:_SafeStr_21;
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _windowManager:_SafeStr_1695;
         private var _disposed:Boolean = false;
 
-        public function BadgesModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:_SafeStr_25, _arg_4:_SafeStr_21)
+        public function BadgesModel(_arg_1:HabboInventory, _arg_2:_SafeStr_1695, _arg_3:IHabboCommunicationManager, _arg_4:_SafeStr_21)
         {
             _SafeStr_4360 = _arg_1;
             _windowManager = _arg_2;

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //camera_btn_png$e9d697424fce6139b9b46785363d47811472955502
 

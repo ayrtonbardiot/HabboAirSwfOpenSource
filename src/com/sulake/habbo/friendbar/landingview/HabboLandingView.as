@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.friendbar.landingview.HabboLandingView
 
@@ -8,7 +7,7 @@ package com.sulake.habbo.friendbar.landingview
     import com.sulake.habbo.friendbar.view.AbstractView;
     import com.sulake.habbo.friendbar.IHabboLandingView;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.IRoomSessionManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.navigator._SafeStr_1696;
@@ -57,7 +56,7 @@ package com.sulake.habbo.friendbar.landingview
     {
 
         private var _landingViewLayout:WidgetContainerLayout;
-        private var _communicationManager:_SafeStr_25;
+        private var _communicationManager:IHabboCommunicationManager;
         private var _roomSessionManager:IRoomSessionManager;
         private var _catalog:IHabboCatalog;
         private var _navigator:_SafeStr_1696;
@@ -110,7 +109,7 @@ package com.sulake.habbo.friendbar.landingview
             return (_windowManager);
         }
 
-        public function get communicationManager():_SafeStr_25
+        public function get communicationManager():IHabboCommunicationManager
         {
             return (_communicationManager);
         }
@@ -122,7 +121,7 @@ package com.sulake.habbo.friendbar.landingview
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), function (_arg_1:IRoomSessionManager):void

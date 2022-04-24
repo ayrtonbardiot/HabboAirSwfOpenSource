@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //illumina_light_balloon_png$931ce0cc5b19d33be3ed62e9176c7809427828567
 

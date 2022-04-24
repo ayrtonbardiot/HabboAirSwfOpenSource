@@ -1,11 +1,10 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.avatar.AvatarEditorMessageHandler
 
 package com.sulake.habbo.avatar
 {
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import _-w19._SafeStr_317;
     import _-O1Z._SafeStr_860;
     import _-w19._SafeStr_1038;
@@ -25,10 +24,10 @@ package com.sulake.habbo.avatar
     public class AvatarEditorMessageHandler 
     {
 
-        private var _communication:_SafeStr_25;
+        private var _communication:IHabboCommunicationManager;
         private var _SafeStr_4360:HabboAvatarEditorManager;
 
-        public function AvatarEditorMessageHandler(_arg_1:HabboAvatarEditorManager, _arg_2:_SafeStr_25)
+        public function AvatarEditorMessageHandler(_arg_1:HabboAvatarEditorManager, _arg_2:IHabboCommunicationManager)
         {
             _SafeStr_4360 = _arg_1;
             _communication = _arg_2;

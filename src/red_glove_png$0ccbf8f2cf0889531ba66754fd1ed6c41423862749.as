@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //red_glove_png$0ccbf8f2cf0889531ba66754fd1ed6c41423862749
 

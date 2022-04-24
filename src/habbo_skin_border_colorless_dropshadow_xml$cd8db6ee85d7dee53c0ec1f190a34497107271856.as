@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //habbo_skin_border_colorless_dropshadow_xml$cd8db6ee85d7dee53c0ec1f190a34497107271856
 

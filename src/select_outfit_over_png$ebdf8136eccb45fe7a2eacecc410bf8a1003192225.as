@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //select_outfit_over_png$ebdf8136eccb45fe7a2eacecc410bf8a1003192225
 

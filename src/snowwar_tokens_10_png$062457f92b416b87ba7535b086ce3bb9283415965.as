@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //snowwar_tokens_10_png$062457f92b416b87ba7535b086ce3bb9283415965
 

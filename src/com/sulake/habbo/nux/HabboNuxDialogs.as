@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.nux.HabboNuxDialogs
 
@@ -7,7 +6,7 @@ package com.sulake.habbo.nux
 {
     import com.sulake.core.runtime._SafeStr_20;
     import com.sulake.core.runtime.events.ILinkEventTracker;
-    import com.sulake.habbo.communication._SafeStr_25;
+    import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.navigator._SafeStr_1696;
     import com.sulake.habbo.window._SafeStr_1695;
     import com.sulake.habbo.localization._SafeStr_18;
@@ -44,7 +43,7 @@ package com.sulake.habbo.nux
     public class HabboNuxDialogs extends _SafeStr_20 implements ILinkEventTracker 
     {
 
-        protected var _communicationManager:_SafeStr_25;
+        protected var _communicationManager:IHabboCommunicationManager;
         protected var _navigator:_SafeStr_1696;
         protected var _windowManager:_SafeStr_1695;
         protected var _localizationManager:_SafeStr_18;
@@ -64,7 +63,7 @@ package com.sulake.habbo.nux
 
         override protected function get dependencies():Vector.<ComponentDependency>
         {
-            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:_SafeStr_25):void
+            return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (_arg_1:IHabboCommunicationManager):void
             {
                 _communicationManager = _arg_1;
             }, true), new ComponentDependency(new IIDHabboWindowManager(), function (_arg_1:_SafeStr_1695):void

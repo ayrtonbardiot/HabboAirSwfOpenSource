@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //free_games_bg_png$64bae4c429d372bd592c200dc55a1351250867472
 

@@ -1,5 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //doorbell_list_entry_xml$b48bef1be11d50077fa03a39f9fd8ada1100683462
 

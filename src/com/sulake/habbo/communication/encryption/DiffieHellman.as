@@ -1,14 +1,13 @@
-﻿// Decompiled by AS3 Sorcerer 6.30
-// www.as3sorcerer.com
+﻿// by nota
 
 //com.sulake.habbo.communication.encryption.DiffieHellman
 
 package com.sulake.habbo.communication.encryption
 {
-    import com.sulake.core.communication.handshake._SafeStr_42;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import com.hurlant.math.BigInteger;
 
-    public class DiffieHellman implements _SafeStr_42 
+    public class DiffieHellman implements IKeyExchange 
     {
 
         private var _privateKey:BigInteger;
